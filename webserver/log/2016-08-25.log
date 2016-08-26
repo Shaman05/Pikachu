@@ -1,0 +1,5 @@
+
+[2016-08-25 14:45:45]Http Server running at http://localhost:8088/
+[2016-08-25 14:45:48]GET /
+[2016-08-25 14:45:48]GET /favicon.ico
+[2016-08-25 14:45:48]404 Not Found: /favicon.ico

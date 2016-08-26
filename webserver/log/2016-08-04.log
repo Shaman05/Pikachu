@@ -1,0 +1,20 @@
+
+[2016-08-04 16:39:41]Http Server running at http://localhost:1234/
+[2016-08-04 16:39:42]GET /
+[2016-08-04 16:39:42]GET /favicon.ico
+[2016-08-04 16:39:42]404 Not Found: /favicon.ico
+[2016-08-04 16:39:51]GET /docs/
+[2016-08-04 16:39:54]GET /docs/examples/
+[2016-08-04 16:39:55]GET /docs/examples/forms.html
+[2016-08-04 16:39:55]GET /dist/css/vendor/bootstrap/css/bootstrap.min.css
+[2016-08-04 16:39:55]GET /dist/css/flat-ui.css
+[2016-08-04 16:39:55]GET /dist/js/vendor/jquery.min.js
+[2016-08-04 16:39:55]GET /dist/js/flat-ui.min.js
+[2016-08-04 16:39:55]GET /docs/assets/js/application.js
+[2016-08-04 16:39:56]GET /dist/fonts/lato/lato-regular.woff
+[2016-08-04 16:39:56]GET /dist/fonts/lato/lato-bold.woff
+[2016-08-04 16:39:56]GET /dist/fonts/glyphicons/flat-ui-icons-regular.woff
+[2016-08-04 16:40:07]GET /dist/css/vendor/bootstrap/css/bootstrap.min.css
+[2016-08-04 16:40:07]GET /dist/css/flat-ui.css
+[2016-08-04 16:40:07]GET /dist/js/vendor/jquery.min.map
+[2016-08-04 16:40:07]GET /dist/css/flat-ui.css.map

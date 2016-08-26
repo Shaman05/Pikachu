@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Node Static Server - ${dir}</title>
+	<style>
+		ol{
+			list-style-type: none;
+			font-size: 1.2em;
+		}
+	</style>
+</head>
+<body>
+	<h1>Directory: ${dir}</h1>
+	<ol>
+		{@each files as file}
+		<li>
+			<a href="${file}">${file}</a>
+		</li>
+		{@/each}
+	</ol>
+</body>
+</html>

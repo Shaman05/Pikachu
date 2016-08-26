@@ -1,0 +1,8 @@
+
+[2016-07-29 10:47:06]Http Server running at http://localhost:9091/
+[2016-07-29 10:52:26]Http Server running at http://localhost:9091/
+[2016-07-29 10:52:48]GET /
+[2016-07-29 10:52:48]GET /favicon.ico
+[2016-07-29 10:52:48]404 Not Found: /favicon.ico
+[2016-07-29 10:52:50]GET /config.js
+[2016-07-29 10:53:00]GET /config.js

@@ -1,0 +1,156 @@
+
+[2016-07-25 10:51:27]Http Server running at http://localhost:9090/
+[2016-07-25 10:51:55]GET /
+[2016-07-25 10:51:55]GET /favicon.ico
+[2016-07-25 10:51:55]404 Not Found: /favicon.ico
+[2016-07-25 10:51:56]GET /html/
+[2016-07-25 10:52:30]GET /html/index.html
+[2016-07-25 10:52:30]GET /html/css/main.bundle.css?a774466c6e100e414e05
+[2016-07-25 10:52:30]GET /html/js/vendor.bundle.js?a774466c6e100e414e05
+[2016-07-25 10:52:30]GET /html/js/main.bundle.js?a774466c6e100e414e05
+[2016-07-25 10:52:30]GET /html/datasource.xml
+[2016-07-25 10:52:35]GET /index.html
+[2016-07-25 10:52:35]404 Not Found: /index.html
+[2016-07-25 10:52:41]GET /index.html
+[2016-07-25 10:52:41]404 Not Found: /index.html
+[2016-07-25 10:52:43]GET /index.html
+[2016-07-25 10:52:43]404 Not Found: /index.html
+[2016-07-25 10:52:44]GET /index.html
+[2016-07-25 10:52:44]404 Not Found: /index.html
+[2016-07-25 10:52:44]GET /index.html
+[2016-07-25 10:52:44]404 Not Found: /index.html
+[2016-07-25 10:52:44]GET /index.html
+[2016-07-25 10:52:44]404 Not Found: /index.html
+[2016-07-25 10:52:44]GET /index.html
+[2016-07-25 10:52:44]404 Not Found: /index.html
+[2016-07-25 10:52:47]GET /
+[2016-07-25 11:01:38]Http Server running at http://localhost:9090/
+[2016-07-25 11:01:47]GET /
+[2016-07-25 11:01:47]GET /
+[2016-07-25 11:01:47]GET /
+[2016-07-25 11:01:48]GET /html/
+[2016-07-25 11:09:43]Http Server running at http://localhost:9090/
+[2016-07-25 11:09:46]GET /html/
+[2016-07-25 11:09:47]GET /html/index.html
+[2016-07-25 11:09:47]GET /html/js/vendor.bundle.js?a774466c6e100e414e05
+[2016-07-25 11:09:47]GET /html/css/main.bundle.css?a774466c6e100e414e05
+[2016-07-25 11:09:47]GET /html/js/main.bundle.js?a774466c6e100e414e05
+[2016-07-25 11:09:47]GET /html/datasource.xml
+[2016-07-25 11:17:30]Http Server running at http://localhost:9090/
+[2016-07-25 11:17:35]GET /html/index.html
+[2016-07-25 11:17:35]GET /html/css/main.bundle.css?a774466c6e100e414e05
+[2016-07-25 11:17:35]GET /html/js/vendor.bundle.js?a774466c6e100e414e05
+[2016-07-25 11:17:35]GET /html/js/main.bundle.js?a774466c6e100e414e05
+[2016-07-25 11:17:35]GET /html/datasource.xml
+[2016-07-25 11:17:38]GET /
+[2016-07-25 11:18:08]GET /html/
+[2016-07-25 13:17:38]Http Server running at http://localhost:9090/
+[2016-07-25 13:21:29]Http Server running at http://localhost:9090/
+[2016-07-25 13:22:09]Http Server running at http://localhost:9090/
+[2016-07-25 13:23:03]Http Server running at http://localhost:9090/
+[2016-07-25 13:26:19]Http Server running at http://localhost:9090/
+[2016-07-25 13:34:44]GET /html/js/
+[2016-07-25 13:39:52]Http Server running at http://localhost:9090/
+[2016-07-25 13:41:46]Http Server running at http://localhost:8081/
+[2016-07-25 13:45:37]Http Server running at http://localhost:9090/
+[2016-07-25 13:45:41]Http Server running at http://localhost:8081/
+[2016-07-25 13:47:44]Http Server running at http://localhost:9090/
+[2016-07-25 13:47:47]Http Server running at http://localhost:8081/
+[2016-07-25 14:31:03]Http Server running at http://localhost:9090/
+[2016-07-25 14:31:05]GET /
+[2016-07-25 14:31:49]GET /
+[2016-07-25 14:31:59]GET /
+[2016-07-25 14:33:19]Http Server running at http://localhost:9090/
+[2016-07-25 14:33:21]GET /
+[2016-07-25 14:33:24]GET /
+[2016-07-25 14:35:10]Http Server running at http://localhost:9090/
+[2016-07-25 14:35:16]GET /
+[2016-07-25 14:42:20]Http Server running at http://localhost:8081/
+[2016-07-25 14:42:46]GET /
+[2016-07-25 14:42:46]GET /
+[2016-07-25 14:42:46]GET /favicon.ico
+[2016-07-25 14:42:46]404 Not Found: /favicon.ico
+[2016-07-25 14:42:54]GET /
+[2016-07-25 15:00:00]Http Server running at http://localhost:9090/
+[2016-07-25 15:13:02]Http Server running at http://localhost:9090/
+[2016-07-25 15:13:05]GET /
+[2016-07-25 15:13:08]GET /event/
+[2016-07-25 15:13:09]GET /event/html/
+[2016-07-25 15:13:10]GET /event/html/20160630/
+[2016-07-25 15:13:11]GET /event/html/20160630/index.html
+[2016-07-25 15:13:11]GET /event/html/%7B%7B%7B20160630.css%7D%7D%7D
+[2016-07-25 15:13:11]GET /event/resource/img/20160630/btn_l.png
+[2016-07-25 15:13:11]404 Not Found: /event/html/{{{20160630.css}}}
+[2016-07-25 15:13:11]GET /public/source/js/lib/Swiper-master/js/swiper.min.js
+[2016-07-25 15:13:11]GET /event/resource/img/20160630/btn_r.png
+[2016-07-25 15:13:11]GET /event/resource/img/20160630/s1-1.png
+[2016-07-25 15:13:11]GET /event/resource/img/20160630/s1-2.png
+[2016-07-25 15:13:11]GET /event/resource/img/20160630/s1-3.png
+[2016-07-25 15:13:11]GET /event/resource/img/20160630/s2-3.png
+[2016-07-25 15:13:11]GET /event/resource/img/20160630/s4-3.png
+[2016-07-25 15:13:11]GET /event/resource/img/20160630/arrow.png
+[2016-07-25 15:13:11]GET /event/resource/img/20160630/s4-2.png
+[2016-07-25 15:13:11]GET /event/resource/img/20160630/s3-3.png
+[2016-07-25 15:13:11]GET /event/resource/img/20160630/s3-2.png
+[2016-07-25 15:13:11]GET /event/resource/img/20160630/s2-2.png
+[2016-07-25 15:13:13]GET /event/html/%7B%7B%7B20160630.css%7D%7D%7D
+[2016-07-25 15:13:13]404 Not Found: /event/html/{{{20160630.css}}}
+[2016-07-25 15:13:14]GET /public/source/js/lib/Swiper-master/js/maps/swiper.min.js.map
+[2016-07-25 15:13:15]GET /event/html/20160630/index.html
+[2016-07-25 15:13:15]GET /event/html/%7B%7B%7B20160630.css%7D%7D%7D
+[2016-07-25 15:13:15]404 Not Found: /event/html/{{{20160630.css}}}
+[2016-07-25 15:13:15]GET /event/resource/img/20160630/btn_l.png
+[2016-07-25 15:13:15]GET /public/source/js/lib/Swiper-master/js/swiper.min.js
+[2016-07-25 15:13:15]GET /event/resource/img/20160630/btn_r.png
+[2016-07-25 15:13:15]GET /event/resource/img/20160630/s1-2.png
+[2016-07-25 15:13:15]GET /event/resource/img/20160630/s1-1.png
+[2016-07-25 15:13:15]GET /event/resource/img/20160630/s1-3.png
+[2016-07-25 15:13:15]GET /event/resource/img/20160630/s2-3.png
+[2016-07-25 15:13:15]GET /event/resource/img/20160630/s2-2.png
+[2016-07-25 15:13:15]GET /event/resource/img/20160630/arrow.png
+[2016-07-25 15:13:15]GET /event/resource/img/20160630/s3-2.png
+[2016-07-25 15:13:15]GET /event/resource/img/20160630/s3-3.png
+[2016-07-25 15:13:15]GET /public/source/js/lib/Swiper-master/js/maps/swiper.min.js.map
+[2016-07-25 15:13:15]GET /event/resource/img/20160630/s4-2.png
+[2016-07-25 15:13:15]GET /event/resource/img/20160630/s4-3.png
+[2016-07-25 15:13:21]GET /public/source/js/lib/Swiper-master/js/maps/swiper.min.js.map
+[2016-07-25 15:13:25]GET /
+[2016-07-25 15:13:26]GET /demo/
+[2016-07-25 15:13:28]GET /dribblet/
+[2016-07-25 15:13:29]GET /dribblet/html/
+[2016-07-25 15:13:31]GET /dribblet/html/appraisal.html
+[2016-07-25 15:13:31]GET /dribblet/html/%7B%7B%7Bmain.css%7D%7D%7D
+[2016-07-25 15:13:31]GET /dribblet/source/js/dribblet.js
+[2016-07-25 15:13:31]404 Not Found: /dribblet/html/{{{main.css}}}
+[2016-07-25 15:13:32]GET /dribblet/html/appraisal.html
+[2016-07-25 15:13:32]GET /dribblet/html/%7B%7B%7Bmain.css%7D%7D%7D
+[2016-07-25 15:13:32]GET /dribblet/source/js/dribblet.js
+[2016-07-25 15:13:32]404 Not Found: /dribblet/html/{{{main.css}}}
+[2016-07-25 15:13:41]GET /dribblet/html/
+[2016-07-25 15:13:41]GET /dribblet/html/
+[2016-07-25 16:43:14]Http Server running at http://localhost:0/
+[2016-07-25 16:45:19]Http Server running at http://localhost:0/
+[2016-07-25 16:47:33]Http Server running at http://localhost:0/
+[2016-07-25 16:50:55]Http Server running at http://localhost:0/
+[2016-07-25 16:51:01]Http Server running at http://localhost:9090/
+[2016-07-25 16:51:03]GET /
+[2016-07-25 17:37:53]Http Server running at http://localhost:9090/
+[2016-07-25 17:37:53]GET /
+[2016-07-25 17:37:56]GET /
+[2016-07-25 17:37:57]GET /docs/
+[2016-07-25 17:37:58]GET /docs/components.html
+[2016-07-25 17:37:58]GET /dist/css/vendor/bootstrap/css/bootstrap.min.css
+[2016-07-25 17:37:58]GET /dist/css/flat-ui.min.css
+[2016-07-25 17:37:58]GET /docs/assets/css/docs.css
+[2016-07-25 17:37:58]GET /docs/assets/img/video/poster.jpg
+[2016-07-25 17:37:58]GET /dist/js/vendor/jquery.min.js
+[2016-07-25 17:37:58]GET /dist/js/vendor/video.js
+[2016-07-25 17:37:58]GET /dist/js/flat-ui.min.js
+[2016-07-25 17:37:58]GET /docs/assets/js/prettify.js
+[2016-07-25 17:37:58]GET /docs/assets/js/application.js
+[2016-07-25 17:37:58]GET /dist/fonts/lato/lato-regular.woff
+[2016-07-25 17:37:58]GET /dist/fonts/lato/lato-bold.woff
+[2016-07-25 17:37:58]GET /dist/fonts/glyphicons/flat-ui-icons-regular.woff
+[2016-07-25 17:37:58]GET /dist/fonts/lato/lato-light.woff
+[2016-07-25 17:37:59]GET /img/favicon.ico
+[2016-07-25 18:28:28]Http Server running at http://localhost:9090/

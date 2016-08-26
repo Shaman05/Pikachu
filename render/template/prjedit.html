@@ -1,0 +1,39 @@
+<div class="prj-edit">
+    <form role="form">
+        <legend>编辑项目信息：</legend>
+        <button type="button" class="btn btn-primary btn-sm rlink-btn" v-on:click="pathTo('/prjList')">项目列表</button>
+        <div class="prj-add-msg">
+            <p>添加一个指定目录作为项目的根目录，这将创建一个以该目录为站点的虚拟目录，启动项目后可在本地 localhost+端口号 访问。</p>
+        </div>
+        <div class="form-group">
+            <label for="prjName">项目名称</label>
+            <input v-model="name" type="text" class="form-control" v-bind:class="{'inputError': rename}" v-on:blur="check()" id="prjName" size="30" placeholder="必填项，输入项目名称">
+        </div>
+        <div class="form-group">
+            <label for="prjPort">端口号</label>
+            <input v-model="port" type="number" class="form-control" v-bind:class="{'inputError': unablePort}" v-on:blur="check()" id="prjPort" size="40" placeholder="必填项，输入0~65536之间的端口号">
+            <span class="fui-question-circle icon-tip"><em>建议使用动态端口: 1024~65535 之间的端口号</em></span>
+        </div>
+        <div class="form-group">
+            <label>项目目录</label>
+            <button type="button" class="btn btn-info btn-sm" v-on:click="selectPath()">选择项目目录</button>
+            <span v-if="!!path" class="path path-dir" title="{{path}}" v-on:click="openDir(path)">{{path}}</span>
+        </div>
+        <div class="form-group" v-if="showAdvanced">
+            <label>模板规则 <span class="fui-question-circle icon-tip"><em>添加一个自定义的模板规则模块（需为nodejs模块，已有规则和模块接口示例参考：https://github.com/Shaman05/xxx/xx.js）后，自定义的模板规则将对该项目的模板生效。</em></span></label>
+            <button type="button" class="btn btn-info btn-sm" v-on:click="selectConfigFile('js')">选择自定义模块</button>
+            <span v-if="configTpl" class="path path-dir" title="{{configTpl}}">{{configTpl}}</span>
+        </div>
+        <div class="form-group" v-if="showAdvanced">
+            <label>反向代理 <span class="fui-question-circle icon-tip"><em>反向代理允许你将本地指定的某一类（反向代理路径）请求替换成某一远程机器（反向代理主机）上对应的请求，配置反向代理可以不需任何配置，即可轻松跨域调试。</em></span></label>
+            <input v-model="proxyHost" type="text" class="form-control" size="50" placeholder="反向代理host地址,如：http://10.10.82.85">
+            <input v-model="proxyPath" type="text" class="form-control" size="30" placeholder="需要反向代理的路径,如：/api">
+        </div>
+        <div class="form-group">
+            <a href="javascript:" v-on:click="toggleAdvance()">{{showAdvanced ? "隐藏高级设置" : "高级设置"}}</a>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn" v-bind:class="{'btn-success': canAdd, 'btn-default': !canAdd}" v-on:click="submit()">确认添加</button>
+        </div>
+    </form>
+</div>

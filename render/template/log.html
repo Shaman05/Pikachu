@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pikachu - Log</title>
+    <link rel="stylesheet" href="./render/css/flat-ui.min.css">
+    <link rel="stylesheet" href="./render/css/main.css">
+</head>
+<body id="app">
+<div class="loading-mask" v-if="appLoading">
+    <span class="fui-gear"></span>
+</div>
+<div class="title-bar">
+    <span class="logo"></span>
+    <span class="app-title-name">日志查看（{{logFile}}）</span>
+    <span class="fui-cross-circle fr" title="关闭" v-on:click="closeWin()"></span>
+    <span class="fui-eye fr" title="刷新" v-on:click="reloadWin()"></span>
+</div>
+<div class="app-wrap log-wrap" v-bind:class="{'fullScreen': isFullScreen}">
+    {{{content}}}
+</div>
+<script src="./render/js/vue.min.js"></script>
+<script src="./render/js/log.js"></script>
+</body>
+</html>

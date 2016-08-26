@@ -1,0 +1,18 @@
+//定义字体颜色
+$color: #fef1ab;
+
+body{
+  /*body height*/
+  height: 100%;
+  color: $color;
+  font-size: 12px;
+  p{
+    line-height: 2rem;
+    span{
+      color: red;
+    }
+  }
+  div{
+    background: white;
+  }
+}

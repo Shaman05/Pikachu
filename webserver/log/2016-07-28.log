@@ -1,0 +1,61 @@
+
+[2016-07-28 15:11:36]Http Server running at http://localhost:1234/
+[2016-07-28 15:11:38]GET /
+[2016-07-28 15:11:38]GET /favicon.ico
+[2016-07-28 15:11:38]404 Not Found: /favicon.ico
+[2016-07-28 15:11:40]GET /index.html
+[2016-07-28 15:11:40]GET /dist/css/vendor/bootstrap/css/bootstrap.min.css
+[2016-07-28 15:11:40]GET /dist/js/vendor/video.js
+[2016-07-28 15:11:40]GET /dist/css/flat-ui.css
+[2016-07-28 15:11:40]GET /docs/assets/css/demo.css
+[2016-07-28 15:11:40]GET /dist/js/vendor/jquery.min.js
+[2016-07-28 15:11:40]GET /dist/js/flat-ui.min.js
+[2016-07-28 15:11:40]GET /docs/assets/js/application.js
+[2016-07-28 15:11:40]GET /docs/assets/img/example-image.jpg
+[2016-07-28 15:11:40]GET /img/icons/svg/toilet-paper.svg
+[2016-07-28 15:11:40]GET /img/icons/svg/gift-box.svg
+[2016-07-28 15:11:40]GET /img/icons/svg/pencils.svg
+[2016-07-28 15:11:40]GET /dist/fonts/lato/lato-regular.woff
+[2016-07-28 15:11:40]GET /dist/fonts/lato/lato-bold.woff
+[2016-07-28 15:11:40]GET /dist/fonts/glyphicons/flat-ui-icons-regular.woff
+[2016-07-28 15:11:40]GET /dist/fonts/lato/lato-bolditalic.woff
+[2016-07-28 15:11:41]GET /dist/fonts/lato/lato-italic.woff
+[2016-07-28 15:11:41]GET /dist/fonts/lato/lato-light.woff
+[2016-07-28 15:11:41]GET /img/icons/svg/clipboard.svg
+[2016-07-28 15:11:41]GET /img/icons/svg/retina.svg
+[2016-07-28 15:11:41]GET /img/icons/svg/compas.svg
+[2016-07-28 15:11:41]GET /img/icons/svg/map.svg
+[2016-07-28 15:11:41]GET /img/icons/svg/chat.svg
+[2016-07-28 15:11:41]GET /img/icons/svg/mail.svg
+[2016-07-28 15:11:41]GET /img/icons/svg/book.svg
+[2016-07-28 15:11:41]GET /img/icons/svg/calendar.svg
+[2016-07-28 15:11:41]GET /img/icons/svg/paper-bag.svg
+[2016-07-28 15:11:41]GET /img/icons/svg/clocks.svg
+[2016-07-28 15:11:41]GET /docs/assets/img/demo/logo-mask.png
+[2016-07-28 15:11:41]GET /img/icons/svg/loop.svg
+[2016-07-28 15:11:41]GET /docs/assets/img/video/poster.jpg
+[2016-07-28 15:11:41]GET /img/icons/svg/ribbon.svg
+[2016-07-28 15:11:41]GET /img/login/icon.png
+[2016-07-28 15:11:41]GET /docs/assets/img/demo/browser-pic-1.jpg
+[2016-07-28 15:11:41]GET /docs/assets/img/demo/browser-pic-2.jpg
+[2016-07-28 15:11:41]GET /docs/assets/img/demo/browser-pic-3.jpg
+[2016-07-28 15:11:41]GET /docs/assets/img/demo/browser-pic-4.jpg
+[2016-07-28 15:11:41]GET /docs/assets/img/demo/browser-pic-5.jpg
+[2016-07-28 15:11:41]GET /docs/assets/img/demo/browser-pic-6.jpg
+[2016-07-28 15:11:41]GET /docs/assets/img/demo/html-icon.png
+[2016-07-28 15:11:41]GET /docs/assets/img/footer/logo.png
+[2016-07-28 15:11:41]GET /dist/img/login/imac.png
+[2016-07-28 15:11:41]GET /docs/assets/img/demo/browser.png
+[2016-07-28 15:11:41]GET /docs/assets/img/demo/browser-author.jpg
+[2016-07-28 15:12:01]GET /img/favicon.ico
+[2016-07-28 17:11:02]Http Server running at http://localhost:1234/
+[2016-07-28 17:45:04]Http Server running at http://localhost:9091/
+[2016-07-28 17:49:58]Http Server running at http://localhost:9091/
+[2016-07-28 17:50:01]GET /
+[2016-07-28 17:50:01]GET /favicon.ico
+[2016-07-28 17:50:01]404 Not Found: /favicon.ico
+[2016-07-28 17:50:04]GET /offFund/
+[2016-07-28 17:50:05]GET /offFund/html/
+[2016-07-28 17:50:06]GET /offFund/html/convert.html
+[2016-07-28 17:50:06]GET /offFund/html/%7B%7B%7Bstyle.css%7D%7D%7D
+[2016-07-28 17:50:06]404 Not Found: /offFund/html/{{{style.css}}}

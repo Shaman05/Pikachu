@@ -1,0 +1,85 @@
+
+[2016-07-22 15:26:35]Http Server running at http://localhost:9090/
+[2016-07-22 15:26:43]GET /
+[2016-07-22 15:26:43]GET /favicon.ico
+[2016-07-22 15:26:43]404 Not Found: /favicon.ico
+[2016-07-22 15:26:48]GET /html/
+[2016-07-22 15:26:49]GET /html/api20160602.xml
+[2016-07-22 15:26:55]GET /html/test.xml
+[2016-07-22 15:27:02]GET /html/index.html
+[2016-07-22 15:27:03]GET /html/css/main.bundle.css?a774466c6e100e414e05
+[2016-07-22 15:27:03]GET /html/js/vendor.bundle.js?a774466c6e100e414e05
+[2016-07-22 15:27:03]GET /html/js/main.bundle.js?a774466c6e100e414e05
+[2016-07-22 15:27:03]GET /html/js/main.bundle.js?a774466c6e100e414e05
+[2016-07-22 15:27:03]GET /html/datasource.xml
+[2016-07-22 15:27:17]GET /html/font/
+[2016-07-22 15:27:20]GET /html/css/
+[2016-07-22 15:27:21]GET /html/css/main.bundle.css
+[2016-07-22 15:27:25]GET /dist/
+[2016-07-22 15:27:27]GET /dist/index.html
+[2016-07-22 15:27:27]GET /dist/emace/emace.css
+[2016-07-22 15:27:27]GET /dist/emace/lib/ace/ace.js
+[2016-07-22 15:27:27]GET /dist/emace/lib/clipboard.js
+[2016-07-22 15:27:27]GET /css/main.bundle.css?8e0367999bf0a579ecfd
+[2016-07-22 15:27:27]GET /dist/emace/emace.js
+[2016-07-22 15:27:27]GET /js/vendor.bundle.js?8e0367999bf0a579ecfd
+[2016-07-22 15:27:27]404 Not Found: /css/main.bundle.css
+[2016-07-22 15:27:27]404 Not Found: /js/vendor.bundle.js
+[2016-07-22 15:27:27]GET /js/main.bundle.js?8e0367999bf0a579ecfd
+[2016-07-22 15:27:27]404 Not Found: /js/main.bundle.js
+[2016-07-22 15:27:31]GET /dist/emace/emace.css
+[2016-07-22 15:27:31]GET /css/main.bundle.css?8e0367999bf0a579ecfd
+[2016-07-22 15:27:31]404 Not Found: /css/main.bundle.css
+[2016-07-22 15:27:42]GET /dist/css/
+[2016-07-22 15:27:45]GET /dist/index.html
+[2016-07-22 15:27:45]GET /dist/emace/emace.css
+[2016-07-22 15:27:45]GET /dist/emace/lib/ace/ace.js
+[2016-07-22 15:27:45]GET /dist/emace/lib/clipboard.js
+[2016-07-22 15:27:45]GET /dist/emace/emace.js
+[2016-07-22 15:27:45]GET /css/main.bundle.css?8e0367999bf0a579ecfd
+[2016-07-22 15:27:45]GET /js/vendor.bundle.js?8e0367999bf0a579ecfd
+[2016-07-22 15:27:45]404 Not Found: /css/main.bundle.css
+[2016-07-22 15:27:45]404 Not Found: /js/vendor.bundle.js
+[2016-07-22 15:27:45]GET /js/main.bundle.js?8e0367999bf0a579ecfd
+[2016-07-22 15:27:45]404 Not Found: /js/main.bundle.js
+[2016-07-22 15:27:47]GET /dist/emace/emace.css
+[2016-07-22 15:27:47]GET /css/main.bundle.css?8e0367999bf0a579ecfd
+[2016-07-22 15:27:47]404 Not Found: /css/main.bundle.css
+[2016-07-22 15:27:52]GET /dist/index.html
+[2016-07-22 15:27:52]GET /dist/emace/emace.css
+[2016-07-22 15:27:52]GET /dist/emace/lib/ace/ace.js
+[2016-07-22 15:27:52]GET /dist/emace/lib/clipboard.js
+[2016-07-22 15:27:52]GET /dist/emace/emace.js
+[2016-07-22 15:27:52]GET /css/main.bundle.css?8e0367999bf0a579ecfd
+[2016-07-22 15:27:52]GET /js/vendor.bundle.js?8e0367999bf0a579ecfd
+[2016-07-22 15:27:52]404 Not Found: /css/main.bundle.css
+[2016-07-22 15:27:52]404 Not Found: /js/vendor.bundle.js
+[2016-07-22 15:27:52]GET /js/main.bundle.js?8e0367999bf0a579ecfd
+[2016-07-22 15:27:52]404 Not Found: /js/main.bundle.js
+[2016-07-22 15:28:01]GET /dist/index.html
+[2016-07-22 15:28:01]GET /dist/emace/emace.css
+[2016-07-22 15:28:01]GET /dist/emace/lib/ace/ace.js
+[2016-07-22 15:28:01]GET /dist/emace/lib/clipboard.js
+[2016-07-22 15:28:01]GET /dist/emace/emace.js
+[2016-07-22 15:28:01]GET /css/main.bundle.css?8e0367999bf0a579ecfd
+[2016-07-22 15:28:01]404 Not Found: /css/main.bundle.css
+[2016-07-22 15:28:01]GET /js/vendor.bundle.js?8e0367999bf0a579ecfd
+[2016-07-22 15:28:01]404 Not Found: /js/vendor.bundle.js
+[2016-07-22 15:28:01]GET /js/main.bundle.js?8e0367999bf0a579ecfd
+[2016-07-22 15:28:01]404 Not Found: /js/main.bundle.js
+[2016-07-22 15:28:06]GET /server.js
+[2016-07-22 15:30:41]Http Server running at http://localhost:9090/
+[2016-07-22 15:31:11]Http Server running at http://localhost:9090/
+[2016-07-22 15:50:37]Http Server running at http://localhost:9090/
+[2016-07-22 15:50:57]GET /
+[2016-07-22 15:50:59]GET /server.js
+[2016-07-22 16:39:06]Http Server running at http://localhost:9090/
+[2016-07-22 16:39:10]GET /
+[2016-07-22 16:45:20]GET /node_modules/
+[2016-07-22 16:45:23]GET /node_modules/align-text/
+[2016-07-22 16:45:26]GET /node_modules/align-text/index.js
+[2016-07-22 16:45:35]GET /html/
+[2016-07-22 16:45:41]GET /server.js
+[2016-07-22 16:46:58]Http Server running at http://localhost:9090/
+[2016-07-22 16:47:22]Http Server running at http://localhost:9090/
+[2016-07-22 16:48:10]Http Server running at http://localhost:9090/

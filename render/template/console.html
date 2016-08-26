@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pikachu - Console</title>
+    <link rel="stylesheet" href="./render/css/flat-ui.min.css">
+    <link rel="stylesheet" href="./render/css/main.css">
+</head>
+<body id="app">
+<div class="title-bar">
+    <span class="logo"></span>
+    <span class="app-title-name">控制台 - Console</span>
+    <span class="fui-cross-circle fr" title="关闭" v-on:click="closeWin()"></span>
+</div>
+<div id="consoleWrap" class="app-wrap console-wrap" v-on:contextmenu="popMenu($event)">
+    <p class="versionInfo">{{versionConsole}}</p>
+    <div class="console-content" id="console" v-bind:class="{'f12': fontSize==12, 'f13': fontSize==13, 'f14': fontSize==14, 'f15': fontSize==15, 'f16': fontSize==16}">
+        {{{content}}}
+    </div>
+</div>
+<script src="./render/js/vue.min.js"></script>
+<script>
+    (function () {
+        var config = require('./config/render.conf');
+        window.consoleApp = require('./render/js/console')(config);
+    }());
+</script>
+</body>
+</html>

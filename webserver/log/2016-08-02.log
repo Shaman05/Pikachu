@@ -1,0 +1,89 @@
+
+[2016-08-02 15:15:11]Http Server running at http://localhost:9091/
+[2016-08-02 15:15:24]Http Server running at http://localhost:1234/
+[2016-08-02 15:16:43]Http Server running at http://localhost:1234/
+[2016-08-02 15:17:11]Http Server running at http://localhost:1234/
+[2016-08-02 15:18:58]Http Server running at http://localhost:1234/
+[2016-08-02 15:19:11]Http Server running at http://localhost:9091/
+[2016-08-02 15:19:17]GET /
+[2016-08-02 15:19:17]GET /favicon.ico
+[2016-08-02 15:19:17]404 Not Found: /favicon.ico
+[2016-08-02 15:19:20]GET /freeAgent/
+[2016-08-02 15:19:21]GET /freeAgent/html/
+[2016-08-02 15:50:37]Http Server running at http://localhost:1234/
+[2016-08-02 15:50:39]GET /
+[2016-08-02 15:50:40]GET /favicon.ico
+[2016-08-02 15:50:40]404 Not Found: /favicon.ico
+[2016-08-02 15:50:41]GET /index.html
+[2016-08-02 15:50:41]GET /dist/css/vendor/bootstrap/css/bootstrap.min.css
+[2016-08-02 15:50:41]GET /dist/css/flat-ui.css
+[2016-08-02 15:50:41]GET /docs/assets/css/demo.css
+[2016-08-02 15:50:41]GET /docs/assets/img/example-image.jpg
+[2016-08-02 15:50:41]GET /dist/js/vendor/jquery.min.js
+[2016-08-02 15:50:41]GET /dist/js/vendor/video.js
+[2016-08-02 15:50:41]GET /dist/js/flat-ui.min.js
+[2016-08-02 15:50:41]GET /docs/assets/js/application.js
+[2016-08-02 15:50:41]GET /img/icons/svg/toilet-paper.svg
+[2016-08-02 15:50:41]GET /img/icons/svg/gift-box.svg
+[2016-08-02 15:50:41]GET /img/icons/svg/pencils.svg
+[2016-08-02 15:50:42]GET /dist/fonts/lato/lato-regular.woff
+[2016-08-02 15:50:42]GET /dist/fonts/lato/lato-bold.woff
+[2016-08-02 15:50:42]GET /dist/fonts/glyphicons/flat-ui-icons-regular.woff
+[2016-08-02 15:50:42]GET /dist/fonts/lato/lato-bolditalic.woff
+[2016-08-02 15:50:42]GET /dist/fonts/lato/lato-italic.woff
+[2016-08-02 15:50:42]GET /dist/fonts/lato/lato-light.woff
+[2016-08-02 15:50:42]GET /docs/assets/img/demo/logo-mask.png
+[2016-08-02 15:50:42]GET /img/icons/svg/clipboard.svg
+[2016-08-02 15:50:42]GET /img/icons/svg/retina.svg
+[2016-08-02 15:50:42]GET /img/icons/svg/compas.svg
+[2016-08-02 15:50:42]GET /img/icons/svg/map.svg
+[2016-08-02 15:50:42]GET /img/icons/svg/chat.svg
+[2016-08-02 15:50:42]GET /img/icons/svg/mail.svg
+[2016-08-02 15:50:42]GET /img/icons/svg/book.svg
+[2016-08-02 15:50:42]GET /img/icons/svg/calendar.svg
+[2016-08-02 15:50:42]GET /img/icons/svg/paper-bag.svg
+[2016-08-02 15:50:42]GET /img/icons/svg/clocks.svg
+[2016-08-02 15:50:42]GET /img/icons/svg/loop.svg
+[2016-08-02 15:50:42]GET /docs/assets/img/video/poster.jpg
+[2016-08-02 15:50:42]GET /img/icons/svg/ribbon.svg
+[2016-08-02 15:50:42]GET /img/login/icon.png
+[2016-08-02 15:50:42]GET /docs/assets/img/demo/browser-pic-1.jpg
+[2016-08-02 15:50:42]GET /docs/assets/img/demo/browser-pic-2.jpg
+[2016-08-02 15:50:42]GET /docs/assets/img/demo/browser-pic-3.jpg
+[2016-08-02 15:50:42]GET /docs/assets/img/demo/browser-pic-4.jpg
+[2016-08-02 15:50:42]GET /docs/assets/img/demo/browser-pic-5.jpg
+[2016-08-02 15:50:42]GET /docs/assets/img/demo/browser-pic-6.jpg
+[2016-08-02 15:50:42]GET /docs/assets/img/demo/html-icon.png
+[2016-08-02 15:50:42]GET /docs/assets/img/footer/logo.png
+[2016-08-02 15:50:42]GET /dist/img/login/imac.png
+[2016-08-02 15:50:42]GET /docs/assets/img/demo/browser.png
+[2016-08-02 15:50:42]GET /docs/assets/img/demo/browser-author.jpg
+[2016-08-02 17:03:03]Http Server running at http://localhost:1234/
+[2016-08-02 17:03:03]GET /docs/
+[2016-08-02 17:03:07]GET /docs/examples/
+[2016-08-02 17:03:08]GET /docs/examples/buttons.html
+[2016-08-02 17:03:08]GET /dist/css/vendor/bootstrap/css/bootstrap.min.css
+[2016-08-02 17:03:08]GET /dist/css/flat-ui.css
+[2016-08-02 17:03:08]GET /dist/fonts/lato/lato-bold.woff
+[2016-08-02 17:03:08]GET /dist/fonts/lato/lato-regular.woff
+[2016-08-02 17:03:08]GET /dist/fonts/glyphicons/flat-ui-icons-regular.woff
+[2016-08-02 17:03:08]GET /dist/img/favicon.ico
+[2016-08-02 17:03:16]GET /dist/css/vendor/bootstrap/css/bootstrap.min.css
+[2016-08-02 17:03:16]GET /dist/css/flat-ui.css
+[2016-08-02 17:03:16]GET /dist/css/flat-ui.css.map
+[2016-08-02 17:06:04]Http Server running at http://localhost:1234/
+[2016-08-02 17:06:04]GET /docs/
+[2016-08-02 17:06:06]GET /docs/examples/
+[2016-08-02 17:06:08]GET /docs/examples/forms.html
+[2016-08-02 17:06:08]GET /dist/css/vendor/bootstrap/css/bootstrap.min.css
+[2016-08-02 17:06:08]GET /dist/css/flat-ui.css
+[2016-08-02 17:06:08]GET /dist/js/vendor/jquery.min.js
+[2016-08-02 17:06:08]GET /dist/js/flat-ui.min.js
+[2016-08-02 17:06:08]GET /docs/assets/js/application.js
+[2016-08-02 17:06:08]GET /dist/css/flat-ui.css.map
+[2016-08-02 17:06:08]GET /dist/fonts/lato/lato-regular.woff
+[2016-08-02 17:06:08]GET /dist/fonts/lato/lato-bold.woff
+[2016-08-02 17:06:08]GET /dist/fonts/glyphicons/flat-ui-icons-regular.woff
+[2016-08-02 17:06:08]GET /dist/js/vendor/jquery.min.map
+[2016-08-02 17:35:34]Http Server running at http://localhost:9091/
+[2016-08-02 17:36:01]Http Server running at http://localhost:9091/

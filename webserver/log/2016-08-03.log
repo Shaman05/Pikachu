@@ -1,0 +1,319 @@
+
+[2016-08-03 13:55:07]Http Server running at http://localhost:9091/
+[2016-08-03 15:09:25]Http Server running at http://localhost:1234/
+[2016-08-03 15:11:21]Http Server running at http://localhost:1234/
+[2016-08-03 15:12:24]Http Server running at http://localhost:1234/
+[2016-08-03 15:13:12]Http Server running at http://localhost:1234/
+[2016-08-03 15:13:21]Http Server running at http://localhost:1234/
+[2016-08-03 15:13:54]GET /
+[2016-08-03 15:13:54]GET /favicon.ico
+[2016-08-03 15:13:54]404 Not Found: /favicon.ico
+[2016-08-03 17:32:34]Http Server running at http://localhost:9099/
+[2016-08-03 17:32:38]GET /
+[2016-08-03 17:32:38]GET /favicon.ico
+[2016-08-03 17:32:38]404 Not Found: /favicon.ico
+[2016-08-03 17:32:42]GET /
+[2016-08-03 17:32:51]GET /site/
+[2016-08-03 17:32:55]GET /site/index.test.html
+[2016-08-03 17:32:55]GET /site/lib/ionic/css/ionic.min.css
+[2016-08-03 17:32:55]404 Not Found: /site/lib/ionic/css/ionic.min.css
+[2016-08-03 17:32:56]GET /site/lib/angular-notify/dist/angular-notify.css
+[2016-08-03 17:32:56]GET /site/css/common.css
+[2016-08-03 17:32:56]GET /site/js/config.local.js
+[2016-08-03 17:32:56]GET /site/lib/ionic/js/ionic.bundle.min.js
+[2016-08-03 17:32:56]404 Not Found: /site/lib/angular-notify/dist/angular-notify.css
+[2016-08-03 17:32:56]404 Not Found: /site/js/config.local.js
+[2016-08-03 17:32:56]GET /site/lib/photoswipe/dist/photoswipe.min.js
+[2016-08-03 17:32:56]GET /site/lib/photoswipe/dist/photoswipe-ui-default.min.js
+[2016-08-03 17:32:56]404 Not Found: /site/lib/ionic/js/ionic.bundle.min.js
+[2016-08-03 17:32:56]404 Not Found: /site/lib/photoswipe/dist/photoswipe.min.js
+[2016-08-03 17:32:56]404 Not Found: /site/lib/photoswipe/dist/photoswipe-ui-default.min.js
+[2016-08-03 17:32:56]GET /site/js/mockData.js
+[2016-08-03 17:32:56]GET /site/lib/mockjs/dist/mock-min.js
+[2016-08-03 17:32:56]GET /site/js/mock.angular.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/mockData.js
+[2016-08-03 17:32:56]404 Not Found: /site/lib/mockjs/dist/mock-min.js
+[2016-08-03 17:32:56]GET /site/lib/ng-file-upload/ng-file-upload.min.js
+[2016-08-03 17:32:56]GET /site/lib/angular-notify/dist/angular-notify.min.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/mock.angular.js
+[2016-08-03 17:32:56]404 Not Found: /site/lib/ng-file-upload/ng-file-upload.min.js
+[2016-08-03 17:32:56]404 Not Found: /site/lib/angular-notify/dist/angular-notify.min.js
+[2016-08-03 17:32:56]GET /site/lib/angular-cookies/angular-cookies.min.js
+[2016-08-03 17:32:56]GET /site/js/util.js
+[2016-08-03 17:32:56]404 Not Found: /site/lib/angular-cookies/angular-cookies.min.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/util.js
+[2016-08-03 17:32:56]GET /site/js/component.js
+[2016-08-03 17:32:56]GET /site/js/services/service.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/component.js
+[2016-08-03 17:32:56]GET /site/js/filters/filter.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/services/service.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/filters/filter.js
+[2016-08-03 17:32:56]GET /site/js/directives/directive.js
+[2016-08-03 17:32:56]GET /site/js/app.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/directives/directive.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/app.js
+[2016-08-03 17:32:56]GET /site/js/config.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/config.js
+[2016-08-03 17:32:56]GET /site/js/config.api.js
+[2016-08-03 17:32:56]GET /site/js/config.permission.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/config.api.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/config.permission.js
+[2016-08-03 17:32:56]GET /site/js/routers/router.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/routers/router.js
+[2016-08-03 17:32:56]GET /site/js/routers/test.js
+[2016-08-03 17:32:56]GET /site/js/routers/account.js
+[2016-08-03 17:32:56]GET /site/js/routers/financing.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/routers/test.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/routers/account.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/routers/financing.js
+[2016-08-03 17:32:56]GET /site/js/routers/money.js
+[2016-08-03 17:32:56]GET /site/js/routers/seopages.js
+[2016-08-03 17:32:56]GET /site/js/controllers/app.js
+[2016-08-03 17:32:56]GET /site/js/controllers/test.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/routers/money.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/routers/seopages.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/controllers/app.js
+[2016-08-03 17:32:56]GET /site/js/controllers/account.js
+[2016-08-03 17:32:56]GET /site/js/controllers/financing.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/controllers/test.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/controllers/account.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/controllers/financing.js
+[2016-08-03 17:32:56]GET /site/js/controllers/money.js
+[2016-08-03 17:32:56]GET /site/js/controllers/seopages.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/controllers/money.js
+[2016-08-03 17:32:56]404 Not Found: /site/js/controllers/seopages.js
+[2016-08-03 17:33:19]GET /site/
+[2016-08-03 17:33:22]GET /
+[2016-08-03 17:33:24]GET /source/
+[2016-08-03 17:33:27]GET /source/index.html
+[2016-08-03 17:33:27]GET /source/lib/ionic/css/ionic.min.css
+[2016-08-03 17:33:27]GET /source/lib/angular-notify/dist/angular-notify.css
+[2016-08-03 17:33:27]GET /source/lib/angular-native-picker/build/themes/default.css
+[2016-08-03 17:33:27]GET /source/lib/angular-native-picker/build/themes/default.date.css
+[2016-08-03 17:33:27]GET /source/css/common.css
+[2016-08-03 17:33:27]GET /source/js/config.local.js
+[2016-08-03 17:33:27]GET /source/lib/ionic/js/ionic.bundle.min.js
+[2016-08-03 17:33:27]GET /source/lib/photoswipe/dist/photoswipe.min.js
+[2016-08-03 17:33:27]GET /source/lib/photoswipe/dist/photoswipe-ui-default.min.js
+[2016-08-03 17:33:27]GET /source/lib/angular-native-picker/build/angular-datepicker.js
+[2016-08-03 17:33:27]GET /source/js/mockData.js
+[2016-08-03 17:33:27]GET /source/lib/mockjs/dist/mock-min.js
+[2016-08-03 17:33:27]GET /source/js/mock.angular.js
+[2016-08-03 17:33:27]GET /source/lib/ng-file-upload/ng-file-upload.min.js
+[2016-08-03 17:33:27]GET /source/lib/angular-notify/dist/angular-notify.min.js
+[2016-08-03 17:33:27]GET /source/lib/angular-cookies/angular-cookies.min.js
+[2016-08-03 17:33:27]GET /source/js/util.js
+[2016-08-03 17:33:27]GET /source/js/component.js
+[2016-08-03 17:33:27]GET /source/js/services/service.js
+[2016-08-03 17:33:27]GET /source/js/filters/filter.js
+[2016-08-03 17:33:27]GET /source/js/directives/directive.js
+[2016-08-03 17:33:27]GET /source/js/app.js
+[2016-08-03 17:33:27]GET /source/js/config.js
+[2016-08-03 17:33:27]GET /source/js/config.api.js
+[2016-08-03 17:33:27]GET /source/js/config.permission.js
+[2016-08-03 17:33:27]GET /source/js/routers/router.js
+[2016-08-03 17:33:27]GET /source/js/routers/test.js
+[2016-08-03 17:33:27]GET /source/js/routers/account.js
+[2016-08-03 17:33:27]GET /source/js/routers/financing.js
+[2016-08-03 17:33:27]GET /source/js/routers/money.js
+[2016-08-03 17:33:27]GET /source/js/routers/seopages.js
+[2016-08-03 17:33:27]GET /source/js/routers/invest.js
+[2016-08-03 17:33:27]GET /source/js/controllers/app.js
+[2016-08-03 17:33:27]GET /source/js/controllers/test.js
+[2016-08-03 17:33:27]GET /source/js/controllers/account.js
+[2016-08-03 17:33:27]GET /source/js/controllers/financing.js
+[2016-08-03 17:33:27]GET /source/js/controllers/money.js
+[2016-08-03 17:33:27]GET /source/js/controllers/seopages.js
+[2016-08-03 17:33:27]GET /source/js/controllers/invest.js
+[2016-08-03 17:33:27]GET /source/lib/ionic/js/angular-sanitize.min.js.map
+[2016-08-03 17:33:27]GET /source/lib/mockjs/dist/mock-min.map
+[2016-08-03 17:33:27]404 Not Found: /source/lib/ionic/js/angular-sanitize.min.js.map
+[2016-08-03 17:33:27]GET /source/lib/angular-cookies/angular-cookies.min.js.map
+[2016-08-03 17:33:27]GET /source/templates/account/forget-pay-password-step3.html
+[2016-08-03 17:33:27]GET /source/templates/account/forget-pay-password-step2.html
+[2016-08-03 17:33:27]GET /source/templates/account/forget-pay-password-step1.html
+[2016-08-03 17:33:27]GET /source/templates/account/modify-pay-password.html
+[2016-08-03 17:33:27]POST /api/Account/User/isLogin
+[2016-08-03 17:33:27]GET /source/templates/menu.html
+[2016-08-03 17:33:27]404 Not Found: /api/Account/User/isLogin
+[2016-08-03 17:33:27]GET /source/templates/dynamic/dynamic.html
+[2016-08-03 17:33:28]GET /images/icons/icons40-s3f7693704d.png
+[2016-08-03 17:33:28]404 Not Found: /images/icons/icons40-s3f7693704d.png
+[2016-08-03 17:33:28]GET /source/lib/ionic/fonts/ionicons.ttf?v=2.0.1
+[2016-08-03 17:33:28]GET /source/templates/account/modify-password.html
+[2016-08-03 17:33:28]GET /source/templates/account/set-password-success.html
+[2016-08-03 17:33:28]GET /source/templates/account/set-password.html
+[2016-08-03 17:33:28]GET /source/templates/account/forget-pwd.html
+[2016-08-03 17:33:29]GET /source/templates/account/manager-success.html
+[2016-08-03 17:33:29]GET /source/templates/account/read-manager-card.html
+[2016-08-03 17:33:29]GET /source/templates/account/read-manager-datum.html
+[2016-08-03 17:33:29]GET /source/templates/account/manager-card.html
+[2016-08-03 17:33:30]GET /source/templates/account/manager-datum.html
+[2016-08-03 17:33:30]GET /source/templates/account/corp-trade4.html
+[2016-08-03 17:33:30]GET /source/templates/account/corp-trade3.html
+[2016-08-03 17:33:30]GET /source/templates/account/corp-trade2.html
+[2016-08-03 17:33:31]GET /source/templates/account/corp-trade.html
+[2016-08-03 17:33:31]GET /source/templates/account/corp-city.html
+[2016-08-03 17:33:31]GET /source/templates/account/corp-register.html
+[2016-08-03 17:33:31]GET /source/templates/account/corp-library.html
+[2016-08-03 17:33:32]GET /source/templates/account/corp-binding.html
+[2016-08-03 17:33:32]GET /source/templates/account/upload-confirmation.html
+[2016-08-03 17:33:32]GET /source/templates/account/upload-personal-info.html
+[2016-08-03 17:33:32]GET /source/templates/account/confirmation-list.html
+[2016-08-03 17:33:33]GET /source/templates/account/register-success.html
+[2016-08-03 17:33:33]GET /source/templates/account/register.html
+[2016-08-03 17:33:33]GET /source/templates/account/login.html
+[2016-08-03 17:33:34]GET /source/templates/static/pages.html
+[2016-08-03 17:33:36]GET /source/index.html
+[2016-08-03 17:33:36]GET /source/lib/ionic/css/ionic.min.css
+[2016-08-03 17:33:36]GET /source/lib/angular-notify/dist/angular-notify.css
+[2016-08-03 17:33:36]GET /source/lib/angular-native-picker/build/themes/default.css
+[2016-08-03 17:33:36]GET /source/lib/angular-native-picker/build/themes/default.date.css
+[2016-08-03 17:33:36]GET /source/css/common.css
+[2016-08-03 17:33:36]GET /source/js/config.local.js
+[2016-08-03 17:33:36]GET /source/lib/ionic/js/ionic.bundle.min.js
+[2016-08-03 17:33:36]GET /source/lib/photoswipe/dist/photoswipe.min.js
+[2016-08-03 17:33:36]GET /source/lib/photoswipe/dist/photoswipe-ui-default.min.js
+[2016-08-03 17:33:36]GET /source/lib/angular-native-picker/build/angular-datepicker.js
+[2016-08-03 17:33:36]GET /source/js/mockData.js
+[2016-08-03 17:33:36]GET /source/lib/mockjs/dist/mock-min.js
+[2016-08-03 17:33:36]GET /source/js/mock.angular.js
+[2016-08-03 17:33:36]GET /source/lib/ng-file-upload/ng-file-upload.min.js
+[2016-08-03 17:33:36]GET /source/lib/angular-notify/dist/angular-notify.min.js
+[2016-08-03 17:33:36]GET /source/lib/angular-cookies/angular-cookies.min.js
+[2016-08-03 17:33:36]GET /source/js/util.js
+[2016-08-03 17:33:36]GET /source/js/component.js
+[2016-08-03 17:33:36]GET /source/js/services/service.js
+[2016-08-03 17:33:36]GET /source/js/filters/filter.js
+[2016-08-03 17:33:36]GET /source/js/directives/directive.js
+[2016-08-03 17:33:36]GET /source/js/app.js
+[2016-08-03 17:33:36]GET /source/js/config.js
+[2016-08-03 17:33:36]GET /source/js/config.api.js
+[2016-08-03 17:33:36]GET /source/js/config.permission.js
+[2016-08-03 17:33:36]GET /source/js/routers/router.js
+[2016-08-03 17:33:36]GET /source/js/routers/test.js
+[2016-08-03 17:33:36]GET /source/js/routers/account.js
+[2016-08-03 17:33:36]GET /source/js/routers/financing.js
+[2016-08-03 17:33:36]GET /source/js/routers/money.js
+[2016-08-03 17:33:36]GET /source/js/routers/seopages.js
+[2016-08-03 17:33:36]GET /source/js/routers/invest.js
+[2016-08-03 17:33:36]GET /source/js/controllers/app.js
+[2016-08-03 17:33:36]GET /source/js/controllers/test.js
+[2016-08-03 17:33:36]GET /source/js/controllers/account.js
+[2016-08-03 17:33:36]GET /source/js/controllers/financing.js
+[2016-08-03 17:33:36]GET /source/js/controllers/money.js
+[2016-08-03 17:33:36]GET /source/js/controllers/seopages.js
+[2016-08-03 17:33:36]GET /source/js/controllers/invest.js
+[2016-08-03 17:33:36]GET /source/lib/ionic/js/angular-sanitize.min.js.map
+[2016-08-03 17:33:36]404 Not Found: /source/lib/ionic/js/angular-sanitize.min.js.map
+[2016-08-03 17:33:36]GET /source/lib/mockjs/dist/mock-min.map
+[2016-08-03 17:33:36]GET /source/lib/angular-cookies/angular-cookies.min.js.map
+[2016-08-03 17:33:37]GET /source/templates/account/forget-pay-password-step3.html
+[2016-08-03 17:33:37]GET /source/templates/account/forget-pay-password-step2.html
+[2016-08-03 17:33:37]GET /source/templates/account/forget-pay-password-step1.html
+[2016-08-03 17:33:37]GET /source/templates/account/modify-pay-password.html
+[2016-08-03 17:33:37]GET /source/templates/menu.html
+[2016-08-03 17:33:37]GET /source/templates/dynamic/dynamic.html
+[2016-08-03 17:33:37]GET /images/icons/icons40-s3f7693704d.png
+[2016-08-03 17:33:37]404 Not Found: /images/icons/icons40-s3f7693704d.png
+[2016-08-03 17:33:37]GET /source/lib/ionic/fonts/ionicons.ttf?v=2.0.1
+[2016-08-03 17:33:38]GET /source/templates/account/modify-password.html
+[2016-08-03 17:33:38]GET /source/templates/account/set-password-success.html
+[2016-08-03 17:33:38]GET /source/templates/account/set-password.html
+[2016-08-03 17:33:38]GET /source/templates/account/forget-pwd.html
+[2016-08-03 17:33:39]GET /source/templates/account/manager-success.html
+[2016-08-03 17:33:39]GET /source/templates/account/read-manager-card.html
+[2016-08-03 17:33:39]GET /source/templates/account/manager-card.html
+[2016-08-03 17:33:39]GET /source/templates/account/read-manager-datum.html
+[2016-08-03 17:33:40]GET /source/templates/account/manager-datum.html
+[2016-08-03 17:33:40]GET /source/templates/account/corp-trade4.html
+[2016-08-03 17:33:40]GET /source/templates/account/corp-trade3.html
+[2016-08-03 17:33:40]GET /source/templates/account/corp-trade2.html
+[2016-08-03 17:33:41]GET /source/templates/account/corp-trade.html
+[2016-08-03 17:33:41]GET /source/templates/account/corp-city.html
+[2016-08-03 17:33:41]GET /source/templates/account/corp-register.html
+[2016-08-03 17:33:41]GET /source/templates/account/corp-library.html
+[2016-08-03 17:33:41]GET /source/templates/account/register.html
+[2016-08-03 17:33:41]GET /images/icons/icons3630-sd1834a4a92.png
+[2016-08-03 17:33:41]404 Not Found: /images/icons/icons3630-sd1834a4a92.png
+[2016-08-03 17:33:41]GET /templates/common/double-header.html
+[2016-08-03 17:33:41]404 Not Found: /templates/common/double-header.html
+[2016-08-03 17:33:41]GET /templates/common/modal.html
+[2016-08-03 17:33:41]404 Not Found: /templates/common/modal.html
+[2016-08-03 17:33:41]POST /api/Account/User/isLogin
+[2016-08-03 17:33:41]404 Not Found: /api/Account/User/isLogin
+[2016-08-03 17:33:41]GET /api/Public/Public/verify?key=register
+[2016-08-03 17:33:41]404 Not Found: /api/Public/Public/verify
+[2016-08-03 17:33:42]GET /source/templates/account/corp-binding.html
+[2016-08-03 17:33:42]GET /source/templates/account/upload-confirmation.html
+[2016-08-03 17:33:42]GET /source/templates/account/confirmation-list.html
+[2016-08-03 17:33:42]GET /source/templates/account/upload-personal-info.html
+[2016-08-03 17:33:43]GET /source/templates/account/register-success.html
+[2016-08-03 17:33:43]GET /source/templates/account/login.html
+[2016-08-03 17:33:44]GET /source/templates/static/pages.html
+[2016-08-03 17:33:46]POST /api/Index/Protocol/viewRegisterProtocol
+[2016-08-03 17:33:46]404 Not Found: /api/Index/Protocol/viewRegisterProtocol
+[2016-08-03 17:33:55]POST /api/Account/User/isLogin
+[2016-08-03 17:33:55]404 Not Found: /api/Account/User/isLogin
+[2016-08-03 17:33:55]GET /templates/common/single-header.html
+[2016-08-03 17:33:55]GET /templates/common/my-refresh.html
+[2016-08-03 17:33:55]404 Not Found: /templates/common/single-header.html
+[2016-08-03 17:33:55]404 Not Found: /templates/common/my-refresh.html
+[2016-08-03 17:34:00]GET /source/templates/account/upload-attach.html
+[2016-08-03 17:34:00]POST /api/Account/User/isLogin
+[2016-08-03 17:34:00]404 Not Found: /api/Account/User/isLogin
+[2016-08-03 17:34:00]GET /templates/common/double-header.html
+[2016-08-03 17:34:00]404 Not Found: /templates/common/double-header.html
+[2016-08-03 17:34:04]GET /templates/common/single-header.html
+[2016-08-03 17:34:04]404 Not Found: /templates/common/single-header.html
+[2016-08-03 17:34:04]GET /templates/common/my-refresh.html
+[2016-08-03 17:34:04]404 Not Found: /templates/common/my-refresh.html
+[2016-08-03 17:34:04]POST /api/Account/User/isLogin
+[2016-08-03 17:34:04]404 Not Found: /api/Account/User/isLogin
+[2016-08-03 17:34:08]POST /api/Account/User/isLogin
+[2016-08-03 17:34:08]404 Not Found: /api/Account/User/isLogin
+[2016-08-03 17:34:08]GET /templates/common/double-header.html
+[2016-08-03 17:34:08]404 Not Found: /templates/common/double-header.html
+[2016-08-03 17:34:19]GET /templates/common/single-header.html
+[2016-08-03 17:34:19]404 Not Found: /templates/common/single-header.html
+[2016-08-03 17:34:19]GET /templates/common/my-refresh.html
+[2016-08-03 17:34:19]404 Not Found: /templates/common/my-refresh.html
+[2016-08-03 17:34:19]POST /api/Account/User/isLogin
+[2016-08-03 17:34:19]404 Not Found: /api/Account/User/isLogin
+[2016-08-03 17:34:20]POST /api/Account/User/isLogin
+[2016-08-03 17:34:20]404 Not Found: /api/Account/User/isLogin
+[2016-08-03 17:34:20]GET /templates/common/double-header.html
+[2016-08-03 17:34:20]404 Not Found: /templates/common/double-header.html
+[2016-08-03 17:34:22]POST /api/Account/User/isLogin
+[2016-08-03 17:34:22]404 Not Found: /api/Account/User/isLogin
+[2016-08-03 17:34:22]GET /templates/common/single-header.html
+[2016-08-03 17:34:22]GET /templates/common/my-refresh.html
+[2016-08-03 17:34:22]404 Not Found: /templates/common/single-header.html
+[2016-08-03 17:34:22]404 Not Found: /templates/common/my-refresh.html
+[2016-08-03 17:35:35]Http Server running at http://localhost:9098/
+[2016-08-03 17:35:36]GET /
+[2016-08-03 17:35:36]GET /favicon.ico
+[2016-08-03 17:35:36]404 Not Found: /favicon.ico
+[2016-08-03 17:35:40]GET /html/
+[2016-08-03 17:35:41]GET /html/index.html
+[2016-08-03 17:35:41]GET /html/css/main.bundle.css?a774466c6e100e414e05
+[2016-08-03 17:35:41]GET /html/js/vendor.bundle.js?a774466c6e100e414e05
+[2016-08-03 17:35:41]GET /html/js/main.bundle.js?a774466c6e100e414e05
+[2016-08-03 17:35:41]GET /html/datasource.xml
+[2016-08-03 17:35:51]GET /index.html
+[2016-08-03 17:35:51]404 Not Found: /index.html
+[2016-08-03 17:35:54]GET /html/index.html
+[2016-08-03 17:35:54]GET /html/css/main.bundle.css?a774466c6e100e414e05
+[2016-08-03 17:35:54]GET /html/js/vendor.bundle.js?a774466c6e100e414e05
+[2016-08-03 17:35:54]GET /html/js/main.bundle.js?a774466c6e100e414e05
+[2016-08-03 17:35:54]GET /html/datasource.xml
+[2016-08-03 17:36:05]GET /
+[2016-08-03 17:36:08]GET /server.js
+[2016-08-03 17:36:10]GET /source/
+[2016-08-03 17:36:13]GET /webserver/
+[2016-08-03 17:36:14]GET /webserver/index.js
+[2016-08-03 17:36:19]GET /bower_components/
+[2016-08-03 17:36:20]GET /bower_components/vue/
+[2016-08-03 17:36:22]GET /bower_components/vue/bower.json
+[2016-08-03 17:36:25]GET /bower_components/vue/src/
+[2016-08-03 17:36:26]GET /bower_components/vue/src/batcher.js

@@ -1,0 +1,930 @@
+start host args: E:\work\electronPrj\nss2\webserver\server.js fsa none none none none true
+Mon Jul 25 2016 15:55:27 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:fsa/
+
+
+--------Error--------
+Mon Jul 25 2016 15:55:27 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EACCES fsa
+    at Object.exports._errnoException (util.js:1008:11)
+    at exports._exceptionWithHostPort (util.js:1031:20)
+    at Server._listen2 (net.js:1240:19)
+    at listen (net.js:1289:10)
+    at Server.listen (net.js:1378:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+
+
+--------End error--------
+
+Mon Jul 25 2016 15:55:27 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : 1
+
+start host args: E:\work\electronPrj\nss2\webserver\server.js fsa none none none none true】
+Mon Jul 25 2016 15:56:24 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:fsa/
+
+
+--------Error--------
+Mon Jul 25 2016 15:56:24 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EACCES fsa
+    at Object.exports._errnoException (util.js:1008:11)
+    at exports._exceptionWithHostPort (util.js:1031:20)
+    at Server._listen2 (net.js:1240:19)
+    at listen (net.js:1289:10)
+    at Server.listen (net.js:1378:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+
+
+--------End error--------
+
+Mon Jul 25 2016 15:56:24 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : 1
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js fsa none none none none true ]
+Mon Jul 25 2016 15:57:10 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:fsa/
+
+
+--------Error--------
+Mon Jul 25 2016 15:57:10 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EACCES fsa
+    at Object.exports._errnoException (util.js:1008:11)
+    at exports._exceptionWithHostPort (util.js:1031:20)
+    at Server._listen2 (net.js:1240:19)
+    at listen (net.js:1289:10)
+    at Server.listen (net.js:1378:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+
+
+--------End error--------
+
+Mon Jul 25 2016 15:57:10 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : 1
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 0 none none none none true ]
+Mon Jul 25 2016 16:43:14 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:0/
+
+
+Mon Jul 25 2016 16:44:36 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 0 none none none none true ]
+Mon Jul 25 2016 16:45:19 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:0/
+
+
+Mon Jul 25 2016 16:46:36 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 0 none none none none true ]
+Mon Jul 25 2016 16:47:33 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:0/
+
+
+Mon Jul 25 2016 16:47:38 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 0 none none none none true ]
+Mon Jul 25 2016 16:50:55 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:0/
+
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 9090 none none none none true ]
+Mon Jul 25 2016 16:51:01 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:9090/
+
+
+Mon Jul 25 2016 16:51:38 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 9090 none none none none true ]
+Mon Jul 25 2016 17:37:53 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:9090/
+
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 9090 none none none none true ]
+Mon Jul 25 2016 18:28:28 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:9090/
+
+
+Mon Jul 25 2016 18:28:30 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 9090 none none none none true ]
+Tue Jul 26 2016 10:19:49 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:9090/
+
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 9900 none none none none true ]
+Tue Jul 26 2016 14:07:42 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:9900/
+
+
+Tue Jul 26 2016 14:07:55 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 9900 none none none none true ]
+Tue Jul 26 2016 14:08:03 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:9900/
+
+
+Tue Jul 26 2016 14:20:34 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 12321321 none none none none true ]
+--------Error--------
+Wed Jul 27 2016 14:15:11 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+internal/net.js:17
+    throw new RangeError('"port" argument must be >= 0 and < 65536');
+    ^
+
+RangeError: "port" argument must be >= 0 and < 65536
+    at assertPort (internal/net.js:17:11)
+    at Server.listen (net.js:1384:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+
+
+--------End error--------
+
+Wed Jul 27 2016 14:15:11 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : 1
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 231 none none none none true ]
+Wed Jul 27 2016 14:15:36 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:231/
+
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 12321321 none none none none true ]
+--------Error--------
+Wed Jul 27 2016 14:16:22 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+internal/net.js:17
+    throw new RangeError('"port" argument must be >= 0 and < 65536');
+    ^
+
+RangeError: "port" argument must be >= 0 and < 65536
+    at assertPort (internal/net.js:17:11)
+    at Server.listen (net.js:1384:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+
+
+--------End error--------
+
+Wed Jul 27 2016 14:16:22 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : 1
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 12321321 none none none none true ]
+--------Error--------
+Wed Jul 27 2016 14:17:12 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+internal/net.js:17
+    throw new RangeError('"port" argument must be >= 0 and < 65536');
+    ^
+
+RangeError: "port" argument must be >= 0 and < 65536
+    at assertPort (internal/net.js:17:11)
+    at Server.listen (net.js:1384:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+
+
+--------End error--------
+
+Wed Jul 27 2016 14:17:12 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : 1
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 12321321 none none none none true ]
+--------Error--------
+Wed Jul 27 2016 14:18:32 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+internal/net.js:17
+    throw new RangeError('"port" argument must be >= 0 and < 65536');
+    ^
+
+RangeError: "port" argument must be >= 0 and < 65536
+    at assertPort (internal/net.js:17:11)
+    at Server.listen (net.js:1384:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+
+
+--------End error--------
+
+Wed Jul 27 2016 14:18:32 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : 1
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 12321321 none none none none true ]
+--------Error--------
+Wed Jul 27 2016 14:18:51 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+internal/net.js:17
+    throw new RangeError('"port" argument must be >= 0 and < 65536');
+    ^
+
+RangeError: "port" argument must be >= 0 and < 65536
+    at assertPort (internal/net.js:17:11)
+    at Server.listen (net.js:1384:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+
+
+--------End error--------
+
+Wed Jul 27 2016 14:18:51 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : 1
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 12321321 none none none none true ]
+--------Error--------
+Wed Jul 27 2016 14:18:52 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+internal/net.js:17
+    throw new RangeError('"port" argument must be >= 0 and < 65536');
+    ^
+
+RangeError: "port" argument must be >= 0 and < 65536
+    at assertPort (internal/net.js:17:11)
+    at Server.listen (net.js:1384:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+
+
+--------End error--------
+
+Wed Jul 27 2016 14:18:52 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : 1
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 12321321 none none none none true ]
+--------Error--------
+Wed Jul 27 2016 14:24:30 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+internal/net.js:17
+    throw new RangeError('"port" argument must be >= 0 and < 65536');
+    ^
+
+RangeError: "port" argument must be >= 0 and < 65536
+    at assertPort (internal/net.js:17:11)
+    at Server.listen (net.js:1384:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+
+
+--------End error--------
+
+Wed Jul 27 2016 14:24:30 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : 1
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 12321321 none none none none true ]
+--------Error--------
+Wed Jul 27 2016 14:25:33 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+internal/net.js:17
+    throw new RangeError('"port" argument must be >= 0 and < 65536');
+    ^
+
+RangeError: "port" argument must be >= 0 and < 65536
+    at assertPort (internal/net.js:17:11)
+    at Server.listen (net.js:1384:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+
+
+--------End error--------
+
+Wed Jul 27 2016 14:25:33 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : 1
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 12321321 none none none none true ]
+--------Error--------
+Wed Jul 27 2016 14:25:35 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+internal/net.js:17
+    throw new RangeError('"port" argument must be >= 0 and < 65536');
+    ^
+
+RangeError: "port" argument must be >= 0 and < 65536
+    at assertPort (internal/net.js:17:11)
+    at Server.listen (net.js:1384:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+
+
+--------End error--------
+
+Wed Jul 27 2016 14:25:35 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : 1
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 12321321 none none none none true ]
+--------Error--------
+Wed Jul 27 2016 14:25:52 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+internal/net.js:17
+    throw new RangeError('"port" argument must be >= 0 and < 65536');
+    ^
+
+RangeError: "port" argument must be >= 0 and < 65536
+    at assertPort (internal/net.js:17:11)
+    at Server.listen (net.js:1384:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+
+
+--------End error--------
+
+Wed Jul 27 2016 14:25:52 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : 1
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 12321321 none none none none true ]
+--------Error--------
+Wed Jul 27 2016 14:26:07 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+internal/net.js:17
+    throw new RangeError('"port" argument must be >= 0 and < 65536');
+    ^
+
+RangeError: "port" argument must be >= 0 and < 65536
+    at assertPort (internal/net.js:17:11)
+    at Server.listen (net.js:1384:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+
+
+--------End error--------
+
+Wed Jul 27 2016 14:26:07 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : 1
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 12321321 none none none none true ]
+--------Error--------
+Wed Jul 27 2016 14:27:23 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+internal/net.js:17
+    throw new RangeError('"port" argument must be >= 0 and < 65536');
+    ^
+
+RangeError: "port" argument must be >= 0 and < 65536
+    at assertPort (internal/net.js:17:11)
+    at Server.listen (net.js:1384:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+
+
+--------End error--------
+
+Wed Jul 27 2016 14:27:23 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : 1
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 12321321 none none none none true ]
+--------Error--------
+Wed Jul 27 2016 14:27:43 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+internal/net.js:17
+    throw new RangeError('"port" argument must be >= 0 and < 65536');
+    ^
+
+RangeError: "port" argument must be >= 0 and < 65536
+    at assertPort (internal/net.js:17:11)
+    at Server.listen (net.js:1384:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+
+
+--------End error--------
+
+Wed Jul 27 2016 14:27:43 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : 1
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 12321321 none none none none true ]
+--------Error--------
+Wed Jul 27 2016 14:28:14 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+internal/net.js:17
+    throw new RangeError('"port" argument must be >= 0 and < 65536');
+    ^
+
+RangeError: "port" argument must be >= 0 and < 65536
+    at assertPort (internal/net.js:17:11)
+    at Server.listen (net.js:1384:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+
+
+--------End error--------
+
+Wed Jul 27 2016 14:28:14 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : 1
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 12321321 none none none none true ]
+--------Error--------
+Wed Jul 27 2016 14:55:21 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+internal/net.js:17
+    throw new RangeError('"port" argument must be >= 0 and < 65536');
+    ^
+
+RangeError: "port" argument must be >= 0 and < 65536
+    at assertPort (internal/net.js:17:11)
+    at Server.listen (net.js:1384:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+
+
+--------End error--------
+
+Wed Jul 27 2016 14:55:21 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : 1
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 12321321 none none none none true ]
+--------Error--------
+Wed Jul 27 2016 14:55:24 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+internal/net.js:17
+    throw new RangeError('"port" argument must be >= 0 and < 65536');
+    ^
+
+RangeError: "port" argument must be >= 0 and < 65536
+    at assertPort (internal/net.js:17:11)
+    at Server.listen (net.js:1384:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+    at tryModuleLoad (module.js:417:12)
+    at Function.Module._load (module.js:409:3)
+    at Module.runMain (module.js:575:10)
+
+
+--------End error--------
+
+Wed Jul 27 2016 14:55:24 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : 1
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 1234 none none none none true ]
+Wed Jul 27 2016 17:46:17 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:1234/
+
+
+Wed Jul 27 2016 17:46:48 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 1234 none none none none true ]
+Thu Jul 28 2016 15:11:36 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:1234/
+
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 1234 none none none none true ]
+Thu Jul 28 2016 17:11:02 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:1234/
+
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 9091 http://10.10.82.85 /api none none true ]
+Thu Jul 28 2016 17:45:04 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+Http Server running at http://localhost:9091/
+
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 9091 http://10.10.82.85 /api none none true ]
+Thu Jul 28 2016 17:49:58 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+Http Server running at http://localhost:9091/
+
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 9091 http://10.10.82.85 /api none none true ]
+Fri Jul 29 2016 10:47:06 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+Http Server running at http://localhost:9091/
+
+
+Fri Jul 29 2016 10:47:12 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 9091 http://10.10.82.85 /api none none true ]
+Fri Jul 29 2016 10:52:26 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+Http Server running at http://localhost:9091/
+
+
+Fri Jul 29 2016 10:56:02 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 9091 http://10.10.82.85 /api none none true ]
+Tue Aug 02 2016 15:15:11 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+Http Server running at http://localhost:9091/
+
+
+Tue Aug 02 2016 15:15:17 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 1234 none none none none true ]
+Tue Aug 02 2016 15:15:24 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:1234/
+
+
+Tue Aug 02 2016 15:15:29 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 1234 none none none none true ]
+Tue Aug 02 2016 15:16:43 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:1234/
+
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 1234 none none none none true ]
+Tue Aug 02 2016 15:17:11 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:1234/
+
+
+Tue Aug 02 2016 15:18:53 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 1234 none none none none true ]
+Tue Aug 02 2016 15:18:58 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:1234/
+
+
+Tue Aug 02 2016 15:19:06 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 9091 http://10.10.82.85 /api none none true ]
+Tue Aug 02 2016 15:19:11 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+Http Server running at http://localhost:9091/
+
+
+Tue Aug 02 2016 15:21:51 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 1234 none none none none true ]
+Tue Aug 02 2016 15:50:37 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:1234/
+
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 1234 none none none none true ]
+Tue Aug 02 2016 17:03:03 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:1234/
+
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 1234 none none none none true ]
+Tue Aug 02 2016 17:06:04 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:1234/
+
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 9091 http://10.10.82.85 /api none none true ]
+Tue Aug 02 2016 17:35:34 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+Http Server running at http://localhost:9091/
+
+
+Tue Aug 02 2016 17:35:40 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 9091 http://10.10.82.85 /api none none true ]
+Tue Aug 02 2016 17:36:01 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+Http Server running at http://localhost:9091/
+
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 9091 http://10.10.82.85 /api none none true ]
+Wed Aug 03 2016 13:55:07 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+Http Server running at http://localhost:9091/
+
+
+Wed Aug 03 2016 13:55:17 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 9999 none none none none true ]
+Wed Aug 03 2016 13:56:03 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+Http Server running at http://localhost:9999/
+
+
+--------Error--------
+Wed Aug 03 2016 13:56:03 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::9999
+    at Object.exports._errnoException (util.js:1008:11)
+    at exports._exceptionWithHostPort (util.js:1031:20)
+    at Server._listen2 (net.js:1253:14)
+    at listen (net.js:1289:10)
+    at Server.listen (net.js:1385:5)
+    at Server.start (E:\work\electronPrj\nss2\webserver\core\Server.js:22:17)
+    at Object.<anonymous> (E:\work\electronPrj\nss2\webserver\server.js:7:11)
+    at Module._compile (module.js:541:32)
+    at Object.Module._extensions..js (module.js:550:10)
+    at Module.load (module.js:458:32)
+
+
+--------End error--------
+
+Wed Aug 03 2016 13:56:03 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+child process exited with code : 1
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 1234 none none none none true ]
+Wed Aug 03 2016 15:09:25 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:1234/
+
+
+Wed Aug 03 2016 15:09:30 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 1234 none none none none true ]
+Wed Aug 03 2016 15:11:21 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:1234/
+
+
+Wed Aug 03 2016 15:12:19 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 1234 none none none none true ]
+Wed Aug 03 2016 15:12:24 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:1234/
+
+
+Wed Aug 03 2016 15:13:09 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 1234 none none none none true ]
+Wed Aug 03 2016 15:13:12 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:1234/
+
+
+Wed Aug 03 2016 15:13:18 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 1234 none none none none true ]
+Wed Aug 03 2016 15:13:21 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:1234/
+
+
+Wed Aug 03 2016 15:14:03 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 9099 none none none none true ]
+Wed Aug 03 2016 17:32:34 GMT+0800 (中国标准时间)
+E:\bak\work_bak\yrzb
+Http Server running at http://localhost:9099/
+
+
+Wed Aug 03 2016 17:34:34 GMT+0800 (中国标准时间)
+E:\bak\work_bak\yrzb
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 9098 none none none none true ]
+Wed Aug 03 2016 17:35:35 GMT+0800 (中国标准时间)
+E:\work\emapi
+Http Server running at http://localhost:9098/
+
+
+Wed Aug 03 2016 17:36:44 GMT+0800 (中国标准时间)
+E:\work\emapi
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 1234 none none none none true ]
+Thu Aug 04 2016 16:39:41 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:1234/
+
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 1234 none none none none true ]
+Tue Aug 09 2016 13:30:01 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:1234/
+
+
+Tue Aug 09 2016 13:30:10 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 1234 none none none none true ]
+Tue Aug 09 2016 13:31:13 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:1234/
+
+
+Tue Aug 09 2016 13:31:16 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 9099 none none none none true ]
+Tue Aug 09 2016 13:32:54 GMT+0800 (中国标准时间)
+E:\bak\work_bak\yrzb
+Http Server running at http://localhost:9099/
+
+
+Tue Aug 09 2016 13:32:56 GMT+0800 (中国标准时间)
+E:\bak\work_bak\yrzb
+child process exited with code : null
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 1234 none none none none true ]
+Wed Aug 24 2016 17:30:31 GMT+0800 (中国标准时间)
+E:\work\Flat-UI
+Http Server running at http://localhost:1234/
+
+
+[ start host args: E:\work\electronPrj\nss2\webserver\server.js 8088 none none none none true ]
+Thu Aug 25 2016 14:45:45 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+Http Server running at http://localhost:8088/
+
+
+Thu Aug 25 2016 14:45:55 GMT+0800 (中国标准时间)
+E:\work\NewH5_Html_Css_Dev\h5\new_web
+child process exited with code : null
+
