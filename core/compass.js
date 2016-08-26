@@ -11,6 +11,9 @@ var rubyCmd = config.addOn.rubyCmd;
 var sassCli = config.addOn.sassCli;
 var compassCli = config.addOn.compassCli;
 
+//自定义一个非进程结束的 code 值
+var runningCode = -110;
+
 module.exports = {
     getDefaultArgs: function (options) {
         return resolveParam(options);
@@ -34,18 +37,19 @@ module.exports = {
      * @param sassFile sass源文件
      * @param options 参数设定
      */
-    sassCompile: function (sassFile, options) {
+    sassCompile: function (sassFile, options, cb) {
+        var argsMap = {
+            outStyle: '--style=',
+            sourceMap: `--sourcemap=${options.sourceMap ? 'auto' : 'none'}`,
+            trace: '--trace',
+            force: '--force',
+            sourceComments: '--line-comments'
+        };
         var args = sassCli
             .concat([sassFile])
-            .concat(resolveParam(options));
-        execCommand(args, function (error, stdOut) {
-            if(error){
-                console.log(error);
-            }
-            if(stdOut){
-                console.log(stdOut);
-            }
-        });
+            .concat([options.cssFile])
+            .concat(resolveParam(argsMap, options));
+        execCommand(args, callback(cb));
     },
 
     /**
@@ -53,56 +57,64 @@ module.exports = {
      * @param projectSassDir compass项目根目录
      * @param options 参数设定
      */
-    compassCompile: function (projectSassDir, options) {
+    compassCompile: function (projectSassDir, options, cb) {
+        var argsMap = {
+            cssDir: '--css-dir=',
+            outStyle: '--output-style=',
+            configFile: '--config=',
+            sourceMap: `--${options.sourceMap ? '' : 'no-'}sourcemap`,
+            time: '--time',
+            trace: '--trace',
+            force: '--force',
+            sourceComments: '--no-line-comments'
+        };
         var args = compassCli
             .concat(['compile'])
             .concat([projectSassDir])
-            .concat(resolveParam(options));
-        execCommand(args, function (error, stdOut) {
-            if(error){
-                console.log(error);
-            }
-            if(stdOut){
-                console.log(stdOut);
-            }
-        });
+            .concat(resolveParam(argsMap, options));
+        execCommand(args, callback(cb));
     }
 };
+
+function callback(cb) {
+    return function (error, stdOut, code) {
+        if(error){
+            console.log(error);
+        }
+        if(stdOut){
+            console.log(stdOut);
+        }
+        if(code !== runningCode){
+            console.log(`Process exited with code: ${code}, command exec ${code == 0 ? 'success': 'failed'}!`);
+            cb(code);
+        }
+    }
+}
 
 function execCommand(args, callback) {
     if(!args.length === 0)return;
     var childProcess = child_process.spawn(rubyCmd, args);
     childProcess.stderr.setEncoding('utf8');
     childProcess.stderr.on('data', function (error){
-        callback && callback(error, '');
+        callback && callback(error, '', runningCode);
     });
     childProcess.stdout.setEncoding('utf8');
     childProcess.stdout.on('data', function (data){
-        callback && callback(null, data);
+        callback && callback(null, data, runningCode);
     });
     childProcess.on('close', function (code){
-        console.log(`Process exited with code: ${code}, command exec ${code == 0 ? 'success': 'failed'}!`);
+        callback && callback(null, '', code);
     });
 }
 
-function resolveParam(options) {
+function resolveParam(argsMap, options) {
     var args = [];
-    var argsMap = {
-        cssDir: '--css-dir=',
-        outStyle: '--output-style=',
-        configFile: '--config=',
-        sourceMap: '--sourcemap',
-        time: '--time',
-        trace: '--trace',
-        force: '--force',
-        sourceComments: '--no-line-comments'
-    };
     options = _.extend(config.sass, options || {});
     //必传参数
     args.push(`${argsMap.outStyle}${options.outStyle}`);
-    args.push(`${argsMap.cssDir}${options.cssDir}`);
+    args.push(argsMap.sourceMap);
     //可选参数
-    options.sourceMap && args.push(argsMap.sourceMap);
+    options.cssDir && args.push(`${argsMap.cssDir}${options.cssDir}`);
     options.sourceComments && args.push(argsMap.sourceComments);
     options.configFile && args.push(argsMap.configFile);
     options.time && args.push(argsMap.time);
@@ -110,12 +122,3 @@ function resolveParam(options) {
     options.force && args.push(argsMap.force);
     return args;
 }
-
-module.exports.compassCompile('./test', {
-    cssDir: './out',
-    sourceMap: true,
-    outStyle: 'compressed',
-    trace: true,
-    force: true,
-    time: true
-});
