@@ -5,9 +5,14 @@
 var path = require('path');
 var compass = require('./compass');
 
-compass.check();
+//compass.check();
 
-compass.compile(resolveFile('aa.scss'), {
+/*compass.sassCompile(resolveFile('sass/aa.scss'), {
+    out: resolveFile('out/aa.css'),
+    sourceMap: true
+});*/
+
+compass.compassCompile(resolveFile('sass/'), {
     out: resolveFile('out/aa.css'),
     sourceMap: true
 });

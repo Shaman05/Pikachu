@@ -24,10 +24,16 @@ module.exports = {
             console.log(error ? 'Compass abnormal!' : 'Compass pass!');
         });
     },
-    
-    compile: function (sassFile, options) {
+
+    sassCompile: function (sassFile, options) {
         execCommand(`${sassCli} ${sassFile} ${options.out}`, function (error) {
-            console.log(error ? `Compile ${sassFile} failed!` : `Compile ${sassFile} success!`);
+            console.log(error ? `Sass compile ${sassFile} failed!` : `Sass compile ${sassFile} success!`);
+        });
+    },
+
+    compassCompile: function (sassFile, options) {
+        execCommand(`${compassCli} compile ${sassFile} ${options.out}`, function (error) {
+            console.log(error ? `Compass compile ${sassFile} failed!` : `Compass Compile ${sassFile} success!`);
         });
     }
 };

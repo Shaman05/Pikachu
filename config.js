@@ -30,8 +30,8 @@ module.exports = {
     //插件配置
     addOn: {
         rubyCmd: rubyCmd,
-        sassCli: [rubyCmd, '-S', sassCmd].join(' '),
-        compassCli: [rubyCmd, '-S', compassCmd].join(' ')
+        sassCli: ['-S', sassCmd],
+        compassCli: ['-S', compassCmd]
     },
 
     //应用信息
