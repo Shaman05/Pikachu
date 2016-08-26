@@ -5,11 +5,25 @@
 var path = require('path');
 var compass = require('../core/compass');
 
-//compass.check();
+//compassCheck();
 
-testCompass();
+//testCompass();
 
-//testSass();
+testSass();
+
+
+
+function compassCheck() {
+    compass.getRubyVersion(function (versionInfo, code) {
+        console.log(versionInfo);
+    });
+    compass.getSassVersion(function (versionInfo, code) {
+        console.log(versionInfo);
+    });
+    compass.getCompassVersion(function (versionInfo, code) {
+        console.log(versionInfo);
+    });
+}
 
 function testSass(){
     console.log('start test: sass compile');
@@ -19,7 +33,7 @@ function testSass(){
         force: true,
         outStyle: 'compact'
     }, function (code) {
-        //console.log('cass compile test completed! exit code: ' + code);
+        console.log('cass compile test completed! exit code: ' + code);
     });
 }
 
@@ -33,7 +47,7 @@ function testCompass() {
         force: true,
         time: true
     }, function (code) {
-        //console.log('compass compile test completed! exit code: ' + code);
+        console.log('compass compile test completed! exit code: ' + code);
     });
 }
 

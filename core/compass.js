@@ -31,6 +31,36 @@ module.exports = {
             console.log(error ? 'Compass abnormal!' : 'Compass pass!');
         });
     },
+    
+    getRubyVersion: function (cb) {
+        var args = ['-v'];
+        execCommand(args, function (error, stdOut, code) {
+            cb(stdOut, code);
+            if(code !== runningCode){
+                console.log(code == 0 ? 'Ruby pass!' : 'Ruby abnormal!');
+            }
+        });
+    },
+
+    getSassVersion: function (cb) {
+        var args = sassCli.concat(['-v']);
+        execCommand(args, function (error, stdOut, code) {
+            cb(stdOut, code);
+            if(code !== runningCode){
+                console.log(code == 0 ? 'Sass pass!' : 'Sass abnormal!');
+            }
+        });
+    },
+
+    getCompassVersion: function (cb) {
+        var args = compassCli.concat(['-v']);
+        execCommand(args, function (error, stdOut, code) {
+            cb(stdOut, code);
+            if(code !== runningCode){
+                console.log(code == 0 ? 'Compass pass!' : 'Compass abnormal!');
+            }
+        });
+    },
 
     /**
      * 使用 sass 编译
