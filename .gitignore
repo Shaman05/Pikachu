@@ -5,5 +5,7 @@
 .build
 
 node_modules
+data
 test/out
 !test/out/a.temp
+webserver/log

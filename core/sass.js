@@ -62,44 +62,21 @@ module.exports = {
      */
     compile: function (file, compileType) {
         var compileOptions = _util.getSassCompileOptions(file);
-        var filePath = file.fullPath;
         var fileName = file.name;
         var cssFilePath = `${file.cssDir}\\${fileName.replace('.scss', '.css')}`;
         _util.consoleTask('编译 scss 文件', fileName);
-        console.log(file);
-        console.log(cssFilePath);
-        console.dir(compileOptions);
         if(compileType == 'sass'){
             compileOptions.cssFile = cssFilePath;
         }
-        compass.sassCompile(file.fullPath, compileOptions, function (code) {
-            console.log(code);
-        });
-        /*nodeSass.render({
-            file: filePath,
-            outputStyle: 'compressed',
-            sourceMap: true,
-            sourceComments: false
-        }, function(err, result) {
-            if(!err){
-                var tipMsg = `完成编译！耗时：${result.stats.duration}ms`;
-                var successMsg = [
-                    `source file：${filePath}`,
-                    `export css：${cssFilePath}`,
-                    tipMsg
-                ].join('<br>');
-                _util.tip(tipMsg);
-                _util.consoleInfo(successMsg); //不放入写文件的回调
-                fs.writeFile(cssFilePath, result.css.toString(), function (err){
-                    if(err){
-                        _util.consoleError(err);
-                    }
-                })
+        compass[compileType == 'sass' ? 'sassCompile' : 'compassCompile'](file.fullPath, compileOptions, function (code, duration, error) {
+            if(code == 0){
+                _util.tip(`完成编译！耗时：${duration}ms`);
+                _util.consoleInfo(`完成编译！耗时：${duration}ms`);
             }else{
-                _util.tipError(`编译出错，详情查看控制台！`);
-                _util.consoleError(err.message);
+                _util.tipError(`编译异常，详情查看控制台！`);
+                _util.consoleError(error);
             }
-        });*/
+        });
     }
 };
 

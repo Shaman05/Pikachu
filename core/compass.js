@@ -6,6 +6,7 @@
 
 var child_process = require('child_process');
 var _ = require('lodash');
+var log = require('./log');
 var config = require('../config');
 var rubyCmd = config.addOn.rubyCmd;
 var sassCli = config.addOn.sassCli;
@@ -68,7 +69,7 @@ module.exports = {
      * @param options 参数设定
      */
     sassCompile: function (sassFile, options, cb) {
-        console.log(options);
+        delete options.cssDir;
         var argsMap = {
             outStyle: '--style=',
             sourceMap: `--sourcemap=${options.sourceMap ? 'auto' : 'none'}`,
@@ -108,7 +109,7 @@ module.exports = {
 };
 
 function callback(cb) {
-    return function (error, stdOut, code) {
+    return function (error, stdOut, code, duration) {
         if(error){
             console.log(error);
         }
@@ -116,16 +117,22 @@ function callback(cb) {
             console.log(stdOut);
         }
         if(code !== runningCode){
-            console.log(`Process exited with code: ${code}, command exec ${code == 0 ? 'success': 'failed'}!`);
-            cb(code);
+            var logMsg = `Process exited with code: ${code}, command exec ${code == 0 ? 'success': 'failed'}!`;
+            console.log(logMsg);
+            log.info(logMsg);
+            cb(code, duration);
+        }else{
+            console.log(`Process running exception!`);
+            cb(code, '', error);
         }
     }
 }
 
 function execCommand(args, callback) {
     if(!args.length === 0)return;
-    console.log(args);
+    var startTime = +new Date();
     var childProcess = child_process.spawn(rubyCmd, args);
+    log.info(['exec command:', args.join(' ')].join('\r\n'));
     childProcess.stderr.setEncoding('utf8');
     childProcess.stderr.on('data', function (error){
         callback && callback(error, '', runningCode);
@@ -135,7 +142,8 @@ function execCommand(args, callback) {
         callback && callback(null, data, runningCode);
     });
     childProcess.on('close', function (code){
-        callback && callback(null, '', code);
+        var duration = +new Date() - startTime;
+        callback && callback(null, '', code, duration);
     });
 }
 

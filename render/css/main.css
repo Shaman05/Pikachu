@@ -617,10 +617,10 @@ input[type=number].form-control{
 }
 .task-show i:after{
     content: '';
-    height: 2px;
-    width: 12px;
+    height: 16px;
+    width: 5px;
     position: absolute;
-    right: -14px;
+    right: -8px;
     bottom: 2px;
     -webkit-animation: gogogo 1s linear infinite;
 }

@@ -159,7 +159,7 @@ module.exports = {
         });
     },
     notice: function(content, onclick){
-        var myNotification = new Notification(config.title, {
+        var myNotification = new Notification(appConf.title, {
             body: content
         });
         myNotification.onclick = function(){

@@ -177,10 +177,16 @@ settingMenu.append(globalSet);
 
 //Help
 var helpMenu = new Menu();
+var homePage = new MenuItem({
+    label: 'Home page',
+    click: function(){
+        util.pathTo('/index');
+    }
+});
 var readMe = new MenuItem({
     label: 'README.md',
     click: function(){
-        util.pathTo('/index');
+        //todo
     }
 });
 var useMenu = new MenuItem({
@@ -207,11 +213,12 @@ var about = new MenuItem({
     icon: config.logo,
     click: util.about
 });
+helpMenu.append(homePage);
 helpMenu.append(readMe);
 helpMenu.append(useMenu);
 helpMenu.append(feedBack);
-helpMenu.append(checkUpdate);
 helpMenu.append(new MenuItem({type: 'separator'}));
+helpMenu.append(checkUpdate);
 helpMenu.append(about);
 
 module.exports = [prjMenu, editMenu, winMenu, settingMenu, helpMenu];
