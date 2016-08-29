@@ -15,6 +15,7 @@ var clearPrjMenu = menus.prjMenu.items[2];
 var consoleMenu = menus.winMenu.items[0];
 
 module.exports.start = function(config){
+    var appConf = config.appInfo;
     //来自主进程中的消息事件
     ipcRenderer.on('app quit', function(event, message) {
         var hosts = util.ls.get('hosts') || [];
@@ -41,7 +42,7 @@ module.exports.start = function(config){
     var App = Vue.extend({
         data: function(){
             return {
-                appName: config.title,
+                appName: appConf.title,
                 appLoading: true,
                 appShowTip: false,
                 appShowTipError: false,

@@ -250,6 +250,20 @@ h1,h2,h3{margin: 12px 0}
 .readme-content{
     padding: 12px;
 }
+.home-page ol{
+    padding-bottom: 12px;
+}
+.home-page li{
+    margin-bottom: 15px;
+}
+.home-page li p{
+    font-size: 16px;
+    margin: 6px 0;
+}
+.home-page .info{
+    font-size: 12px;
+    margin: 0;
+}
 .prj-add-msg{
     background: #1ABC9C;
     padding: 4px 8px;

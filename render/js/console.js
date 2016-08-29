@@ -12,6 +12,7 @@ var util = require('../../core/util');
 var consoleMenu = require('./consolemenu');
 
 module.exports = function (config) {
+    var appConf = config.appInfo;
     return new Vue({
         el: '#app',
         data: {
@@ -21,7 +22,7 @@ module.exports = function (config) {
         },
         created: function(){
             var _this = this;
-            this.versionConsole = `© 2016 ${config.title} version${config.version} [${config.osType} - ${config.osPlatform}]`;
+            this.versionConsole = `© 2016 ${appConf.title} version${appConf.version} [${config.osType} - ${config.osPlatform}]`;
             setTimeout(function () {
                 _this.printMsg('Console is ready !', 'normal');
             }, 500);

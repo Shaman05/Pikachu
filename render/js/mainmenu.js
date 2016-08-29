@@ -68,7 +68,7 @@ var log = new MenuItem({
                 show: true
             });
             win.loadURL(path.join(config.templateDir, 'log.html'));
-            config.devTool && win.webContents.openDevTools();
+            //config.devTool && win.webContents.openDevTools();
         }, 300);
     }
 });
@@ -133,7 +133,7 @@ var consoleLog = new MenuItem({
         });
         win.loadURL(path.join(config.templateDir, '/console.html'));
         appRoute.app.consoleWindow = win;
-        config.devTool && win.webContents.openDevTools();
+        //config.devTool && win.webContents.openDevTools();
         ipcRenderer.send('console open', new Date() + ' console window opened!');
         win.on('close', function(e){
             appRoute.app.consoleWindow = win = null;
