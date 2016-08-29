@@ -8,7 +8,7 @@ var fs = require('fs');
 var electron = require('electron');
 var remote = electron.remote;
 var mainWindow = remote.getCurrentWindow();
-var util = require('../../common/util');
+var util = require('../../core/util');
 var consoleMenu = require('./consolemenu');
 
 module.exports = function (config) {

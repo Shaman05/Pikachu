@@ -4,7 +4,7 @@
 
 "use strict";
 
-var util = require('../../../common/util');
+var util = require('../../../core/util');
 
 module.exports = function () {
     return Vue.extend({

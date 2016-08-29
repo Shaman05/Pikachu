@@ -8,8 +8,8 @@ var electron = require('electron');
 var remote = electron.remote;
 var Menu = remote.Menu;
 var MenuItem = remote.MenuItem;
-var util = require('../../common/util');
-var sass = require('../../main/sass');
+var util = require('../../core/util');
+var sass = require('../../core/sass');
 
 module.exports = function (file) {
     var contextMenu = new Menu();

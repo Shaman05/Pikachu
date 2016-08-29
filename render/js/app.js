@@ -7,8 +7,8 @@
 
 var electron = require('electron');
 var remote = electron.remote;
-var menus = require('./menu');
-var util = require('../../common/util');
+var menus = require('./mainmenu');
+var util = require('../../core/util');
 var ipcRenderer = electron.ipcRenderer;
 var mainWindow = remote.getCurrentWindow();
 var clearPrjMenu = menus.prjMenu.items[2];

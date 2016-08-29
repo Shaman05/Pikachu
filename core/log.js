@@ -6,7 +6,7 @@
 
 var path = require('path');
 var fs = require('fs');
-var config = require('../config/base.conf');
+var config = require('../config');
 var logFile = config.logFile;
 
 module.exports = {

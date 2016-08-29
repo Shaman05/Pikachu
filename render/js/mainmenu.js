@@ -13,9 +13,10 @@ var MenuItem = remote.MenuItem;
 var BrowserWindow = remote.BrowserWindow;
 var mainWindow = remote.getCurrentWindow();
 var webContents = mainWindow.webContents;
-var vhost = require('../../main/vhost');
-var util = require('../../common/util');
-var config = require('../../config/base.conf');
+var vhost = require('../../core/vhost');
+var util = require('../../core/util');
+var config = require('../../config');
+var appConf = config.appInfo;
 
 //Project
 var prjMenu = new Menu();
@@ -64,10 +65,10 @@ var log = new MenuItem({
                 icon: config.logo,
                 autoHideMenuBar: true,
                 frame: false,
-                show: false
+                show: true
             });
-            win.loadURL(path.join(config.appRoot, '/log.html'));
-            //config.devTool && win.webContents.openDevTools();
+            win.loadURL(path.join(config.templateDir, 'log.html'));
+            config.devTool && win.webContents.openDevTools();
         }, 300);
     }
 });
@@ -130,9 +131,9 @@ var consoleLog = new MenuItem({
             frame: false,
             show: false
         });
-        win.loadURL(path.join(config.appRoot, '/console.html'));
+        win.loadURL(path.join(config.templateDir, '/console.html'));
         appRoute.app.consoleWindow = win;
-        //config.devTool && win.webContents.openDevTools();
+        config.devTool && win.webContents.openDevTools();
         ipcRenderer.send('console open', new Date() + ' console window opened!');
         win.on('close', function(e){
             appRoute.app.consoleWindow = win = null;
@@ -202,7 +203,7 @@ var checkUpdate = new MenuItem({
     }
 });
 var about = new MenuItem({
-    label: `关于 ${config.title}`,
+    label: `关于 ${appConf.title}`,
     icon: config.logo,
     click: util.about
 });

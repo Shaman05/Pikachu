@@ -7,7 +7,7 @@
 var fs = require('fs');
 var path = require('path');
 var child_process = require('child_process');
-var util = require('../common/util');
+var util = require('./util');
 
 module.exports = {
     hasGrunt: function (projectDir) {

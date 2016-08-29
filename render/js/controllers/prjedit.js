@@ -7,8 +7,8 @@
 var electron = require('electron');
 var remote = electron.remote;
 var dialog = remote.dialog;
-var util = require('../../../common/util');
-var config = require('../../../config/base.conf');
+var util = require('../../../core/util');
+var config = require('../../../config');
 
 module.exports = function () {
     return Vue.extend({

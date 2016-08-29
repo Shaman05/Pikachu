@@ -68,6 +68,7 @@ module.exports = {
      * @param options 参数设定
      */
     sassCompile: function (sassFile, options, cb) {
+        console.log(options);
         var argsMap = {
             outStyle: '--style=',
             sourceMap: `--sourcemap=${options.sourceMap ? 'auto' : 'none'}`,
@@ -123,6 +124,7 @@ function callback(cb) {
 
 function execCommand(args, callback) {
     if(!args.length === 0)return;
+    console.log(args);
     var childProcess = child_process.spawn(rubyCmd, args);
     childProcess.stderr.setEncoding('utf8');
     childProcess.stderr.on('data', function (error){

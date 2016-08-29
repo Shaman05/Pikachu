@@ -4,8 +4,8 @@
 
 "use strict";
 
-var util = require('../../../common/util');
-var vhost = require('../../../main/vhost');
+var util = require('../../../core/util');
+var vhost = require('../../../core/vhost');
 
 module.exports = function () {
     return Vue.extend({

@@ -13,7 +13,8 @@ var liner = new stream.Transform( { objectMode: true } );
 var electron = require('electron');
 var ipcRenderer = electron.ipcRenderer;
 var shell = electron.shell;
-var config = require('../config/base.conf');
+var config = require('../config');
+var appConf = config.appInfo;
 
 module.exports = {
     //methods
@@ -324,8 +325,8 @@ module.exports = {
             `Chrome 版本: ${process.versions.chrome}`,
             `Electron 版本: ${process.versions.electron}`,
             `System: ${config.osType} / ${config.osPlatform}`,
-            `${config.title} 版本: ${config.version}`,
-            `Author: ${config.author} <${config.github}>`
+            `${appConf.title} 版本: ${appConf.version}`,
+            `Author: ${appConf.author} <${appConf.gitHub}>`
         ];
         dialog.showMessageBox({
             type: 'info',
@@ -353,5 +354,14 @@ module.exports = {
             file.cssDir = filenames && filenames[0] || file.cssDir;
             _this.ls.set(file.fullPath, file);
         });
+    },
+    getSassCompileOptions: function (file) {
+        return {
+            sourceMap: file.sourceMap,
+            sourceComments: file.sourceComments,
+            outStyle: file.outStyle,
+            watch: file.watch,
+            cssDir: file.cssDir
+        }
     }
 };

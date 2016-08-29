@@ -26,6 +26,8 @@ module.exports = {
     logFile: path.join(dataDir, 'vhost.log'),
     hostsFile: path.join(dataDir, 'vhost.json'),
     logo: path.join(appRoot, `render/images/logo/logo.png`),
+    refresh: true,
+    devTool: true,
 
     //插件配置
     addOn: {
@@ -50,11 +52,5 @@ module.exports = {
         sourceComments: false,
         outStyle: 'compressed', //Values: nested, expanded, compact, compressed
         watch: false
-    },
-
-    //调试配置
-    debug: {
-        refresh: true,
-        devTool: true
     }
 };

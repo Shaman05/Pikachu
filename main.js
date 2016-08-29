@@ -16,18 +16,19 @@ var Tray = electron.Tray;
 
 var mainWindow;
 var appIcon = null;
-var config = require('./config/main.conf');
+var config = require('./config');
+var appConf = config.appInfo;
 
 appInit();
 
 function createWindow(){
     mainWindow = new BrowserWindow({
-        width: config.winWidth,
-        height: config.winHeight,
-        title: config.title,
+        width: appConf.winWidth,
+        height: appConf.winHeight,
+        title: appConf.title,
         icon: config.logo,
         resizable: false,
-        show: false,
+        show: true,
         frame: false
     });
     mainWindow.loadURL(config.enterUrl);
@@ -62,7 +63,7 @@ function createMenu(){
             }
         }
     ]);
-    appIcon.setToolTip(`${config.title}\n当前版本: ${config.version}\n已是最新版本`);
+    appIcon.setToolTip(`${appConf.title}\n当前版本: ${appConf.version}\n已是最新版本`);
     appIcon.setContextMenu(contextMenu);
     appIcon.on('click', function(){
         var isVisible = mainWindow.isVisible();

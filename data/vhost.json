@@ -10,5 +10,17 @@
     "proxyHost": "",
     "proxyPath": "",
     "createTime": "2016/8/25 上午10:01:55"
+  },
+  {
+    "id": "NVSORKUW3VTZG0GHVIHFWP14I",
+    "name": "gulp-demo",
+    "path": "E:\\work\\gulp-demo",
+    "configTpl": "",
+    "useCache": true,
+    "port": "8087",
+    "isWap": false,
+    "proxyHost": "",
+    "proxyPath": "",
+    "createTime": "2016/8/29 上午10:03:07"
   }
 ]

@@ -5,14 +5,14 @@
 "use strict";
 
 var child_process = require('child_process');
-var util = require('../../../common/util');
-var gulp = require('../../../main/gulp');
-var grunt = require('../../../main/grunt');
-var sass = require('../../../main/sass');
+var util = require('../../../core/util');
+var gulp = require('../../../core/gulp');
+var grunt = require('../../../core/grunt');
+var sass = require('../../../core/sass');
 var sassMenu = require('../sassmenu');
 var electron = require('electron');
 var remote = electron.remote;
-var config = require('../../../config/render.conf');
+var config = require('../../../config');
 var sassConf = config.sass;
 
 module.exports = function () {
@@ -103,6 +103,7 @@ module.exports = function () {
                 var _this = this;
                 var startTime = +new Date();
                 _this.isScanning = true;
+                _this.sassFiles = [];
                 sass.scanFile(this.prjInfo.path, function (files) {
                     _this.scanTime = +new Date() - startTime;
                     _this.isScanning = false;
@@ -133,7 +134,9 @@ module.exports = function () {
                     sassMenu(file).popup(remote.getCurrentWindow());
                 }, 100);
             },
-            compileSass: sass.compile
+            compileSass: function (file) {
+                sass.compile(file, 'sass');
+            }
         }
     });
 };

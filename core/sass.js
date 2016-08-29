@@ -7,8 +7,8 @@
 var util = require('util');
 var fs = require('fs');
 var path = require('path');
-var nodeSass = require('node-sass');
-var _util = require('../common/util');
+var _util = require('./util');
+var compass = require('./compass');
 var mr = Math.random;
 var readdir = fs.readdir;
 var stat = fs.stat;
@@ -54,12 +54,28 @@ module.exports = {
             });
         }
     },
-    compile: function (file) {
+
+    /**
+     * sass 编译
+     * @param file sass源文件对象
+     * @param compileType 编译方式：sass|compass
+     */
+    compile: function (file, compileType) {
+        var compileOptions = _util.getSassCompileOptions(file);
         var filePath = file.fullPath;
         var fileName = file.name;
         var cssFilePath = `${file.cssDir}\\${fileName.replace('.scss', '.css')}`;
         _util.consoleTask('编译 scss 文件', fileName);
-        nodeSass.render({
+        console.log(file);
+        console.log(cssFilePath);
+        console.dir(compileOptions);
+        if(compileType == 'sass'){
+            compileOptions.cssFile = cssFilePath;
+        }
+        compass.sassCompile(file.fullPath, compileOptions, function (code) {
+            console.log(code);
+        });
+        /*nodeSass.render({
             file: filePath,
             outputStyle: 'compressed',
             sourceMap: true,
@@ -83,7 +99,7 @@ module.exports = {
                 _util.tipError(`编译出错，详情查看控制台！`);
                 _util.consoleError(err.message);
             }
-        });
+        });*/
     }
 };
 
