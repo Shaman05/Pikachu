@@ -1,70 +1,40 @@
-## Node Static Server
+## 欢迎使用 Pikachu!
 
-#### NSS能做什么？
+#### Pikachu 是用来做什么的？
 
-N(Node)S(Static)S(Server)是用Nodejs创建web服务，并提供一组相关功能由 electron 开发的桌面应用。
+1.  web server 静态文件服务器
 
-* 可以任意指定的目录作为一个静态web服务的虚拟根目录
-* 可配置自定义标签作为模板碎片占位符
-* 可为远程接口设置代理服务，方便前后端分离的开发
+    你可以将你的前端项目添加到 pikachu 里，简单配置后即可以启动一个支持预览 .html 文件的静态的 web server， 其他类型文件，将以对应的 mime type 返回， 服务的根目录即为添加项目的目录。  [点击添加新项目](javascript:)
 
-#### 基本功能介绍
+2.  模板解析
 
-## 添加虚拟目录
+    pikachu 启动的静态 web server 默认支持 <include file="path/to/file"></include> 等语法（[详情参考](javascript:)）， 同时也支持自定义模板标签，该规则是自由指定对 .html 文件里特殊标签或者占位符的解析规则，不同的项目可以配置自己的模板规则。
 
-该功能同IIS的虚拟目录，nginx的vhost，以指定的目录作为web静态站点的根目录。
+3.  反向代理
 
-##### 添加虚拟目录
-![image](https://github.com/Shaman05/Node-Static-Server/blob/master/static/addvhost.png)
+    此功能在前后端完全分离的项目中很有用，它允许你配置反向代理的主机地址和对应的 path 路径，在项目中以该 path 开头的请求会由配置的主机返回响应， 该功能可在项目设置中自由开关。
+    一个反向代理的配置 host 为 http://10.10.82.85, path 为 /api，会将路由 /api/path/to/login 代理到 http://10.10.82.85/api/path/to/login。
 
-###### 别名(必须)
-该站点的名称
+4.  gulp、grunt、webpack任务一键运行
 
-###### 端口（必须）
-站点占用端口号，唯一指定，不能重复
+    基于目前前端项目的工程化，pikachu 针对构建工具 gulp, grunt, webpack 的对应配置文件 gulpfile.js, Gruntfile.js, webpack.config.js 自动解析 其中的任务和依赖，并提供需要参数的输入一键运行任务。
 
-###### 目录（必须）
-站点的根目录
+5.  sass、compass一键编译
 
-###### 配置文件（可选，json文件）
-站点配置，当前版本尚未添加相关功能
+    对于非工程化的前端项目，目前 pikachu 支持 sass（未考虑加入less、coffeescript） 文件编译。
+     pikachu 会自动扫描项目中的 .scss 源文件并提供相应的配置来帮助你编译该文件，如：是否输出 source map，输出格式等选项，而这些均为可视化的操作。
 
-###### 模板规则文件（可选，js文件，node模块）
-站点的模板规则，该规则是自由指定对html文件里特殊标签或者占位符的解析规则，每个添加的web站点都可以配置自己的模板规则。
+6.  还有什么？
 
-NSS是一个通用的解决方案，当前版本内置识别 `<include file="filepath"></include>` filepath 被引用文件相对当前文件的路径。
+    上面几点是 pikachu 的主要功能，还有其他一些小功能都很贴心的，这里不一一列出了，详情可查看[这里](javascript:)。
+     前端开发在现今越来越重要了，也越来越复杂了，在开发过程中你还需要什么样的功能希望 pikachu 来帮助你呢？ [我要提建议和反馈](javascript:)
 
-一个简单的模板规则模块文件(site1.conf.js)代码如下：
+#### pikachu 客户端开发使用的技术
 
-    "use strict";
-    var cssRegExp = /\{\{\{(.*?)\.css\}\}\}/ig;
-    var destDir = '/dist/css/';
+1.  electron
 
-    module.exports = function(content){
-      //添加css版本号
-      var version = '?v=' + +new Date();
-      return content.replace(cssRegExp, destDir + '$1.css' + version);
-    }
+    其实最初使用过 nw.js 开发过一个前端助手的工具，还没有发布就夭折了（555~~~）。当初因为 windows 环境问题，被折腾的痛苦不堪。后来接触到 electron， 在目前公司前端组里的项目管理上遇到些实际问题，于是开始着手开发 pikachu，在使用 electron 过程中，再也没有碰到众多的环境问题了，文档也很详细，泪流满面。
 
-该配置可将模板中 `{{cssfile.css}}` 替换为 `/dist/css/cssfile.css?v=xxxxxxxx`
+2.  Vue.js
 
-###### 反向代理（可选）
-反向代理作为前后端分离项目来讲是比较好用的配置，后端提供的API接口地址和路径可通过该项配置添加。
-
-一个反向代理的配置，host为http://10.10.82.85, path为/api，会将路由 /api/path/to/login 代理到 http://10.10.82.85/api/path/to/login
-
-## 虚拟目录列表
-
-罗列出已有的虚拟目录和其一些基本信息，并提供一组操作。所有的虚拟目录存储在 /data/vhost.json 文件里。
-
-启动该站点后，可点击访问按钮直接浏览器打开访问。详细信息可查看站点的详细情况，包括运行进程的 pid。
-
-##### 虚拟目录列表
-![image](https://github.com/Shaman05/Node-Static-Server/blob/master/static/vhostlist.png)
-
-##### 虚拟目录信息
-![image](https://github.com/Shaman05/Node-Static-Server/blob/master/static/vhostinfo.png)
-
-## 日志
-
-web服务的启动信息，错误信息，以及调试 console.log 信息可以在文件 /data/vhost.log 里查看， 也可通过菜单栏的日志选项打开查看。
+    同上提到的前端助手工具，业务逻辑使用的是 Angular.js（之前 Vue.js 还没问世），在实际项目中我们开始使用 Vue.js 了，开发过程中最大的感受是 Vue.js 简单易用， 该有的功能都有，编写业务 js 代码可以很简洁，简单粗暴，所以这次选用了 Vue.js 来开发 pikachu。
