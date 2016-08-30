@@ -5,6 +5,7 @@
 .build
 
 node_modules
+addon
 data
 test/out
 !test/out/a.temp
