@@ -103,8 +103,49 @@ Servlet.prototype.directory = function (req, res, path){
 
 //发送文件夹页面
 Servlet.prototype.directoryIndex = function (req, res, path, files, isHtmlDir){
-    var _files = files;
-    path = path.substring(1);
+    var cwd = process.cwd();
+    var fileData = [];
+    var _files = files.sort(function(a ,b){
+        var _a = _PATH_.join(cwd, path, a),
+            _b = _PATH_.join(cwd, path, b),
+            stA = _FS_.statSync(_a),
+            stB = _FS_.statSync(_b);
+        if(stA.isDirectory() && !stB.isDirectory()){
+            return -1;
+        }else  if(!stA.isDirectory() && stB.isDirectory()){
+            return 1;
+        }else{
+            return a > b ? 1 : -1;
+        }
+
+    });
+    _files.forEach(function (fileName){
+        var file = {
+            name: fileName,
+            href: fileName,
+            isDir: true,
+            fileTitle: '',
+            icon: 'icon-directory',
+            fileType: 'file'
+        };
+        if(fileName.charAt(0) !== '.'){
+            var filePath = _PATH_.join(cwd, path, fileName);
+            var st = _FS_.statSync(filePath);
+            var fileTitle = '';
+            file.path = filePath;
+            if(!st.isDirectory()){
+                file.isDir = false;
+                var s = fileName.split('.');
+                var suffix = serverConf.fileSuffix[s[s.length - 1]];
+                file.icon = 'icon-' + (suffix || 'file');
+                var fileContent = _FS_.readFileSync(filePath, 'utf8');
+                fileTitle = suffix == 'html' && serverConf.titleRegExp.exec(fileContent);
+                file.fileTitle = fileTitle ? '(' + fileTitle[1] + ')' : '';
+            }
+        }
+        fileData.push(file);
+    });
+    path = escapeHtml(path.substring(1));
     res.writeHead(200, displayOption);
     if(req.method === 'HEAD'){
         res.end();
@@ -115,8 +156,9 @@ Servlet.prototype.directoryIndex = function (req, res, path, files, isHtmlDir){
             throw err;
         }
         res.write(_JUICER_(content, {
-            dir: escapeHtml(path),
-            files: _files
+            isRoot: path === '/' || path === '\\',
+            dir: path,
+            files: fileData
         }));
         res.end();
     });
@@ -127,7 +169,7 @@ Servlet.prototype.sendFile = function (req, res, path){
     var fileType = path.split('.').pop();
     var self = this;
     res.writeHead(200, {
-        'Content-Type': _MIME_.lookup(fileType)
+        'Content-Type': _MIME_.lookup(fileType) + ';charset=utf-8'
     });
     if(fileType === 'html'){
         sendFile.html(req, res, path, extendConf.tplRule);

@@ -17,8 +17,8 @@ var config = {
     //附加头信息
     headers: {
         'Access-Control-Allow-Origin': '*',
-        'X-Server': 'Node v8',
-        'X-Power-By': 'Nss/1.0'
+        'X-Server': 'Node',
+        'X-Power-By': 'Pikachu Nss/1.0'
     },
 
     //mime type
@@ -39,6 +39,26 @@ var config = {
         'svg': 'image/svg+xml'
     },
 
+    fileSuffix: {
+        'html': 'html',
+        'shtml': 'html',
+        'htm': 'html',
+        'ejs': 'html',
+        'tpl': 'html',
+        'js': 'js',
+        'scss': 'sass',
+        'css': 'css',
+        'png': 'image',
+        'jpg': 'image',
+        'jpeg': 'image',
+        'gif': 'image',
+        'bmp': 'image',
+        'file': 'file',
+        'rar': 'zip',
+        'rar5': 'zip',
+        'zip': 'zip'
+    },
+
     //html content
     contentType: {
         'Content-Type': 'text/html; charset=utf-8'
@@ -46,6 +66,8 @@ var config = {
 
     //默认显示页面
     defaultPagePattern: /index22\.html/,
+
+    titleRegExp: /<title>(.*?)<\/title>/i,
 
     //是否默认支持 html 文件夹
     metaHtml: true,
