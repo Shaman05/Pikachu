@@ -65,7 +65,7 @@ var config = {
     },
 
     //默认显示页面
-    defaultPagePattern: /index22\.html/,
+    defaultPagePattern: /index\.html/,
 
     titleRegExp: /<title>(.*?)<\/title>/i,
 

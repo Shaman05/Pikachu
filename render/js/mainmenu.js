@@ -65,10 +65,16 @@ var log = new MenuItem({
                 icon: config.logo,
                 autoHideMenuBar: true,
                 frame: false,
-                show: true
+                show: false
             });
-            win.loadURL(path.join(config.templateDir, 'log.html'));
             //config.devTool && win.webContents.openDevTools();
+            win.loadURL(path.join(config.templateDir, 'log.html'));
+            appRoute.app.logWindow = win;
+            ipcRenderer.send('logger open', new Date() + ' logger window opened!');
+            win.on('close', function(e){
+                appRoute.app.logWindow = win = null;
+                ipcRenderer.send('logger close', new Date() + ' logger window closed!');
+            });
         }, 300);
     }
 });
@@ -132,8 +138,8 @@ var consoleLog = new MenuItem({
             show: false
         });
         win.loadURL(path.join(config.templateDir, '/console.html'));
-        appRoute.app.consoleWindow = win;
         //config.devTool && win.webContents.openDevTools();
+        appRoute.app.consoleWindow = win;
         ipcRenderer.send('console open', new Date() + ' console window opened!');
         win.on('close', function(e){
             appRoute.app.consoleWindow = win = null;
@@ -160,16 +166,36 @@ winMenu.append(exit);
 var settingMenu = new Menu();
 var theme = new MenuItem({
     label: '主题设置',
-    type: 'checkbox',
-    checked: true,
+    enabled: false,
     click: function(item, win){
     }
 });
 var globalSet = new MenuItem({
-    label: '项目设置',
+    label: '设 置',
     //icon: path.join(config.appRoot, '/render/images/menu_icon_settings.png'),
     click: function(){
-        util.pathTo('/setting');
+        appRoute.app.appLoading = true;
+        setTimeout(function(){
+            appRoute.app.appLoading = false;
+            var win = new BrowserWindow({
+                width: 700,
+                height: 500,
+                title: `设置`,
+                icon: config.logo,
+                autoHideMenuBar: true,
+                resizable: false,
+                frame: false,
+                show: false
+            });
+            win.loadURL(path.join(config.templateDir, 'setting.html'));
+            config.devTool && win.webContents.openDevTools();
+            appRoute.app.settingWindow = win;
+            ipcRenderer.send('setting open', new Date() + ' console window opened!');
+            win.on('close', function(e){
+                appRoute.app.settingWindow = win = null;
+                ipcRenderer.send('setting close', new Date() + ' console window closed!');
+            });
+        }, 300);
     }
 });
 settingMenu.append(theme);

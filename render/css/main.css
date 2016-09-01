@@ -55,10 +55,11 @@ h1,h2,h3{margin: 12px 0}
     overflow: auto;
 }
 .app-wrap.log-wrap,
-.app-wrap.console-wrap{
+.app-wrap.console-wrap,
+.app-wrap.setting-wrap{
     top: 30px;
     background: #121212;
-    padding: 10px 0;
+    padding: 0;
 }
 .log-wrap p{
     font-size: 12px;
@@ -746,4 +747,75 @@ input[type=number].form-control{
 }
 .sass-file-list .fui-upload:hover{
     color: #2ECC71;
+}
+
+.app-wrap.setting-wrap{
+    font-size: 14px;
+    color: #bbbbbb;
+    background: #3c3f41;
+    overflow: hidden;
+}
+.setting-wrap .left-side,
+.setting-wrap .right-side,
+.setting-wrap .bottom-bar{
+    box-shadow: 0 0 2px #515151 inset;
+    position: relative;
+}
+.setting-wrap .left-side{
+    float: left;
+    width: 20%;
+    height: 90%;
+    background: #3e434c;
+    border-right: 1px solid #515151;
+    margin-right: -1px;
+}
+.setting-wrap .right-side{
+    float: left;
+    width: 80%;
+    height: 90%;
+}
+.setting-wrap .bottom-bar{
+    height: 10%;
+    clear: both;
+    border-top: 1px solid #515151;
+    text-align: right;
+    top: -1px;
+}
+.bottom-bar button{
+    border-radius: 2px;
+    background: #4f5456;
+    color: #bbbbbb;
+    border: none;
+    padding: 3px 12px;
+    box-shadow: 0 0 1px #bbbbbb;
+    outline: none;
+    margin: 12px 12px 0 0;
+    font-family: "Courier New";
+}
+.bottom-bar button.ok{
+    background: -webkit-linear-gradient(top, #344a65 0%,#263549 100%);
+}
+.bottom-bar button:active{
+    box-shadow: 0 0 5px #6a91ff;
+}
+.setting-menu{
+    margin: 0;
+    padding: 18px 6px;
+    font-family: "Courier New";
+}
+.setting-menu dt{
+    font-weight: bold;
+    padding: 0 12px;
+    -webkit-user-select: none;
+    cursor: default;
+    -webkit-transition: all 0.2s;
+}
+.setting-menu dt.current{
+    background: #22456f;
+}
+.setting-menu dt:hover{
+    background: #484848;
+}
+.setting-menu dt.current:hover{
+    background: #22456f;
 }

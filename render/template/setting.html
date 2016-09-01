@@ -1,5 +1,43 @@
-<div class="setting">
-    <form>
-        <legend>设置</legend>
-    </form>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>设置</title>
+    <link rel="stylesheet" href="../css/flat-ui.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body id="app">
+<div class="loading-mask" v-if="!pageLoad">
+    <span class="fui-gear"></span>
 </div>
+<div class="title-bar">
+    <span class="logo"></span>
+    <span class="app-title-name">设置</span>
+    <span class="fui-cross-circle fr" title="刷新" v-on:click="refreshWin()"></span>
+</div>
+<div class="app-wrap setting-wrap">
+    <div class="left-side">
+        <dl class="setting-menu">
+            <dt>Nss</dt>
+            <dt>Sass</dt>
+            <dt class="current">Compass</dt>
+        </dl>
+    </div>
+    <div class="right-side">
+        <dl>
+            <dt>Nss</dt>
+            <dd>
+                <p>开启默认页显示（index.html）:</p>
+                <p>允许跨域：</p>
+            </dd>
+        </dl>
+    </div>
+    <div class="bottom-bar">
+        <button class="ok">Apply</button>
+        <button class="cancel" v-on:click="closeWin()">Cancel</button>
+    </div>
+</div>
+<script src="../js/vue.min.js"></script>
+<script src="../js/setting.js"></script>
+</body>
+</html>

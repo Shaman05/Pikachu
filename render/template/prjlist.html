@@ -12,7 +12,7 @@
     <div class="prj-row" v-for="host in hosts" v-bind:class="{'running': host.isRunning}">
         <span class="col50">名称：{{host.name}}</span>
         <span class="col50">端口：{{host.port}}</span>
-        <span class="col100">路径：<span class="path" v-on:click="openDir(host.path)">{{host.path}}</span></span>
+        <span class="col100">路径：<span class="path" v-on:click="openDir(host.path)" title="打开目录">{{host.path}}</span></span>
         <span class="col100">创建时间：<span>{{host.createTime}}</span></span>
         <div class="btn-group">
             <button type="button" class="btn btn-primary btn-xs" v-if="!host.isRunning" v-on:click="startHost(host)">启动</button>

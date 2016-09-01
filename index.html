@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="./render/css/main.css">
 </head>
 <body id="app">
-<div class="loading-mask" v-if="appLoading">
-    <span class="fui-gear"></span>
+<div class="loading-mask" v-if="appLoading || showMask">
+    <span class="fui-gear" v-if="appLoading"></span>
 </div>
 <div class="app-tip-bar" v-bind:class="{'tip-show': appShowTip, 'error-tip-bar': appShowTipError}">
     <p class="text-warning">{{appTipMessage}}</p>

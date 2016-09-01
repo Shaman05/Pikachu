@@ -106,4 +106,16 @@ function appInit(){
     ipcMain.on('console close', function (event, message) {
         event.sender.send('console close', message);
     });
+    ipcMain.on('logger open', function (event, message) {
+        event.sender.send('logger open', message);
+    });
+    ipcMain.on('logger close', function (event, message) {
+        event.sender.send('logger close', message);
+    });
+    ipcMain.on('setting open', function (event, message) {
+        event.sender.send('setting open', message);
+    });
+    ipcMain.on('setting close', function (event, message) {
+        event.sender.send('setting close', message);
+    });
 }

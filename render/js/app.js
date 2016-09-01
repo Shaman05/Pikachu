@@ -12,7 +12,9 @@ var util = require('../../core/util');
 var ipcRenderer = electron.ipcRenderer;
 var mainWindow = remote.getCurrentWindow();
 var clearPrjMenu = menus.prjMenu.items[2];
+var logMenu = menus.prjMenu.items[3];
 var consoleMenu = menus.winMenu.items[0];
+var settingMenu = menus.settingMenu.items[1];
 
 module.exports.start = function(config){
     var appConf = config.appInfo;
@@ -30,10 +32,21 @@ module.exports.start = function(config){
     ipcRenderer.on('console open', function(event, message){
         consoleMenu.enabled = false;
     });
+    ipcRenderer.on('logger close', function(event, message){
+        logMenu.enabled = true;
+    });
+    ipcRenderer.on('logger open', function(event, message){
+        logMenu.enabled = false;
+    });
+    ipcRenderer.on('setting close', function(event, message){
+        settingMenu.enabled = true;
+    });
+    ipcRenderer.on('setting open', function(event, message){
+        settingMenu.enabled = false;
+    });
 
     //controllers
     var index = require('./controllers/index')();
-    var setting = require('./controllers/setting')();
     var prjEdit = require('./controllers/prjedit')();
     var prjList = require('./controllers/prjlist')();
     var prjInfo = require('./controllers/prjinfo')();
@@ -47,7 +60,9 @@ module.exports.start = function(config){
                 appShowTip: false,
                 appShowTipError: false,
                 appTipMessage: '系统默认提示信息：这里是前端项目管理器！',
-                consoleWindow: null
+                consoleWindow: null,
+                logWindow: null,
+                settingWindow: null
             };
         },
         created: function(){
@@ -68,9 +83,6 @@ module.exports.start = function(config){
     Router.map({
         '/index': {
             component: index
-        },
-        '/setting': {
-            component: setting
         },
         '/prjEdit': {
             component: prjEdit
