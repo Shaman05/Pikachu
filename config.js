@@ -6,6 +6,8 @@
 
 var path = require('path');
 var os = require('os');
+var fs = require('fs');
+var _ = require('lodash');
 var pkg = require('./package.json');
 
 var appRoot = process.cwd();
@@ -15,7 +17,7 @@ var rubyCmd = path.join(addOnDir, 'ruby', 'bin', 'ruby.exe');
 var sassCmd = path.join(addOnDir, 'bin', 'sass');
 var compassCmd = path.join(addOnDir, 'bin', 'compass');
 
-module.exports = {
+var baseConfig = {
     appRoot: appRoot,
     osType: os.type(),
     osPlatform: os.platform(),
@@ -25,6 +27,7 @@ module.exports = {
     readMeFile: path.join(appRoot, 'README.md'),
     logFile: path.join(dataDir, 'vhost.log'),
     hostsFile: path.join(dataDir, 'vhost.json'),
+    customSettingFile: path.join(dataDir, 'setting.json'),
     logo: path.join(appRoot, `render/images/logo/logo.png`),
     refresh: true,
     devTool: true,
@@ -54,3 +57,9 @@ module.exports = {
         watch: false
     }
 };
+
+module.exports = _.merge(baseConfig, getCustomConfig());
+
+function getCustomConfig() {
+    return fs.existsSync(baseConfig.customSettingFile) ? require(baseConfig.customSettingFile) : {};
+}

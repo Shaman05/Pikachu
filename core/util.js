@@ -19,6 +19,9 @@ var appConf = config.appInfo;
 
 module.exports = {
     //methods
+    getRuntimeConfig: function () {
+        return require('../config');
+    },
     rid: function (len) {
         return Math.random().toString(len || 36).substr(2).toUpperCase();    
     },
