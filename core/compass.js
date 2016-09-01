@@ -36,9 +36,9 @@ module.exports = {
     getRubyVersion: function (cb) {
         var args = ['-v'];
         execCommand(args, function (error, stdOut, code) {
-            cb(stdOut, code);
             if(code !== runningCode){
                 console.log(code == 0 ? 'Ruby pass!' : 'Ruby abnormal!');
+                cb(stdOut, code);
             }
         });
     },
@@ -46,9 +46,9 @@ module.exports = {
     getSassVersion: function (cb) {
         var args = sassCli.concat(['-v']);
         execCommand(args, function (error, stdOut, code) {
-            cb(stdOut, code);
             if(code !== runningCode){
                 console.log(code == 0 ? 'Sass pass!' : 'Sass abnormal!');
+                cb(stdOut, code);
             }
         });
     },
@@ -56,9 +56,9 @@ module.exports = {
     getCompassVersion: function (cb) {
         var args = compassCli.concat(['-v']);
         execCommand(args, function (error, stdOut, code) {
-            cb(stdOut, code);
             if(code !== runningCode){
                 console.log(code == 0 ? 'Compass pass!' : 'Compass abnormal!');
+                cb(stdOut, code);
             }
         });
     },
@@ -131,6 +131,7 @@ function callback(cb) {
 function execCommand(args, callback) {
     if(!args.length === 0)return;
     var startTime = +new Date();
+    var outPut = '';
     var childProcess = child_process.spawn(rubyCmd, args);
     log.info(['exec command:', args.join(' ')].join('\r\n'));
     childProcess.stderr.setEncoding('utf8');
@@ -139,11 +140,12 @@ function execCommand(args, callback) {
     });
     childProcess.stdout.setEncoding('utf8');
     childProcess.stdout.on('data', function (data){
+        outPut += data;
         callback && callback(null, data, runningCode);
     });
     childProcess.on('close', function (code){
         var duration = +new Date() - startTime;
-        callback && callback(null, '', code, duration);
+        callback && callback(null, outPut, code, duration);
     });
 }
 

@@ -204,27 +204,21 @@ settingMenu.append(globalSet);
 //Help
 var helpMenu = new Menu();
 var homePage = new MenuItem({
-    label: 'Home page',
-    click: function(){
-        util.pathTo('/index');
-    }
-});
-var readMe = new MenuItem({
     label: 'README.md',
     click: function(){
-        //todo
+        util.pathTo('/index');
     }
 });
 var useMenu = new MenuItem({
     label: '使用帮助',
     click: function(){
-
+        util.openUrl('https://github.com/Shaman05/Pikachu/wiki')
     }
 });
 var feedBack = new MenuItem({
     label: '建议和反馈',
     click: function(){
-
+        util.openUrl('https://github.com/Shaman05/Pikachu/issues');
     }
 });
 var checkUpdate = new MenuItem({
@@ -240,7 +234,6 @@ var about = new MenuItem({
     click: util.about
 });
 helpMenu.append(homePage);
-helpMenu.append(readMe);
 helpMenu.append(useMenu);
 helpMenu.append(feedBack);
 helpMenu.append(new MenuItem({type: 'separator'}));

@@ -14,6 +14,7 @@ var electron = require('electron');
 var ipcRenderer = electron.ipcRenderer;
 var shell = electron.shell;
 var config = require('../config');
+var compass = require('./compass');
 var appConf = config.appInfo;
 
 module.exports = {
@@ -363,5 +364,20 @@ module.exports = {
             watch: file.watch,
             cssDir: file.cssDir
         }
+    },
+    getRubyVersion: function (cb) {
+        compass.getRubyVersion(function (stdOut, code) {
+            cb(code == 0 ? stdOut : '获取 ruby 版本失败！');
+        });
+    },
+    getSassVersion: function (cb) {
+        compass.getSassVersion(function (stdOut, code) {
+            cb(code == 0 ? stdOut : '获取 sass 版本失败！');
+        });
+    },
+    getCompassVersion: function (cb) {
+        compass.getCompassVersion(function (stdOut, code) {
+            cb(code == 0 ? stdOut : '获取 compass 版本失败！');
+        });
     }
 };

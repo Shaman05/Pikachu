@@ -18,19 +18,93 @@
 <div class="app-wrap setting-wrap">
     <div class="left-side">
         <dl class="setting-menu">
-            <dt>Nss</dt>
-            <dt>Sass</dt>
-            <dt class="current">Compass</dt>
+            <dt v-bind:class="{'current': contentShow == 'nss'}" v-on:click="tabSetting('nss')">Nss</dt>
+            <dt v-bind:class="{'current': contentShow == 'ruby'}" v-on:click="tabSetting('ruby')">Ruby</dt>
+            <dt v-bind:class="{'current': contentShow == 'sass'}" v-on:click="tabSetting('sass')">Sass</dt>
+            <dt v-bind:class="{'current': contentShow == 'compass'}" v-on:click="tabSetting('compass')">Compass</dt>
         </dl>
     </div>
     <div class="right-side">
-        <dl>
-            <dt>Nss</dt>
-            <dd>
-                <p>开启默认页显示（index.html）:</p>
-                <p>允许跨域：</p>
-            </dd>
-        </dl>
+        <div class="setting-content" v-if="contentShow == 'nss'">
+            <h4>Node static server setting</h4>
+            <div class="version"></div>
+            <div class="row">
+                <span>开启默认页显示(index.html)</span>&nbsp;<input type="checkbox">
+            </div>
+            <div class="row"><span>开启浏览器自动刷新</span>&nbsp;<input type="checkbox" checked></div>
+            <div class="row">
+                <span>允许跨域</span>&nbsp;<input type="checkbox" checked>
+                <br>
+                <p>开启后将自动添加 'Access-Control-Allow-Origin': '*' 头来支持跨域访问</p>
+            </div>
+            <div class="row">
+                <span>开启手机调试</span>&nbsp;<input type="checkbox">
+                <br>
+                <p>需要先安装 weinre, 启动后占用端口 9527</p>
+            </div>
+            <div class="setting-tips">
+                <p>注意：node static server 的设置修改后需重新启动项目才生效！</p>
+            </div>
+        </div>
+        <div class="setting-content" v-if="contentShow == 'ruby'">
+            <h4>Ruby</h4>
+            <div class="version">{{rubyVersion}}</div>
+        </div>
+        <div class="setting-content" v-if="contentShow == 'sass'">
+            <h4>Sass setting</h4>
+            <div class="version">{{sassVersion}}</div>
+            <div class="row">
+                <span>输出格式</span>&nbsp;
+                <select name="out-style">
+                    <option value="nested" title="层级嵌套">nested</option>
+                    <option value="expanded" title="正常展开格式">expanded</option>
+                    <option value="compact" title="单行紧凑输出">compact</option>
+                    <option value="compressed" title="完全压缩" selected>compressed</option>
+                </select>
+            </div>
+            <div class="row"><span>输出 sourceMap</span>&nbsp;<input type="checkbox" checked></div>
+            <div class="row"><span>输出额外的调试信息</span>&nbsp;<input type="checkbox"></div>
+            <div class="row">
+                <span>是否强制编译</span>&nbsp;<input type="checkbox">
+                <br>
+                <p>如果勾选则对文件内容没有变动的情况下也会重新编译</p>
+            </div>
+            <div class="row">
+                <span>auto compile</span>&nbsp;<input type="checkbox" checked>
+                <br>
+                <p>即我们通常说的 watch 功能</p>
+            </div>
+        </div>
+        <div class="setting-content" v-if="contentShow == 'compass'">
+            <h4>Compass setting</h4>
+            <div class="version">{{compassVersion}}</div>
+            <div class="row">
+                <span>输出格式</span>&nbsp;
+                <select name="out-style">
+                    <option value="nested" title="层级嵌套">nested</option>
+                    <option value="expanded" title="正常展开格式">expanded</option>
+                    <option value="compact" title="单行紧凑输出">compact</option>
+                    <option value="compressed" title="完全压缩" selected>compressed</option>
+                </select>
+            </div>
+            <div class="row"><span>输出 sourceMap</span>&nbsp;<input type="checkbox" checked></div>
+            <div class="row"><span>输出额外的调试信息</span>&nbsp;<input type="checkbox"></div>
+            <div class="row">
+                <span>是否强制编译</span>&nbsp;<input type="checkbox">
+                <br>
+                <p>如果勾选则对文件内容没有变动的情况下也会重新编译</p>
+            </div>
+            <div class="row">
+                <span>auto compile</span>&nbsp;<input type="checkbox" checked>
+                <br>
+                <p>即我们通常说的 watch 功能</p>
+            </div>
+            <div class="row">
+                <span>使用系统的 compass 编译</span>&nbsp;
+                <br>
+                <input type="text" placeholder="这里指定 compass 路径" size="30" readonly><button>Select</button>
+            </div>
+        </div>
     </div>
     <div class="bottom-bar">
         <button class="ok">Apply</button>

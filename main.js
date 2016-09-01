@@ -28,7 +28,7 @@ function createWindow(){
         title: appConf.title,
         icon: config.logo,
         resizable: false,
-        show: true,
+        show: false,
         frame: false
     });
     mainWindow.loadURL(config.enterUrl);

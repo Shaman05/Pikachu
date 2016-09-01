@@ -99,14 +99,6 @@
                             <input type="text" class="form-control gulp-param" v-model="gruntParam" placeholder="这里可添加运行参数">
                             <button type="button" class="btn btn-primary btn-sm" v-bind:disabled="!gruntTask || gruntTaskIsRunning" v-on:click="runGruntTask()">运 行</button>
                         </div>
-
-                        <!--<div class="task-row grunt-task-item" v-for="task in gruntList">
-                            <h4>{{task.taskName}}</h4>
-                            <ul>
-                                <li v-for="subTask in task.subTask">{{subTask}}</li>
-                            </ul>
-                        </div>-->
-
                         <div class="task-row gulp-task-row">
                             <label class="task-item" v-for="task in gruntList" v-bind:class="{'current': task == gruntTaskName}">
                                 <input type="radio" name="grunt-task-item" v-model="gruntTaskName" v-bind:value="task">
@@ -135,7 +127,11 @@
                     <em>
                         1. 文件默认是按命名排序的。
                         <br>
-                        2. 本功能是使用 node-sass 模块编译，如果使用了 compass 的精灵图，请使用 compass 自行编译。
+                        2. 本功能是使用集成到 pikachu 内部的 ruby + sass 或 ruby + compass 实现的编译过程。
+                        <br>
+                        3. 默认编译配置将使用项目的 sass 编译配置，默认输出位置是源文件的位置。
+                        <br>
+                        4. 单个文件的编译配置和文件输出位置可右键菜单设置。
                     </em>
                 </span>
                 <span class="fui-eye fr" title="重新扫描" v-on:click="scanSassFile()"><em>{{scanTime}}ms {{sassFiles.length}}个文件</em></span>
