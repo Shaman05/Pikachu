@@ -49,12 +49,26 @@ var baseConfig = {
         width: 800
     },
 
+    //nss默认设置
+    nss: {
+        protocol: 'http',
+        liveLoad: true,
+        defaultPage: false,
+        crossDomain: true,
+        weinre: false,
+        useRule: false,
+        tplRule: path.join(appRoot, `webserver/addon/base-tpl.js`)
+    },
+
     //sass默认设置
     sass: {
         sourceMap: true,
         sourceComments: false,
         outStyle: 'compressed', //Values: nested, expanded, compact, compressed
-        watch: false
+        watch: false,
+        force: false,
+        useCustomCompass: false,
+        customCompass: 'sss'
     }
 };
 

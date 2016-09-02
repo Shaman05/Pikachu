@@ -19,9 +19,11 @@
     <div class="left-side">
         <dl class="setting-menu">
             <dt v-bind:class="{'current': contentShow == 'nss'}" v-on:click="tabSetting('nss')">Nss</dt>
+            <dt v-bind:class="{'current': contentShow == 'tplRule'}" v-on:click="tabSetting('tplRule')">Template rule</dt>
             <dt v-bind:class="{'current': contentShow == 'ruby'}" v-on:click="tabSetting('ruby')">Ruby</dt>
             <dt v-bind:class="{'current': contentShow == 'sass'}" v-on:click="tabSetting('sass')">Sass</dt>
             <dt v-bind:class="{'current': contentShow == 'compass'}" v-on:click="tabSetting('compass')">Compass</dt>
+            <dt v-bind:class="{'current': contentShow == 'gulp'}" v-on:click="tabSetting('gulp')">Gulp plugs</dt>
         </dl>
     </div>
     <div class="right-side">
@@ -29,21 +31,43 @@
             <h4>Node static server setting</h4>
             <div class="version"></div>
             <div class="row">
-                <span>开启默认页显示(index.html)</span>&nbsp;<input type="checkbox">
+                <span>开启默认页显示(index.html)</span>&nbsp;<input type="checkbox" v-bind:checked="editConfig.defaultPage" v-model="editConfig.defaultPage">
             </div>
-            <div class="row"><span>开启浏览器自动刷新</span>&nbsp;<input type="checkbox" checked></div>
+            <div class="row"><span>开启浏览器自动刷新</span>&nbsp;<input type="checkbox" v-bind:checked="editConfig.liveLoad" v-model="editConfig.liveLoad"></div>
             <div class="row">
-                <span>允许跨域</span>&nbsp;<input type="checkbox" checked>
+                <span>允许跨域</span>&nbsp;<input type="checkbox" v-bind:checked="editConfig.crossDomain" v-model="editConfig.crossDomain">
                 <br>
                 <p>开启后将自动添加 'Access-Control-Allow-Origin': '*' 头来支持跨域访问</p>
             </div>
             <div class="row">
-                <span>开启手机调试</span>&nbsp;<input type="checkbox">
+                <span>开启手机调试</span>&nbsp;<input type="checkbox" v-bind:checked="editConfig.weinre" v-model="editConfig.weinre">
                 <br>
                 <p>需要先安装 weinre, 启动后占用端口 9527</p>
             </div>
+            <div class="row">
+                <span>默认使用的协议</span>&nbsp;
+                <select name="protocol" style="min-width: 80px" disabled v-model="editConfig.protocol">
+                    <option value="http">http://</option>
+                    <option value="https">https://</option>
+                </select>
+                <br>
+                <p>全局默认使用 http 协议，如需使用 https 可在项目设置中单独设置</p>
+            </div>
             <div class="setting-tips">
-                <p>注意：node static server 的设置修改后需重新启动项目才生效！</p>
+                <p>注意：node static server 的设置修改后需重新启动项目才生效</p>
+            </div>
+        </div>
+        <div class="setting-content" v-if="contentShow == 'tplRule'">
+            <h4>Template rule</h4>
+            <div class="row">
+                <span>模板规则模块</span>&nbsp;<input type="checkbox" v-bind:checked="editConfig.useRule" v-model="editConfig.useRule">
+                <br>
+                <p><input type="text" readonly
+                          v-bind:disabled="!editConfig.useRule"
+                          value="{{editConfig.tplRule}}" size="50"><button v-bind:disabled="!editConfig.useRule">Select</button></p>
+            </div>
+            <div class="setting-tips">
+                <p>全局的模板规则模块规则作用于所有添加的项目，单个项目的模板规则可单独添加</p>
             </div>
         </div>
         <div class="setting-content" v-if="contentShow == 'ruby'">
@@ -55,24 +79,27 @@
             <div class="version">{{sassVersion}}</div>
             <div class="row">
                 <span>输出格式</span>&nbsp;
-                <select name="out-style">
-                    <option value="nested" title="层级嵌套">nested</option>
-                    <option value="expanded" title="正常展开格式">expanded</option>
-                    <option value="compact" title="单行紧凑输出">compact</option>
-                    <option value="compressed" title="完全压缩" selected>compressed</option>
+                <select name="out-style" v-model="editConfig.outStyle">
+                    <option value="nested" title="层级嵌套" v-bind:selected="editConfig.outStyle == 'nested'">nested</option>
+                    <option value="expanded" title="正常展开格式" v-bind:selected="editConfig.outStyle == 'expanded'">expanded</option>
+                    <option value="compact" title="单行紧凑输出" v-bind:selected="editConfig.outStyle == 'compact'">compact</option>
+                    <option value="compressed" title="完全压缩"  v-bind:selected="editConfig.outStyle == 'compressed'">compressed</option>
                 </select>
             </div>
-            <div class="row"><span>输出 sourceMap</span>&nbsp;<input type="checkbox" checked></div>
-            <div class="row"><span>输出额外的调试信息</span>&nbsp;<input type="checkbox"></div>
+            <div class="row"><span>输出 sourceMap</span>&nbsp;<input type="checkbox" v-bind:checked="editConfig.sourceMap" v-model="editConfig.sourceMap"></div>
+            <div class="row"><span>输出额外的调试信息</span>&nbsp;<input type="checkbox" v-bind:checked="editConfig.sourceComments" v-model="editConfig.sourceComments"></div>
             <div class="row">
-                <span>是否强制编译</span>&nbsp;<input type="checkbox">
+                <span>是否强制编译</span>&nbsp;<input type="checkbox" v-bind:checked="editConfig.force" v-model="editConfig.force">
                 <br>
                 <p>如果勾选则对文件内容没有变动的情况下也会重新编译</p>
             </div>
             <div class="row">
-                <span>auto compile</span>&nbsp;<input type="checkbox" checked>
+                <span>auto compile</span>&nbsp;<input type="checkbox" v-bind:checked="editConfig.watch" v-model="editConfig.watch">
                 <br>
                 <p>即我们通常说的 watch 功能</p>
+            </div>
+            <div class="setting-tips">
+                <p>sass 和 compass 的基础编译设置是完全一样，所以修改的时候将会同步这些设置</p>
             </div>
         </div>
         <div class="setting-content" v-if="contentShow == 'compass'">
@@ -80,34 +107,38 @@
             <div class="version">{{compassVersion}}</div>
             <div class="row">
                 <span>输出格式</span>&nbsp;
-                <select name="out-style">
-                    <option value="nested" title="层级嵌套">nested</option>
-                    <option value="expanded" title="正常展开格式">expanded</option>
-                    <option value="compact" title="单行紧凑输出">compact</option>
-                    <option value="compressed" title="完全压缩" selected>compressed</option>
+                <select name="out-style" v-model="editConfig.outStyle">
+                    <option value="nested" title="层级嵌套" v-bind:selected="editConfig.outStyle == 'nested'">nested</option>
+                    <option value="expanded" title="正常展开格式" v-bind:selected="editConfig.outStyle == 'expanded'">expanded</option>
+                    <option value="compact" title="单行紧凑输出" v-bind:selected="editConfig.outStyle == 'compact'">compact</option>
+                    <option value="compressed" title="完全压缩"  v-bind:selected="editConfig.outStyle == 'compressed'">compressed</option>
                 </select>
             </div>
-            <div class="row"><span>输出 sourceMap</span>&nbsp;<input type="checkbox" checked></div>
-            <div class="row"><span>输出额外的调试信息</span>&nbsp;<input type="checkbox"></div>
+            <div class="row"><span>输出 sourceMap</span>&nbsp;<input type="checkbox" v-bind:checked="editConfig.sourceMap" v-model="editConfig.sourceMap"></div>
+            <div class="row"><span>输出额外的调试信息</span>&nbsp;<input type="checkbox" v-bind:checked="editConfig.sourceComments" v-model="editConfig.sourceComments"></div>
             <div class="row">
-                <span>是否强制编译</span>&nbsp;<input type="checkbox">
+                <span>是否强制编译</span>&nbsp;<input type="checkbox" v-bind:checked="editConfig.force" v-model="editConfig.force">
                 <br>
                 <p>如果勾选则对文件内容没有变动的情况下也会重新编译</p>
             </div>
             <div class="row">
-                <span>auto compile</span>&nbsp;<input type="checkbox" checked>
+                <span>auto compile</span>&nbsp;<input type="checkbox" v-bind:checked="editConfig.watch" v-model="editConfig.watch">
                 <br>
                 <p>即我们通常说的 watch 功能</p>
             </div>
             <div class="row">
-                <span>使用系统的 compass 编译</span>&nbsp;
+                <span>使用系统的 compass 编译</span>&nbsp;<input type="checkbox" v-bind:checked="editConfig.useCustomCompass" v-model="editConfig.useCustomCompass">
                 <br>
-                <input type="text" placeholder="这里指定 compass 路径" size="30" readonly><button>Select</button>
+                <input type="text" placeholder="这里指定 compass 路径"
+                       size="50" readonly
+                       value="{{editConfig.customCompass}}"
+                       v-bind:disabled="!editConfig.useCustomCompass"><button v-bind:disabled="!editConfig.useCustomCompass">Select</button>
             </div>
         </div>
     </div>
     <div class="bottom-bar">
-        <button class="ok">Apply</button>
+        <button class="ok canSave reset" v-on:click="reset()">恢复默认设置</button>
+        <button class="ok" v-bind:class="{'canSave': canSave}" v-bind:disabled="!canSave" v-on:click="applySet()">Apply</button>
         <button class="cancel" v-on:click="closeWin()">Cancel</button>
     </div>
 </div>

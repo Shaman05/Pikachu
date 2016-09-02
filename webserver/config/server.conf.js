@@ -3,6 +3,9 @@
  * 创建web服务的相关配置
  */
 
+var baseConfig = require('../../config');
+nssConf = baseConfig.nss || {};
+
 var env = 'dev';
 
 var config = {
@@ -15,11 +18,16 @@ var config = {
     port: '',
 
     //附加头信息
-    headers: {
-        'Access-Control-Allow-Origin': '*',
-        'X-Server': 'Node',
-        'X-Power-By': 'Pikachu Nss/1.0'
-    },
+    headers: function () {
+        var headers = {
+            'X-Server': 'Node',
+            'X-Power-By': 'Pikachu Nss/1.0'
+        };
+        if(nssConf.crossDomain){
+            headers['Access-Control-Allow-Origin'] = '*';
+        }
+        return headers;
+    }(),
 
     //mime type
     mimeType: {
@@ -65,7 +73,7 @@ var config = {
     },
 
     //默认显示页面
-    defaultPagePattern: /index123\.html/,
+    defaultPagePattern: nssConf.defaultPage && /index123\.html/,
 
     titleRegExp: /<title>(.*?)<\/title>/i,
 
