@@ -7,7 +7,6 @@
 var path = require('path');
 var os = require('os');
 var fs = require('fs');
-var _ = require('lodash');
 var pkg = require('./package.json');
 
 var appRoot = process.cwd();
@@ -68,12 +67,8 @@ var baseConfig = {
         watch: false,
         force: false,
         useCustomCompass: false,
-        customCompass: 'sss'
+        customCompass: ''
     }
 };
 
-module.exports = _.merge(baseConfig, getCustomConfig());
-
-function getCustomConfig() {
-    return fs.existsSync(baseConfig.customSettingFile) ? require(baseConfig.customSettingFile) : {};
-}
+module.exports = baseConfig;

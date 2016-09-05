@@ -13,7 +13,7 @@
 <div class="title-bar">
     <span class="logo"></span>
     <span class="app-title-name">设置</span>
-    <span class="fui-cross-circle fr" title="刷新" v-on:click="refreshWin()"></span>
+    <span class="fui-cross-circle fr" title="关闭" v-on:click="closeWin()"></span>
 </div>
 <div class="app-wrap setting-wrap">
     <div class="left-side">
@@ -138,7 +138,7 @@
     </div>
     <div class="bottom-bar">
         <button class="ok canSave reset" v-on:click="reset()">恢复默认设置</button>
-        <button class="ok" v-bind:class="{'canSave': canSave}" v-bind:disabled="!canSave" v-on:click="applySet()">Apply</button>
+        <button class="ok canSave" v-on:click="applySet()">Apply</button>
         <button class="cancel" v-on:click="closeWin()">Cancel</button>
     </div>
 </div>

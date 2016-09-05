@@ -17,7 +17,6 @@ var consoleMenu = menus.winMenu.items[0];
 var settingMenu = menus.settingMenu.items[1];
 
 module.exports.start = function(config){
-    console.log(config);
     var appConf = config.appInfo;
     //来自主进程中的消息事件
     ipcRenderer.on('app quit', function(event, message) {

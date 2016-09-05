@@ -10,6 +10,7 @@ var remote = electron.remote;
 var mainWindow = remote.getCurrentWindow();
 var util = require('../../core/util');
 var config = require('../../config');
+var savedConfig = getEntryConfig(util.getRuntimeConfig());
 
 var V = new Vue({
     el: '#app',
@@ -19,7 +20,7 @@ var V = new Vue({
         rubyVersion: '正在获取当前 ruby 版本号...',
         sassVersion: '正在获取当前 sass 版本号...',
         compassVersion: '正在获取当前 compass 版本号...',
-        editConfig: getEntryConfig(config)
+        editConfig: savedConfig
     },
     created: function(){
         var _this = this;
@@ -34,11 +35,6 @@ var V = new Vue({
         util.getCompassVersion(function (msg) {
             _this.compassVersion = msg;
         });
-    },
-    computed: {
-        canSave: function () {
-            return !compareConfig(getEntryConfig(config), this.editConfig);
-        }
     },
     methods: {
         closeWin: mainWindow.close,
@@ -72,19 +68,22 @@ var V = new Vue({
             };
             fs.writeFile(config.customSettingFile, JSON.stringify(customConfig, true, 4), function (err) {
                 if(!err){
-                    util.alert('设置已更新');
+                    //util.alert('设置已更新');
                 }
             });
         },
         reset: function () {
-            this.editConfig = getEntryConfig(util.getRuntimeConfig());
-            fs.unlink(config.customSettingFile, function (err) {});
+            this.editConfig = getEntryConfig(config);
+            fs.existsSync(config.customSettingFile) && fs.unlink(config.customSettingFile, function (err) {
+                if(!err){
+                    //util.alert('已恢复默认设置');
+                }
+            });
         }
     }
 });
 
 function getEntryConfig(config) {
-    console.log(config);
     var nssConf = config.nss;
     var sassConf = config.sass;
     return {
@@ -104,16 +103,4 @@ function getEntryConfig(config) {
         watch: sassConf.watch,
         force: sassConf.force
     }
-}
-
-//浅对比两个对象，完全相等返回 true
-function compareConfig(saveConfig, newConfig) {
-    for(var key in saveConfig){
-        if(saveConfig.hasOwnProperty(key)){
-            if(newConfig[key] !== saveConfig[key]){
-                return false;
-            }
-        }
-    }
-    return true;
 }

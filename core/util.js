@@ -9,6 +9,7 @@ var fs = require('fs');
 var os = require('os');
 var child_process = require('child_process');
 var stream = require('stream');
+var _ = require('lodash');
 var liner = new stream.Transform( { objectMode: true } );
 var electron = require('electron');
 var ipcRenderer = electron.ipcRenderer;
@@ -20,7 +21,8 @@ var appConf = config.appInfo;
 module.exports = {
     //methods
     getRuntimeConfig: function () {
-        return require('../config');
+        var customSetting = fs.existsSync(config.customSettingFile) ? require(config.customSettingFile) : {};
+        return _.merge(_.cloneDeep(config), _.cloneDeep(customSetting));
     },
     rid: function (len) {
         return Math.random().toString(len || 36).substr(2).toUpperCase();    
