@@ -249,10 +249,22 @@ h1,h2,h3{margin: 12px 0}
     padding-left: 20px;
 }
 .prj-edit,
-.prj-list,
 .setting,
+.prj-list,
 .readme-content{
     padding: 12px;
+}
+.prj-list{
+    transition: all 0.3s;
+}
+.prj-list .side-menu{
+    width: 140px;
+}
+.prj-list.expend{
+    padding-left: 140px;
+}
+.prj-list.expend .side-menu{
+    margin-left: -140px;
 }
 .home-page ol{
     padding-bottom: 12px;
@@ -388,6 +400,8 @@ input[type=number].form-control{
 .prj-row.running{
     background: #2C3E50;
     color: #1abc9c;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 .prj-row .stop{
     background: #E67E22;
