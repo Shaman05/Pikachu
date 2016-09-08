@@ -1,0 +1,65 @@
+<div class="prj-task" v-if="curTab == 'task'" v-bind:class="{'tabShow': curTab == 'task'}">
+    <h2>任务调度</h2>
+    <dl>
+        <dt v-bind:class="{'current': curTaskTab == 'gulp'}" v-on:click="taskTab('gulp')">gulp
+            <span class="fui-question-circle icon-tip">
+                <em>
+                    解析项目 gulpfile.js 文件中 gulp.task() 定义的任务。
+                    <br>
+                    <span class="cwd">cwd: {{prjInfo.path}}</span>
+                    <br>
+                    可在 window -&gt; 控制台 查看IO输出。
+                </em>
+            </span>
+        </dt>
+        <dt v-bind:class="{'current': curTaskTab == 'grunt'}" v-on:click="taskTab('grunt')">grunt
+            <span class="fui-question-circle icon-tip"><em>解析项目 Gruntfile.js 文件中 grunt.registerTask() 定义的任务。
+            <br>
+            <span class="cwd">cwd: {{prjInfo.path}}</span></em></span>
+        </dt>
+        <dt v-bind:class="{'current': curTaskTab == 'webpack'}" v-on:click="taskTab('webpack')">webpack</dt>
+
+        <dd v-bind:class="{'current': curTaskTab == 'gulp'}">
+            <template v-if="gulpList.length === 0">
+                <p>No task!</p>
+            </template>
+            <template v-else>
+                <div class="task-info">
+                    <span class="task-show" title="执行的命令">$ &nbsp;<i>{{gulpTask || '未指定任务'}}</i></span>
+                    <input type="text" class="form-control gulp-param" v-model="gulpParam" placeholder="这里可添加运行参数">
+                    <button type="button" class="btn btn-primary btn-sm" v-bind:disabled="!gulpTask || gulpTaskIsRunning" v-on:click="runGulpTask()">运 行</button>
+                </div>
+                <div class="task-row gulp-task-row">
+                    <label class="task-item" v-for="task in gulpList" v-bind:class="{'current': task == gulpTaskName}">
+                        <input type="radio" name="gulp-task-item" v-model="gulpTaskName" v-bind:value="task">
+                        <span> {{task}} </span>
+                    </label>
+                </div>
+            </template>
+        </dd>
+        <dd v-bind:class="{'current': curTaskTab == 'grunt'}">
+            <template v-if="gruntList.length === 0">
+                <p>No task!</p>
+            </template>
+            <template v-else>
+                <div class="task-info">
+                    <span class="task-show" title="执行的命令">$ &nbsp;<i>{{gruntTask || '未指定任务'}}</i></span>
+                    <input type="text" class="form-control gulp-param" v-model="gruntParam" placeholder="这里可添加运行参数">
+                    <button type="button" class="btn btn-primary btn-sm" v-bind:disabled="!gruntTask || gruntTaskIsRunning" v-on:click="runGruntTask()">运 行</button>
+                </div>
+                <div class="task-row gulp-task-row">
+                    <label class="task-item" v-for="task in gruntList" v-bind:class="{'current': task == gruntTaskName}">
+                        <input type="radio" name="grunt-task-item" v-model="gruntTaskName" v-bind:value="task">
+                        <span> {{task.taskName}} </span>
+                    </label>
+                </div>
+            </template>
+        </dd>
+        <dd v-bind:class="{'current': curTaskTab == 'webpack'}">
+            <template v-if="webpackList.length === 0">
+                <p>No task!</p>
+            </template>
+            <template v-else></template>
+        </dd>
+    </dl>
+</div>

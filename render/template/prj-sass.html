@@ -1,0 +1,41 @@
+<div class="prj-css" v-if="curTab == 'css'" v-bind:class="{'tabShow': curTab == 'css'}">
+    <h2>
+        <input class="form-control input-sm" type="text" v-model="sassFileSearch" placeholder="filter: input file name">
+        <label class="checkbox">
+            <input type="checkbox" value="" class="custom-checkbox" v-model="unShowStartWidth_">
+            <span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+            <span class="label-txt">过滤 _ 开头的文件</span>
+        </label>
+                <span class="fui-question-circle icon-tip">
+                    <em>
+                        1. 文件默认是按命名排序的。
+                        <br>
+                        2. 本功能是使用集成到 pikachu 内部的 ruby + sass 或 ruby + compass 实现的编译过程。
+                        <br>
+                        3. 默认编译配置将使用项目的 sass 编译配置，默认输出位置是源文件的位置。
+                        <br>
+                        4. 单个文件的编译配置和文件输出位置可右键菜单设置。
+                    </em>
+                </span>
+        <span class="fui-eye fr" title="重新扫描" v-on:click="scanSassFile()"><em>{{scanTime}}ms {{sassFiles.length}}个文件</em></span>
+    </h2>
+    <p v-if="isScanning">正在扫描项目中的 .scss 文件，请稍后...</p>
+    <template v-else>
+        <p v-if="sassFiles.length === 0">未发现任何 .scss 文件！</p>
+        <ul class="sass-file-list" v-else>
+            <li v-for="file in sassFiles"
+                v-on:contextmenu="popSassMenu($event, file)"
+                v-on:click="selectSassFile(file)"
+                v-bind:class="{'current': selectSass == file.fullPath}"
+                v-show="file.name.indexOf(sassFileSearch) > -1 && !(file.name[0] === '_' && unShowStartWidth_)">
+                <i class="iconfont">&#xe607;</i>
+                        <span>
+                            {{file.fullPath.replace(prjInfo.path, '')}}
+                            <br>
+                            <span class="fui-new" title="设置输出位置" v-on:click="setOurDir(file)"></span> {{file.cssDir}}
+                        </span>
+                <span class="fui-upload" v-on:click="compileSass(file)" title="编译"></span>
+            </li>
+        </ul>
+    </template>
+</div>

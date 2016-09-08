@@ -1,0 +1,41 @@
+<div class="prj-baseInfo" v-if="curTab == 'baseInfo'" v-bind:class="{'tabShow': curTab == 'baseInfo'}">
+    <h2><span>{{prjInfo.name}}</span> 基本信息</h2>
+    <p>
+        <span>名称：</span>
+        <span>{{prjInfo.name}}</span>
+    </p>
+    <p>
+        <span>创建时间：</span>
+        <span>{{prjInfo.createTime}}</span>
+    </p>
+    <p>
+        <span>位置：</span>
+        <span>{{prjInfo.path}}</span>
+    </p>
+    <p>
+        <span>占用端口：</span>
+        <span>{{prjInfo.port}}</span>
+        <span class="status" v-bind:class="{'running': prjInfo.isRunning}" title="当前运行状态">{{prjInfo.isRunning ? "运行中" : "已停止"}}</span>
+    </p>
+    <p>
+        <span>模板配置：</span>
+        <span>{{prjInfo.configTpl || "无"}}</span>
+    </p>
+    <p>
+        <span>代理配置：</span>
+        <span>{{prjInfo.proxyHost ? prjInfo.proxyHost + prjInfo.proxyPath : "无"}}</span>
+    </p>
+    <p>
+        <span>开启缓存：</span>
+        <label class="checkbox" title="{{prjInfo.useCache ? '是' : '否'}}">
+            <input type="checkbox" value="" class="custom-checkbox" disabled v-model="prjInfo.useCache">
+            <span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+        </label>
+    </p>
+    <p>
+        <span>访问地址：</span>
+        <span class="host-link">
+            <a href="javascript:" v-on:click="visitSite()">http://localhost:{{prjInfo.port}}</a>
+        </span>
+    </p>
+</div>

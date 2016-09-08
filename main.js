@@ -38,7 +38,7 @@ function createWindow(){
 
     createMenu();
     createDataDir();
-    config.devTool && mainWindow.webContents.openDevTools();
+    config.mainDevTool && mainWindow.webContents.openDevTools();
     config.refresh && globalShortcut.register('ctrl+r', function() {
         mainWindow.reload();
     });

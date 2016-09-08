@@ -17,6 +17,7 @@ var shell = electron.shell;
 var config = require('../config');
 var compass = require('./compass');
 var appConf = config.appInfo;
+var includeRegExp = /<include\s+file=\"(.*?)\"><\/include>/;
 
 module.exports = {
     //methods
@@ -74,7 +75,14 @@ module.exports = {
         return dest;
     },
     template: function (tplFile) {
-        return fs.readFileSync(path.join(config.templateDir, tplFile), {encoding: 'utf8'});
+        var content = fs.readFileSync(path.join(config.templateDir, tplFile), {encoding: 'utf8'});
+        var includes;
+        while((includes = includeRegExp.exec(content)) !== null){
+            var file = includes[1];
+            var fileContent = fs.readFileSync(path.resolve(config.templateDir, file), 'utf-8');
+            content = content.replace(includeRegExp, fileContent);
+        }
+        return content;
     },
     console: function (message, callback, type) {
         type = type || 'normal';

@@ -29,6 +29,7 @@ var baseConfig = {
     customSettingFile: path.join(dataDir, 'setting.json'),
     logo: path.join(appRoot, `render/images/logo/logo.png`),
     refresh: true,
+    mainDevTool: true,
     devTool: true,
 
     //插件配置

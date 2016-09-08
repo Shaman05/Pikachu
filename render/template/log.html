@@ -20,6 +20,11 @@
     {{{content}}}
 </div>
 <script src="../js/vue.min.js"></script>
-<script src="../js/log.js"></script>
+<script>
+    (function () {
+        var config = require('../../config');
+        window.logApp = require('../js/controllers/log')(config);
+    }());
+</script>
 </body>
 </html>

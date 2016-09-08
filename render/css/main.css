@@ -873,3 +873,6 @@ input[type=number].form-control{
     line-height: 16px;
     margin: 0;
 }
+.prj-actions .prj-setting h2{
+    margin-bottom: 0;
+}

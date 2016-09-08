@@ -8,8 +8,8 @@ var fs = require('fs');
 var electron = require('electron');
 var remote = electron.remote;
 var mainWindow = remote.getCurrentWindow();
-var util = require('../../core/util');
-var consoleMenu = require('./consolemenu');
+var util = require('../../../core/util');
+var consoleMenu = require('../consolemenu');
 
 module.exports = function (config) {
     var appConf = config.appInfo;
@@ -26,7 +26,9 @@ module.exports = function (config) {
             setTimeout(function () {
                 _this.printMsg('Console is ready !', 'normal');
             }, 500);
-            mainWindow.show();
+            setTimeout(function () {
+                mainWindow.show();
+            }, 100);
         },
         methods: {
             closeWin: mainWindow.close,
