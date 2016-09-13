@@ -115,13 +115,13 @@ module.exports = {
     },
 
     //ui
-    pathTo: function(path, params){
+    pathTo: function(path, query){
         appRoute.app.appLoading = true;
         setTimeout(function(){
             appRoute.app.appLoading = false;
             appRoute.go({
                 path: path,
-                params: params || {}
+                query: query || {}
             });
         }, 300);
     },

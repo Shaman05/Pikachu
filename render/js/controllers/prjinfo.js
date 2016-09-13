@@ -9,7 +9,7 @@ var util = require('../../../core/util');
 var gulp = require('../../../core/gulp');
 var grunt = require('../../../core/grunt');
 var sass = require('../../../core/sass');
-var sassMenu = require('../sassmenu');
+var sassMenu = require('../menus/sassmenu');
 var electron = require('electron');
 var remote = electron.remote;
 var config = require('../../../config');
@@ -65,7 +65,9 @@ module.exports = function () {
             }
         },
         methods: {
-            pathTo: util.pathTo,
+            returnTo: function () {
+                util.pathTo('/prjList', {prjName: this.prjInfo.name});
+            },
             tab: function (name) {
                 this.curTab = name;
             },

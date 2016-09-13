@@ -4,22 +4,58 @@
 
 "use strict";
 
+var electron = require('electron');
+var remote = electron.remote;
 var util = require('../../../core/util');
 var vhost = require('../../../core/vhost');
+var prjListMenu = require('../menus/prjlistmenu');
 
 module.exports = function () {
     return Vue.extend({
         data: function (){
             return {
+                expanded: true,
+                currentHostName: '',
                 hosts: util.ls.get('hosts') || []
             };
         },
         template: util.template('prjlist.html'),
         created: function (){
-            //
+            var sortData = util.ls.get('sortData') || {
+                    type: 'createTime',
+                    desc: true
+                };
+            this.sortItem(sortData.type, sortData.desc);
+            this.currentHostName = this.$route.query.prjName || '';
         },
         methods: {
             pathTo: util.pathTo,
+            toggleNav: function () {
+                this.expanded = !this.expanded;
+            },
+            selectHost: function (name) {
+                this.currentHostName = name;
+            },
+            popPrjListMenu: function (e) {
+                setTimeout(function () {
+                    prjListMenu.popup(remote.getCurrentWindow());
+                }, 50);
+            },
+            sortItem: function (type, desc) {
+                this.hosts.sort(function (a, b) {
+                    if(a[type] < b[type]){
+                        return desc ? 1 : -1;
+                    }
+                    if(a[type] > b[type]){
+                        return desc ? -1 : 1;
+                    }
+                    return 0;
+                });
+                util.ls.set('sortData', {
+                    type: type,
+                    desc: desc
+                });
+            },
             startHost: function (host){
                 var _this = this;
                 var newHost = vhost.startHost(host, function (err) {

@@ -1,27 +1,54 @@
 <div class="prj-list">
-    <form>
-        <legend>项目列表：</legend>
-        <button v-if="hosts.length > 0" type="button" class="btn btn-primary btn-sm rlink-btn" v-on:click="pathTo('/prjEdit')">添加项目</button>
-    </form>
-    <div class="no-data" v-if="hosts.length === 0">
-        <p>空，空空如也</p>
-        <button type="button" class="btn btn-primary btn-hg" v-on:click="pathTo('/prjEdit')">
-            <span class="fui-plus"></span> 添加项目
-        </button>
-    </div>
-    <div class="prj-row" v-for="host in hosts" v-bind:class="{'running': host.isRunning}">
-        <span class="col50">名称：{{host.name}}</span>
-        <span class="col50">端口：{{host.port}}</span>
-        <span class="col100">路径：<span class="path" v-on:click="openDir(host.path)" title="打开目录">{{host.path}}</span></span>
-        <span class="col100">创建时间：<span>{{host.createTime}}</span></span>
-        <div class="btn-group">
-            <button type="button" class="btn btn-primary btn-xs" v-if="!host.isRunning" v-on:click="startHost(host)">启动</button>
-            <button type="button" class="btn btn-primary btn-xs running" v-else disabled>运行中</button>
-            <button type="button" class="btn btn-primary btn-xs stop" v-if="host.isRunning" v-on:click="stopHost(host)">停止</button>
-            <button type="button" class="btn btn-primary btn-xs" v-else disabled>停止</button>
-            <button type="button" class="btn btn-info btn-xs" v-on:click="visitSite(host)">访问</button>
-            <button type="button" class="btn btn-info btn-xs" v-on:click="hostInfo(host)">更多操作</button>
-            <button type="button" class="btn btn-danger btn-xs" v-on:click="removeHost($index, host)" class="remove">移除</button>
+    <template v-if="hosts.length === 0">
+        <div class="no-data">
+            <p>空，空空如也</p>
+            <button type="button" class="btn btn-primary btn-hg" v-on:click="pathTo('/prjEdit')">
+                <span class="fui-plus"></span> 添加项目
+            </button>
         </div>
-    </div>
+    </template>
+    <template v-else>
+        <div class="side-menu" v-bind:class="{'expand': expanded}">
+            <div class="project-bar" v-if="expanded">
+                <span class="fui-folder" v-if="expanded"></span>
+                <span v-if="expanded">Projects</span>
+                <span class="fui-arrow-left" title="Hide" v-on:click="toggleNav()"></span>
+            </div>
+            <div class="project-expand-bar" v-if="!expanded" title="Show" v-on:click="toggleNav()">
+                <span class="fui-arrow-right"></span>
+                <span class="v-txt">Projects</span>
+            </div>
+            <ul class="project-item" v-if="expanded" v-on:contextmenu="popPrjListMenu($event)">
+                <li v-for="host in hosts"
+                    v-bind:class="{'running': host.isRunning, 'current': host.name == currentHostName}"
+                    v-on:click="selectHost(host.name)">
+                    <span class="fui-radio-checked"></span>
+                    <span>{{host.name}}</span>
+                    <span class="fui-triangle-right-large" title="running" v-if="host.isRunning"></span>
+                    <span class="fui-power" title="off" v-else></span>
+                </li>
+            </ul>
+        </div>
+        <div class="project-list-item-show">
+            <section v-for="host in hosts" v-if="host.name == currentHostName">
+                <span class="col50">名称：{{host.name}}</span>
+                <span class="col50">端口：{{host.port}}</span>
+                <span class="col100">路径：<span class="path" v-on:click="openDir(host.path)" title="打开目录">{{host.path}}</span></span>
+                <span class="col100">创建时间：<span>{{host.createTime}}</span></span>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary btn-xs" v-if="!host.isRunning" v-on:click="startHost(host)">启动</button>
+                    <button type="button" class="btn btn-primary btn-xs running" v-else disabled>运行中</button>
+                    <button type="button" class="btn btn-primary btn-xs stop" v-if="host.isRunning" v-on:click="stopHost(host)">停止</button>
+                    <button type="button" class="btn btn-primary btn-xs" v-else disabled>停止</button>
+                    <button type="button" class="btn btn-info btn-xs" v-on:click="visitSite(host)">访问</button>
+                    <button type="button" class="btn btn-info btn-xs" v-on:click="hostInfo(host)">更多操作</button>
+                    <button type="button" class="btn btn-danger btn-xs" v-on:click="removeHost($index, host)" class="remove">移除</button>
+                </div>
+            </section>
+            <section v-if="!currentHostName">
+                <br>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;单击选择项目</p>
+            </section>
+        </div>
+    </template>
 </div>

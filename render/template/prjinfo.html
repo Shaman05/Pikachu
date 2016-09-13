@@ -6,7 +6,7 @@
             <a href="javascript:" v-on:click="tab('css')" v-bind:class="{'current': curTab == 'css'}"><i class="iconfont" title="Sass/Less">&#xe607;</i></a>
             <a href="javascript:" v-on:click="tab('others')" v-bind:class="{'current': curTab == 'others'}"><i class="iconfont" title="其他">&#xe60c;</i></a>
             <a href="javascript:" v-on:click="tab('setting')" v-bind:class="{'current': curTab == 'setting'}"><i class="iconfont" title="设置">&#xe601;</i></a>
-            <a href="javascript:" v-on:click="pathTo('/prjList')"><i class="iconfont" title="返回">&#xe605;</i></a>
+            <a href="javascript:" v-on:click="returnTo()"><i class="iconfont" title="返回">&#xe605;</i></a>
         </nav>
     </div>
     <div class="prj-actions">

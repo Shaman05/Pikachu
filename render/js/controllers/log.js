@@ -58,5 +58,5 @@ module.exports = function (config) {
         V.isFullScreen = mainWindow.isMaximized();
     });
 
-    return v;
+    return V;
 };

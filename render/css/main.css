@@ -11,9 +11,9 @@ select,option,input,textarea{
 h1,h2,h3{margin: 12px 0}
 ::-webkit-scrollbar {width: 6px;height:6px;}
 ::-webkit-scrollbar-track-piece{background-color: transparent;}
-::-webkit-scrollbar-thumb{background: #95A5A6; min-height: 150px; min-width: 150px; border-radius: 10px;}
-::-webkit-scrollbar-thumb:vertical:hover{background: #7F8C8D}
-::-webkit-scrollbar-thumb:horizontal:hover{background: #7F8C8D}
+::-webkit-scrollbar-thumb{background: #2C3E50; min-height: 150px; min-width: 150px;}
+::-webkit-scrollbar-thumb:vertical:hover{background: #243649}
+::-webkit-scrollbar-thumb:horizontal:hover{background: #243649}
 .loading-mask{
     position: fixed;
     top: 30px;
@@ -250,21 +250,134 @@ h1,h2,h3{margin: 12px 0}
 }
 .prj-edit,
 .setting,
-.prj-list,
 .readme-content{
     padding: 12px;
 }
 .prj-list{
-    transition: all 0.3s;
+    overflow: hidden;
+    height: 100%;
 }
 .prj-list .side-menu{
-    width: 140px;
+    width: 20px;
+    position: relative;
 }
-.prj-list.expend{
-    padding-left: 140px;
+.prj-list .side-menu.expand{
+    width: 200px;
 }
-.prj-list.expend .side-menu{
-    margin-left: -140px;
+.project-bar{
+    background: #334659;
+    border-bottom: 1px solid #1c3e57;
+    padding: 0 6px;
+    color: #bbbbbb;
+    height: 21px;
+    overflow: hidden;
+    font-family: Lato,Helvetica,Arial,sans-serif;
+}
+.project-bar .fui-arrow-left{
+    cursor: pointer;
+    float: right;
+}
+.project-bar .fui-arrow-left:hover{
+    color: #dfdfdf;
+}
+.project-expand-bar{
+    margin: 1px 1px 0 0;
+    color: #bbbbbb;
+    text-align: center;
+    cursor: pointer;
+    height: 64px;
+    background: #334659;
+    line-height: normal;
+    padding: 6px 0 4px;
+    font-family: Lato,Helvetica,Arial,sans-serif;
+}
+.project-expand-bar:hover{
+    background: #26364c;
+    box-shadow: 0 0 3px gray inset;
+    color: #dfdfdf;
+}
+.v-txt{
+    position: absolute;
+    transform: rotate(-90deg);
+    left: -13px;
+    top: 38px;
+}
+.project-list-item-show{
+    float: left;
+    padding: 0 8px;
+}
+.project-item{
+    overflow: auto;
+    position: absolute;
+    top: 22px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0 3px 0 0;
+    list-style: none;
+    color: #bbbbbb;
+}
+.project-item li{
+    font-weight: bold;
+    font-size: 16px;
+    cursor: default;
+    padding: 4px 12px 10px;
+    line-height: normal;
+    margin: 2px 0;
+    transition: all 0.3s;
+    overflow: hidden;
+    background: #3a4f64;
+}
+.project-item li:hover{
+    background: #455a70;
+    box-shadow: 0 0 6px #668199 inset;
+    text-shadow: 2px 2px 0 black;
+}
+.project-item span:first-of-type{
+    float: left;
+    font-weight: normal;
+    font-size: 10px;
+    opacity: 0;
+    margin: 8px 8px 0 -12px;
+    transition: all 0.2s;
+    text-shadow: none;
+}
+.project-item .current span:first-of-type{
+    opacity: 1;
+    margin-left: -2px;
+}
+.project-item span:nth-of-type(2){
+    float: left;
+}
+.project-item span:last-of-type{
+    float: right;
+    position: relative;
+    top: 5px;
+    color: #C0392B;
+}
+.project-item .running span:last-of-type{
+    color: #2ecc71;
+    animation: isRun 4s infinite;
+    -webkit-animation: isRun 4s infinite;
+}
+@-webkit-keyframes isRun{
+    0%, 25%{
+        color: #2ecc71;
+        transform: scale(1);
+    }
+    25%, 50%{
+        color: #27AE60;
+        transform: scale(0.8);
+    }
+    50%, 75%{
+        color: #27AE60;
+        transform: scale(0.8);
+    }
+    75%, 100%{
+        color: #2ecc71;
+        transform: scale(1);
+    }
 }
 .home-page ol{
     padding-bottom: 12px;
@@ -825,24 +938,25 @@ input[type=number].form-control{
 }
 .setting-menu{
     margin: 0;
-    padding: 18px 6px;
+    padding: 18px 0;
     font-family: "Courier New";
 }
 .setting-menu dt{
     font-weight: bold;
-    padding: 0 0 0 12px;
+    padding: 0 0 0 18px;
     -webkit-user-select: none;
     cursor: default;
     -webkit-transition: all 0.2s;
 }
 .setting-menu dt.current{
-    background: #22456f;
+    background: #4b6eaf;
+    padding-left: 12px;
 }
 .setting-menu dt:hover{
     background: #484848;
 }
 .setting-menu dt.current:hover{
-    background: #22456f;
+    background: #4b6eaf;
 }
 .setting-content{
     height: 100%;

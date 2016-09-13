@@ -13,9 +13,9 @@ var MenuItem = remote.MenuItem;
 var BrowserWindow = remote.BrowserWindow;
 var mainWindow = remote.getCurrentWindow();
 var webContents = mainWindow.webContents;
-var vhost = require('../../core/vhost');
-var util = require('../../core/util');
-var config = require('../../config');
+var vhost = require('../../../core/vhost');
+var util = require('../../../core/util');
+var config = require('../../../config');
 var appConf = config.appInfo;
 
 //Project
