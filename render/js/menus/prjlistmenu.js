@@ -1,5 +1,5 @@
 /**
- * Created by admin on 2016/8/1.
+ * Created by ChenChao on 2016/8/1.
  */
 
 "use strict";
@@ -11,6 +11,7 @@ var MenuItem = remote.MenuItem;
 var mainWindow = remote.getCurrentWindow();
 var webContents = mainWindow.webContents;
 var util = require('../../../core/util');
+var config = require('../../../config');
 
 //默认排序规则
 var sortData = util.ls.get('sortData') || {
@@ -75,10 +76,21 @@ var sortMenu = new MenuItem({
     label: '排序方式',
     submenu: sortMenus
 });
+var newPrjMenu = new MenuItem({
+    label: '创建新项目',
+    icon: config.folderIcon,
+    click: function () {
+        webContents.executeJavaScript('window.appRoute.app.$children[0].createNewPrj()');
+    }
+});
 
 contextMenu.append(sortMenu);
+contextMenu.append(new MenuItem({
+    type: 'separator'
+}));
+contextMenu.append(newPrjMenu);
 module.exports = contextMenu;
 
 function applySort() {
-    webContents.executeJavaScript('console.log(window.appRoute.app.$children[0].sortItem("' + type + '", ' + desc + '))');
+    webContents.executeJavaScript('window.appRoute.app.$children[0].sortItem("' + type + '", ' + desc + ')');
 }

@@ -33,8 +33,12 @@ module.exports = function () {
             toggleNav: function () {
                 this.expanded = !this.expanded;
             },
-            selectHost: function (name) {
+            selectHost: function (e, name) {
                 this.currentHostName = name;
+                e.stopPropagation();
+            },
+            unselectHost: function () {
+                this.currentHostName = '';
             },
             popPrjListMenu: function (e) {
                 setTimeout(function () {
@@ -56,6 +60,9 @@ module.exports = function () {
                     desc: desc
                 });
             },
+            createNewPrj: function () {
+                util.pathTo('/prjEdit');
+            },
             startHost: function (host){
                 var _this = this;
                 var newHost = vhost.startHost(host, function (err) {
@@ -68,7 +75,7 @@ module.exports = function () {
                     host.pid = newHost.pid;
                     host.isRunning = true;
                     util.ls.set('hosts', this.hosts);
-                    util.notice(`${host.name} 已启动！`);
+                    //util.notice(`${host.name} 已启动！`);
                 }
             },
             stopHost: function (host){
@@ -95,6 +102,7 @@ module.exports = function () {
                     vhost.stopHost(host.pid);
                     util.ls.set('hosts', this.hosts);
                     util.saveHosts(this.hosts);
+                    this.unselectHost();
                 }
             },
             hostInfo: function (host){

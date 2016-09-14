@@ -225,8 +225,8 @@ var checkUpdate = new MenuItem({
     label: '检查更新',
     click: function(){
         //console.log(appRoute.app.consoleWindow.webContents.window);
-        //console.log(BrowserWindow.getAllWindows());
-        console.log(config.nss)
+        console.log(BrowserWindow.getAllWindows());
+        mainWindow.hide();
     }
 });
 var about = new MenuItem({

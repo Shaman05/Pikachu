@@ -1,5 +1,5 @@
 /**
- * Created by admin on 2016/8/26.
+ * Created by ChenChao on 2016/8/26.
  */
 
 "use strict";
@@ -28,9 +28,11 @@ var baseConfig = {
     hostsFile: path.join(dataDir, 'vhost.json'),
     customSettingFile: path.join(dataDir, 'setting.json'),
     logo: path.join(appRoot, `render/images/logo/logo.png`),
+    folder: path.join(appRoot, `render/images/Close_Folder.png`),
+    folderIcon: path.join(appRoot, `render/images/Close_Folder_icon.png`),
     refresh: true,
     mainDevTool: true,
-    devTool: true,
+    devTool: false,
 
     //插件配置
     addOn: {

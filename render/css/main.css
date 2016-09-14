@@ -304,7 +304,10 @@ h1,h2,h3{margin: 12px 0}
 }
 .project-list-item-show{
     float: left;
-    padding: 0 8px;
+    padding: 8px;
+}
+.project-list-item-show section{
+    padding: 20px;
 }
 .project-item{
     overflow: auto;
@@ -359,22 +362,22 @@ h1,h2,h3{margin: 12px 0}
 .project-item .running span:last-of-type{
     color: #2ecc71;
     animation: isRun 4s infinite;
-    -webkit-animation: isRun 4s infinite;
+    -webkit-animation: isRun 3s infinite;
 }
 @-webkit-keyframes isRun{
-    0%, 25%{
+    0%, 10%{
         color: #2ecc71;
         transform: scale(1);
     }
-    25%, 50%{
+    10%, 50%{
         color: #27AE60;
         transform: scale(0.8);
     }
-    50%, 75%{
+    50%, 90%{
         color: #27AE60;
         transform: scale(0.8);
     }
-    75%, 100%{
+    90%, 100%{
         color: #2ecc71;
         transform: scale(1);
     }
@@ -762,11 +765,11 @@ input[type=number].form-control{
 }
 .task-show i:after{
     content: '';
-    height: 16px;
-    width: 5px;
+    height: 20px;
+    width: 2px;
     position: absolute;
     right: -8px;
-    bottom: 2px;
+    bottom: -1px;
     -webkit-animation: gogogo 1s linear infinite;
 }
 @-webkit-keyframes gogogo{

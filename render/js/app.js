@@ -76,6 +76,9 @@ module.exports.start = function(config){
                     menus[index].popup($target.offsetLeft, $target.offsetTop + $target.clientHeight);
                 }
             },
+            hideApp: function () {
+                mainWindow.hide();
+            },
             closeApp: util.closeApp,
             pathTo: util.pathTo
         }

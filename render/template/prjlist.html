@@ -8,7 +8,7 @@
         </div>
     </template>
     <template v-else>
-        <div class="side-menu" v-bind:class="{'expand': expanded}">
+        <div class="side-menu" v-bind:class="{'expand': expanded}" v-on:click="unselectHost($event)">
             <div class="project-bar" v-if="expanded">
                 <span class="fui-folder" v-if="expanded"></span>
                 <span v-if="expanded">Projects</span>
@@ -21,7 +21,7 @@
             <ul class="project-item" v-if="expanded" v-on:contextmenu="popPrjListMenu($event)">
                 <li v-for="host in hosts"
                     v-bind:class="{'running': host.isRunning, 'current': host.name == currentHostName}"
-                    v-on:click="selectHost(host.name)">
+                    v-on:click="selectHost($event, host.name)">
                     <span class="fui-radio-checked"></span>
                     <span>{{host.name}}</span>
                     <span class="fui-triangle-right-large" title="running" v-if="host.isRunning"></span>
@@ -46,8 +46,12 @@
                 </div>
             </section>
             <section v-if="!currentHostName">
-                <br>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;单击选择项目</p>
+                <p>
+                    单击选择项目 or
+                    <button type="button" class="btn btn-primary" v-on:click="pathTo('/prjEdit')">
+                        <span class="fui-plus"></span> 添加项目
+                    </button>
+                </p>
             </section>
         </div>
     </template>
