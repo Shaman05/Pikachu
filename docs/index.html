@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
     <meta charset="UTF-8">
-    <title>Pikachu</title>
+    <title>Shaman05.GitHub.io by Shaman05</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -21,11 +21,7 @@
 </section>
 
 <section class="main-content">
-    <h1>
-        <a id="shaman05githubio" class="anchor" href="#shaman05githubio" aria-hidden="true">
-            <span class="octicon octicon-link"></span>
-        </a>shaman05.github.io
-    </h1>
+    <input type="text" id="test">
 
     <footer class="site-footer">
         <div class="copyrights">
@@ -36,5 +32,13 @@
             href="https://twitter.com/jasonlong">Jason Long</a>.</span>
     </footer>
 </section>
+<script src="js/jquery.js"></script>
+<script>
+    $(function () {
+        $('#test').on('focus', function () {
+            $(this).select();
+        })
+    })
+</script>
 </body>
 </html>
