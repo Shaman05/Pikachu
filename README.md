@@ -38,3 +38,20 @@
 2.  Vue.js
 
     同上提到的前端助手工具，业务逻辑使用的是 Angular.js（之前 Vue.js 还没问世），在实际项目中我们开始使用 Vue.js 了，开发过程中最大的感受是 Vue.js 简单易用， 该有的功能都有，编写业务 js 代码可以很简洁，简单粗暴，所以这次选用了 Vue.js 来开发 pikachu。
+
+#### 上几张截图吧 ：）
+
+添加项目
+![image](https://github.com/Shaman05/Pikaqiu/docs/images/prj_add.png)
+
+项目列表
+![image](https://github.com/Shaman05/Pikaqiu/docs/images/prj_list.png)
+
+SASS
+![image](https://github.com/Shaman05/Pikaqiu/docs/images/prj_sass.png)
+
+任务调度
+![image](https://github.com/Shaman05/Pikaqiu/docs/images/prj_task.png)
+
+工具设置
+![image](https://github.com/Shaman05/Pikaqiu/docs/images/setting.png)
