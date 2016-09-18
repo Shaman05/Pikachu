@@ -273,11 +273,14 @@ h1,h2,h3{margin: 12px 0}
     overflow: hidden;
     font-family: Lato,Helvetica,Arial,sans-serif;
 }
-.project-bar .fui-arrow-left{
+.project-bar .fui-arrow-left,
+.project-bar .fui-plus{
     cursor: pointer;
     float: right;
+    margin-left: 6px;
 }
-.project-bar .fui-arrow-left:hover{
+.project-bar .fui-arrow-left:hover,
+.project-bar .fui-plus:hover{
     color: #dfdfdf;
 }
 .project-expand-bar{
@@ -625,7 +628,7 @@ input[type=number].form-control{
     padding: 10px 0;
     margin: 0;
     position: fixed;
-    width: 83%;
+    width: 84%;
     background: #ffffff;
     margin-top: -56px;
     z-index: 9;

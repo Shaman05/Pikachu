@@ -8,17 +8,18 @@
         </div>
     </template>
     <template v-else>
-        <div class="side-menu" v-bind:class="{'expand': expanded}" v-on:click="unselectHost($event)">
+        <div class="side-menu" v-bind:class="{'expand': expanded}">
             <div class="project-bar" v-if="expanded">
                 <span class="fui-folder" v-if="expanded"></span>
                 <span v-if="expanded">Projects</span>
                 <span class="fui-arrow-left" title="Hide" v-on:click="toggleNav()"></span>
+                <span class="fui-plus" title="new" v-on:click="pathTo('/prjEdit')"></span>
             </div>
             <div class="project-expand-bar" v-if="!expanded" title="Show" v-on:click="toggleNav()">
                 <span class="fui-arrow-right"></span>
                 <span class="v-txt">Projects</span>
             </div>
-            <ul class="project-item" v-if="expanded" v-on:contextmenu="popPrjListMenu($event)">
+            <ul class="project-item" v-if="expanded" v-on:contextmenu="popPrjListMenu($event)" v-on:click="unselectHost($event)">
                 <li v-for="host in hosts"
                     v-bind:class="{'running': host.isRunning, 'current': host.name == currentHostName}"
                     v-on:click="selectHost($event, host.name)">

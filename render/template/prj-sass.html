@@ -6,17 +6,17 @@
             <span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
             <span class="label-txt">过滤 _ 开头的文件</span>
         </label>
-                <span class="fui-question-circle icon-tip">
-                    <em>
-                        1. 文件默认是按命名排序的。
-                        <br>
-                        2. 本功能是使用集成到 pikachu 内部的 ruby + sass 或 ruby + compass 实现的编译过程。
-                        <br>
-                        3. 默认编译配置将使用项目的 sass 编译配置，默认输出位置是源文件的位置。
-                        <br>
-                        4. 单个文件的编译配置和文件输出位置可右键菜单设置。
-                    </em>
-                </span>
+        <span class="fui-question-circle icon-tip">
+            <em>
+                1. 文件默认是按命名排序的。
+                <br>
+                2. 本功能是使用集成到 pikachu 内部的 ruby + sass 或 ruby + compass 实现的编译过程。
+                <br>
+                3. 默认编译配置将使用项目的 sass 编译配置，默认输出位置是源文件的位置。
+                <br>
+                4. 单个文件的编译配置和文件输出位置可右键菜单设置。
+            </em>
+        </span>
         <span class="fui-eye fr" title="重新扫描" v-on:click="scanSassFile()"><em>{{scanTime}}ms {{sassFiles.length}}个文件</em></span>
     </h2>
     <p v-if="isScanning">正在扫描项目中的 .scss 文件，请稍后...</p>
