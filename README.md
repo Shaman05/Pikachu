@@ -42,16 +42,21 @@
 #### 上几张截图吧 ：）
 
 添加项目
+
 ![image](https://github.com/Shaman05/Pikachu/blob/master/docs/images/prj_add.png)
 
 项目列表
+
 ![image](https://github.com/Shaman05/Pikachu/blob/master/docs/images/prj_list.png)
 
 SASS
+
 ![image](https://github.com/Shaman05/Pikachu/blob/master/docs/images/prj_sass.png)
 
 任务调度
+
 ![image](https://github.com/Shaman05/Pikachu/blob/master/docs/images/prj_task.png)
 
 工具设置
+
 ![image](https://github.com/Shaman05/Pikachu/blob/master/docs/images/setting.png)
