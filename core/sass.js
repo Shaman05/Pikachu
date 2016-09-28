@@ -68,7 +68,7 @@ module.exports = {
         if(compileType == 'sass'){
             compileOptions.cssFile = cssFilePath;
         }
-        compass[compileType == 'sass' ? 'sassCompile' : 'compassCompile'](file.fullPath, compileOptions, function (code, duration, error) {
+        compass[(compileType || 'sass') + 'Compile'](file.fullPath, compileOptions, function (code, duration, error) {
             if(code == 0){
                 _util.tip(`完成编译！耗时：${duration}ms`);
                 _util.consoleInfo(`完成编译！耗时：${duration}ms`);

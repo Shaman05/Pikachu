@@ -111,8 +111,8 @@ editMenu.append(cut);
 editMenu.append(copy);
 editMenu.append(paste);
 
-//Window
-var winMenu = new Menu();
+//Tools
+var toolsMenu = new Menu();
 var devTool = new MenuItem({
     label: '控制台 - DevTool',
     click: function(){
@@ -123,6 +123,10 @@ var devTool = new MenuItem({
         }
     }
 });
+
+//Window
+var winMenu = new Menu();
+
 var consoleLog = new MenuItem({
     label: '控制台 - Console',
     click: function(){
@@ -241,9 +245,10 @@ helpMenu.append(new MenuItem({type: 'separator'}));
 helpMenu.append(checkUpdate);
 helpMenu.append(about);
 
-module.exports = [prjMenu, editMenu, winMenu, settingMenu, helpMenu];
+module.exports = [prjMenu, editMenu, toolsMenu, winMenu, settingMenu, helpMenu];
 module.exports.prjMenu = prjMenu;
 module.exports.editMenu = editMenu;
+module.exports.toolsMenu = toolsMenu;
 module.exports.winMenu = winMenu;
 module.exports.settingMenu = settingMenu;
 module.exports.helpMenu = helpMenu;

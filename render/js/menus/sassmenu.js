@@ -118,7 +118,7 @@ module.exports = function (file) {
     var compile = new MenuItem({
         label: '编译',
         click: function () {
-            sass.compile(file);
+            sass.compile(file, 'sass');
         }
     });
 
