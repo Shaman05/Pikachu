@@ -4,7 +4,7 @@
 
 1.  web server 静态文件服务器
 
-    你可以将你的前端项目添加到 pikachu 里，简单配置后即可以启动一个支持预览 .html 文件的静态的 web server， 其他类型文件，将以对应的 mime type 返回， 服务的根目录即为添加项目的目录。  [点击添加新项目](javascript:)
+    你可以将你的前端项目添加到 pikachu 里，简单配置后即可以启动一个支持预览 .html 文件的静态的 web server， 其他类型文件，将以对应的 mime type 返回， 站点的根目录即为添加项目的目录。  [点击添加新项目](javascript:)
 
 2.  模板解析
 
