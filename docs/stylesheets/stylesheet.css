@@ -78,6 +78,66 @@ a:hover {
     overflow: hidden;
 }
 
+.info{
+    display: table;
+    width: 900px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.image-show,
+.desc{
+    display: table-cell;
+    vertical-align: top;
+}
+.image-show{
+    min-width: 600px;
+}
+.image-show img{
+    max-width: 600px;
+    box-shadow: 5px 5px 5px #363636;
+}
+.desc{
+    padding-left: 3rem;
+    text-align: left;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+.desc ol{
+    padding-left: 20px;
+}
+.dl{
+    display: block;
+    height: 48px;
+    padding: 0 46px 0 20px;
+    border: none;
+    border-radius: 4px;
+    background: #16A085;
+    font-size: 18px;
+    box-shadow: 2px 2px 5px #363636;
+    outline: none;
+    position: relative;
+}
+.dl:before{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 12px;
+    width: 6px;
+    background: white;
+    right: 24px;
+    top: 14px;
+}
+.dl:after{
+    content: '';
+    display: block;
+    position: absolute;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 8px solid white;
+    right: 18px;
+    top: 26px;
+}
+
 @media screen and (min-width: 64em) {
     .page-header {
         padding: 2rem 6rem 5rem;
@@ -123,18 +183,30 @@ a:hover {
     .project-name {
         font-size: 2.25rem;
     }
+    .info{
+        width: auto;
+    }
+    .image-show{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 42em) {
     .project-name {
         font-size: 1.75rem;
     }
+    .info{
+        width: auto;
+    }
+    .image-show{
+        display: none;
+    }
 }
 
 .project-tagline {
     margin: 0 0 2rem;
     font-weight: normal;
-    opacity: 0.7;
+    opacity: 0.9;
 }
 
 @media screen and (min-width: 64em) {
@@ -153,11 +225,6 @@ a:hover {
     .project-tagline {
         font-size: 1rem;
     }
-}
-.image-show{
-    float: left;
-    width: 60%;
-    min-width: 600px;
 }
 
 .main-content :first-child {
