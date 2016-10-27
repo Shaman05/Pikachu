@@ -68,14 +68,20 @@ module.exports = function () {
                 var newHost = vhost.startHost(host, function (err) {
                     host.pid = '';
                     host.isRunning = false;
+                    host.cpu = '--';
+                    host.mem = '--';
                     util.ls.set('hosts', _this.hosts);
                     util.notice(`${host.name} 发生异常，已停止，详情查看日志！`);
+                    _this.unmonitor(host);
                 });
                 if(newHost && newHost.pid){
                     host.pid = newHost.pid;
                     host.isRunning = true;
+                    host.cpu = '--';
+                    host.mem = '--';
                     util.ls.set('hosts', this.hosts);
                     //util.notice(`${host.name} 已启动！`);
+                    _this.monitor(host);
                 }
             },
             stopHost: function (host){
@@ -83,8 +89,11 @@ module.exports = function () {
                     vhost.stopHost(host.pid);
                     host.pid = '';
                     host.isRunning = false;
+                    host.cpu = '--';
+                    host.mem = '--';
                     util.ls.set('hosts', this.hosts);
                     util.notice(`${host.name} 已停止！`);
+                    this.unmonitor(host);
                 }else{
                     util.tip(host.name + ' 尚未运行！');
                 }
@@ -107,7 +116,55 @@ module.exports = function () {
             },
             hostInfo: function (host){
                 util.pathTo(`/prjInfo/${host.id}`);
+            },
+            getHostUsage: function (host) {
+                var pid = host.pid;
+                pid && vhost.getHostUsage(pid, function (result) {
+                    console.log(pid, result);
+                    console.log(vhost.getHostUsageHistory(pid))
+                });
+            },
+            monitor: function (host) {
+                host.monitorId = setInterval(function () {
+                    vhost.getHostUsage(host.pid, function (result) {
+                        console.log(result);
+                        host.cpu = result.cpu.toFixed(2) + '%';
+                        host.mem = formatSize(result.memory);
+                    });
+                }, 1000);
+            },
+            unmonitor: function (host) {
+                vhost.unmonitor(host);
+                if(host.monitorId){
+                    clearInterval(host.monitorId);
+                    host.cpu = '--';
+                    host.mem = '--';
+                    delete host.monitorId;
+                }
             }
         }
     });
+
+    function formatSize(size){
+        var kb = 1024;
+        var mb = kb * 1024;
+        var gb = mb * 1024;
+        var tb = gb * 1024;
+        if(size > tb){
+            return p2Number(size/tb) + 'TB';
+        }
+        if(size > gb){
+            return p2Number(size/gb) + 'GB';
+        }
+        if(size > mb){
+            return p2Number(size/mb) + 'MB';
+        }
+        if(size > kb){
+            return p2Number(size/kb) + 'KB';
+        }
+        return size + 'Bytes';
+        function p2Number(num){
+            return Math.ceil(num * 100)/100;
+        }
+    }
 };

@@ -5,8 +5,8 @@
 var path = require('path');
 var fs = require('fs');
 var child_process = require('child_process');
+var pusage = require('pidusage');
 var log = require('./log');
-var config = require('../config');
 var hosts = {};
 
 module.exports = {
@@ -15,6 +15,19 @@ module.exports = {
     },
     getHosts: function () {
         return hosts;
+    },
+    getHostUsage: function (pid, callback) {
+        pusage.stat(pid, function(err, stat) {
+            if(!err){
+                callback && callback(stat);
+            }
+        });
+    },
+    unmonitor: function (host) {
+        host.pid && pusage.unmonitor(host.pid);
+    },
+    getHostUsageHistory: function (pid) {
+        return pusage._history[pid];
     },
     startHost: function(host, onError){
         var hostDir = host.path;

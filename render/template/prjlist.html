@@ -43,7 +43,23 @@
                     <button type="button" class="btn btn-primary btn-xs" v-else disabled>停止</button>
                     <button type="button" class="btn btn-info btn-xs" v-on:click="visitSite(host)">访问</button>
                     <button type="button" class="btn btn-info btn-xs" v-on:click="hostInfo(host)">更多操作</button>
-                    <button type="button" class="btn btn-danger btn-xs" v-on:click="removeHost($index, host)" class="remove">移除</button>
+                </div>
+                <button v-on:click="getHostUsage(host)">获取host资源</button>
+                <a class="more-action fui-list-columned" href="javascript:">
+                    <span class="more-action-nav">
+                        <span>任务</span>
+                        <span>Sass</span>
+                        <span>项目设置</span>
+                        <span class="remove" v-on:click="removeHost($index, host)">移除项目</span>
+                    </span>
+                </a>
+                <div class="process-info">
+                    <p class="cpu" title="当前CPU占用率">
+                        <span>CPU</span><span>{{host.cpu}}</span>
+                    </p>
+                    <p class="mem" title="当前占用内存">
+                        <span>MEM</span><span>{{host.mem}}</span>
+                    </p>
                 </div>
             </section>
             <section v-if="!currentHostName">

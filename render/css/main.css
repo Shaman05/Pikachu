@@ -256,6 +256,98 @@ h1,h2,h3{margin: 12px 0}
 .prj-list{
     overflow: hidden;
     height: 100%;
+    background: rgba(44, 62, 80, 0.9);
+    color: #ECF0F1;
+    position: relative;
+}
+.more-action{
+    font-size: 16px;
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    text-decoration: none;
+}
+.more-action-nav{
+    display: none;
+    width: 66px;
+    position: absolute;
+    right: 0;
+    top: 24px;
+    padding: 4px 0;
+    background: #f3f4f5;
+    border-radius: 2px;
+}
+.more-action-nav span{
+    display: block;
+    padding: 3px 8px 3px 0;
+    line-height: normal;
+    font-size: 12px;
+    background: #f3f4f5;
+    color: #55606c;
+    text-align: right;
+    transition: all 0.3s;
+    -webkit-transition: all 0.2s;
+}
+.more-action-nav .remove{
+    color: #E74C3C;
+    border-top: 1px solid darkgray;
+    margin-top: 4px;
+    padding-top: 6px;
+}
+.more-action-nav span:hover{
+    padding-right: 10px;
+    background: #BDC3C7;
+}
+.more-action:focus .more-action-nav{
+    display: block;
+}
+.process-info{
+    position: absolute;
+    bottom: 12px;
+    right: 20px;
+}
+.process-info p{
+    margin: 0;
+    background: rgba(44, 62, 80, 0.4);
+    padding: 0 10px;
+    margin-top: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+.process-info p:before{
+    content: '';
+    height: 12px;
+    width: 12px;
+    background: #BDC3C7;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: all 0.2s;
+}
+.process-info p:hover{
+    background: rgba(44, 62, 80, 0.9);
+}
+.process-info p:hover:before{
+    opacity: 1;
+}
+.process-info p span{
+    display: inline-block;
+    text-align: left;
+    text-shadow: 1px 1px 0 #000;
+    cursor: default;
+    -webkit-user-select: none;
+}
+.process-info p span:first-child{
+    width: 48px;
+}
+.process-info p span:last-child{
+    width: 78px;
+    color: #15ff02;
+    font-weight: bold;
+    text-indent: 6px;
 }
 .prj-list .side-menu{
     width: 20px;
