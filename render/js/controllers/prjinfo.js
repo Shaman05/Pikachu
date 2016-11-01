@@ -21,7 +21,7 @@ module.exports = function () {
             return {
                 id: '',
                 prjInfo: {},
-                curTab: 'baseInfo',
+                curTab: '',
                 curTaskTab: 'gulp',
 
                 //gulp
@@ -50,6 +50,7 @@ module.exports = function () {
         },
         created: function () {
             this.id = this.$route.params.id;
+            this.curTab = this.$route.query.tab || 'baseInfo';
             this.prjInfo = util.getHostInfo(this.id);
             this.gulpList = gulp.getGulpTask(this.prjInfo.path).sort();
             this.gruntList = grunt.getGruntTask(this.prjInfo.path);

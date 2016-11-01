@@ -32,24 +32,37 @@
         </div>
         <div class="project-list-item-show">
             <section v-for="host in hosts" v-if="host.name == currentHostName">
-                <span class="col50">名称：{{host.name}}</span>
-                <span class="col50">端口：{{host.port}}</span>
-                <span class="col100">路径：<span class="path" v-on:click="openDir(host.path)" title="打开目录">{{host.path}}</span></span>
-                <span class="col100">创建时间：<span>{{host.createTime}}</span></span>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-primary btn-xs" v-if="!host.isRunning" v-on:click="startHost(host)">启动</button>
-                    <button type="button" class="btn btn-primary btn-xs running" v-else disabled>运行中</button>
-                    <button type="button" class="btn btn-primary btn-xs stop" v-if="host.isRunning" v-on:click="stopHost(host)">停止</button>
-                    <button type="button" class="btn btn-primary btn-xs" v-else disabled>停止</button>
-                    <button type="button" class="btn btn-info btn-xs" v-on:click="visitSite(host)">访问</button>
-                    <button type="button" class="btn btn-info btn-xs" v-on:click="hostInfo(host)">更多操作</button>
+                <div class="display-row">
+                    <span class="fui-document"></span>
+                    <label class="link canVisit" title="项目名称" v-on:click="hostInfo(host)">{{host.name}}</label>
                 </div>
-                <button v-on:click="getHostUsage(host)">获取host资源</button>
+                <div class="display-row">
+                    <span class="fui-tag"></span>
+                    <label title="端口">{{host.port}}</label>
+                </div>
+                <div class="display-row">
+                    <span class="fui-time"></span>
+                    <label title="创建时间">{{host.createTime}}</label>
+                </div>
+                <div class="display-row">
+                    <span class="fui-folder"></span>
+                    <label class="link canVisit" title="路径" v-on:click="openDir(host.path)">{{host.path}}</label>
+                </div>
+                <div class="display-row">
+                    <span class="fui-link"></span>
+                    <label class="link" v-bind:class="{'canVisit': host.isRunning}" title="点击访问" v-on:click="host.isRunning && visitSite(host)">http://localhost:{{host.port}}</label>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary" v-if="!host.isRunning" v-on:click="startHost(host)">启动</button>
+                    <button type="button" class="btn btn-primary running" v-else disabled>运行中</button>
+                    <button type="button" class="btn btn-primary stop" v-if="host.isRunning" v-on:click="stopHost(host)">停止</button>
+                    <button type="button" class="btn btn-primary" v-else disabled>停止</button>
+                </div>
                 <a class="more-action fui-list-columned" href="javascript:">
                     <span class="more-action-nav">
-                        <span>任务</span>
-                        <span>Sass</span>
-                        <span>项目设置</span>
+                        <span v-on:click="pathTo('/prjInfo/' + host.id, {tab: 'task'})">任务</span>
+                        <span v-on:click="pathTo('/prjInfo/' + host.id, {tab: 'css'})">Sass</span>
+                        <span v-on:click="pathTo('/prjInfo/' + host.id, {tab: 'setting'})">项目设置</span>
                         <span class="remove" v-on:click="removeHost($index, host)">移除项目</span>
                     </span>
                 </a>
