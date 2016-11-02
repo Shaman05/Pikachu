@@ -1,5 +1,26 @@
 ## 欢迎使用 Pikachu!
 
+#### 如何运行开发版本 Pikachu
+
+Pikachu 是用 electron 做的桌面应用，所以要运行开发版本，首先你得先安装 electron, 方式有几种，这里推荐 npm 来安装，简单暴力：
+
+>
+    # Install the `electron` command globally in your $PATH
+    $ npm install electron -g
+
+然后就是克隆项目，别告诉我你没装 git 哈：
+
+`$ git clone https://github.com/Shaman05/Pikachu`
+
+进入项目目录后执行：
+
+`$ npm install`
+
+等待依赖安装完成后，就在当前项目目录使用 electron 来启动开发版本的 Pikachu (后面有个点哦)：
+
+`$ electron .`
+
+
 #### [Pikachu](https://shaman05.github.io/Pikachu/) 是用来做什么的？
 
 1.  web server 静态文件服务器
