@@ -68,7 +68,7 @@ var log = new MenuItem({
                 show: false
             });
             config.devTool && win.webContents.openDevTools();
-            win.loadURL(path.join(config.templateDir, 'log.html'));
+            win.loadURL('file://' + path.join(config.templateDir, 'log.html'));
             appRoute.app.logWindow = win;
             ipcRenderer.send('logger open', new Date() + ' logger window opened!');
             win.on('close', function(e){
@@ -141,7 +141,7 @@ var consoleLog = new MenuItem({
             frame: false,
             show: false
         });
-        win.loadURL(path.join(config.templateDir, '/console.html'));
+        win.loadURL('file://' + path.join(config.templateDir, 'console.html'));
         config.devTool && win.webContents.openDevTools();
         appRoute.app.consoleWindow = win;
         ipcRenderer.send('console open', new Date() + ' console window opened!');
@@ -191,7 +191,7 @@ var globalSet = new MenuItem({
                 frame: false,
                 show: false
             });
-            win.loadURL(path.join(config.templateDir, 'setting.html'));
+            win.loadURL('file://' + path.join(config.templateDir, 'setting.html'));
             config.devTool && win.webContents.openDevTools();
             appRoute.app.settingWindow = win;
             ipcRenderer.send('setting open', new Date() + ' console window opened!');

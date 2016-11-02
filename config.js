@@ -17,6 +17,7 @@ var sassCmd = path.join(addOnDir, 'bin', 'sass');
 var compassCmd = path.join(addOnDir, 'bin', 'compass');
 
 var baseConfig = {
+    name: pkg.name,
     appRoot: appRoot,
     osType: os.type(),
     osPlatform: os.platform(),

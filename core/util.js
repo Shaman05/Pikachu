@@ -348,7 +348,7 @@ module.exports = {
         dialog.showMessageBox({
             type: 'info',
             icon: config.logo,
-            title: config.title,
+            title: `About ${config.name}`,
             message: message.join('\n'),
             buttons: ['OK']
         });
