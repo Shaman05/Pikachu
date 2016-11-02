@@ -20,6 +20,9 @@ var appConf = config.appInfo;
 var includeRegExp = /<include\s+file=\"(.*?)\"><\/include>/;
 
 module.exports = {
+    isMac: function () {
+        return process.platform === 'darwin';
+    },
     //methods
     getRuntimeConfig: function () {
         var customSetting = fs.existsSync(config.customSettingFile) ? require(config.customSettingFile) : {};
@@ -328,7 +331,7 @@ module.exports = {
         shell.openItem(fullPath);
     },
     openUrl: function (url) {
-        child_process.exec("start " + url);
+        child_process.exec([this.isMac() ? 'open' : 'start', url].join(' '));
     },
     about: function(){
         var remote = electron.remote;
