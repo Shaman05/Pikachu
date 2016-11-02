@@ -25,6 +25,8 @@ module.exports = function () {
                 createTime: '',
                 isRunning: false,
                 pid: '',
+                cpu: '--',
+                mem: '--',
 
                 isWap: false,
                 unablePort: false,
@@ -113,6 +115,8 @@ module.exports = function () {
                     useCache: this.useCache,
                     port: this.port,
                     pid: '',
+                    cpu: '--',
+                    mem: '--',
                     isWap: false,
                     proxyHost: this.proxyHost,
                     proxyPath: this.proxyPath,
