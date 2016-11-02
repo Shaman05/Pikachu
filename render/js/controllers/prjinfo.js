@@ -76,7 +76,11 @@ module.exports = function () {
                 this.curTaskTab = name;
             },
             visitSite: function (){
-                util.openUrl('http://localhost:' + this.prjInfo.port);
+                if(this.prjInfo.isRunning){
+                    util.openUrl('http://localhost:' + this.prjInfo.port);
+                }else{
+                    util.tip('项目尚未启动！');
+                }
             },
             setGulpTask: function (taskName) {
                 this.gulpTaskName = taskName;
