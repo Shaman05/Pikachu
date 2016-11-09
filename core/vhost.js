@@ -6,6 +6,7 @@ var path = require('path');
 var fs = require('fs');
 var child_process = require('child_process');
 var pusage = require('pidusage');
+var util = require('./util');
 var log = require('./log');
 var hosts = {};
 
@@ -15,6 +16,15 @@ module.exports = {
     },
     getHosts: function () {
         return hosts;
+    },
+    getHostByName: function (hostName) {
+        var hosts = util.ls.get('hosts');
+        for(var i = 0; i < hosts.length; i++){
+            if(hosts[i].name === hostName){
+                return hosts[i];
+            }
+        }
+        return null;
     },
     getHostUsage: function (pid, callback) {
         pusage.stat(pid, function(err, stat) {

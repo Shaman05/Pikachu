@@ -27,6 +27,11 @@ module.exports = function () {
                 };
             this.sortItem(sortData.type, sortData.desc);
             this.currentHostName = this.$route.query.prjName || '';
+            for(var i = 0; i < this.hosts.length; i++){
+                var host = this.hosts[i];
+                //如果有项目运行则启动监控
+                host.isRunning && this.monitor(host);
+            }
         },
         methods: {
             pathTo: util.pathTo,
@@ -127,7 +132,6 @@ module.exports = function () {
             monitor: function (host) {
                 host.monitorId = setInterval(function () {
                     vhost.getHostUsage(host.pid, function (result) {
-                        console.log(result);
                         host.cpu = result.cpu.toFixed(2) + '%';
                         host.mem = formatSize(result.memory);
                     });
